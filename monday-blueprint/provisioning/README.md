@@ -10,7 +10,22 @@ pip install pyyaml requests
 ```
 Netwerktoegang tot `https://api.monday.com` (host op de egress-allowlist).
 
-## Draaien
+## Draaien — makkelijkste manier (één commando)
+
+De starter vraagt veilig om je token, installeert dependencies, toont eerst een
+dry-run en bouwt na bevestiging live.
+
+**Windows (PowerShell):**
+```powershell
+powershell -ExecutionPolicy Bypass -File .\run.ps1
+```
+
+**macOS / Linux:**
+```bash
+bash run.sh
+```
+
+## Draaien — handmatig
 ```bash
 # 1) Bekijk eerst het plan, zonder iets te wijzigen:
 python3 provision.py --dry-run
@@ -22,6 +37,10 @@ python3 provision.py
 # alternatief: token uit een bestand buiten de repo
 python3 provision.py --token-file ~/.monday_token
 ```
+
+Het script doet eerst een **token-check** (`me`), bouwt dan fasegewijs, gaat bij
+een fout op één board gewoon door, en sluit af met een **samenvatting** (aantallen
++ eventuele fouten). Opnieuw draaien is veilig (idempotent).
 
 ## Wat het doet (fasen)
 - **A** Workspaces (7)

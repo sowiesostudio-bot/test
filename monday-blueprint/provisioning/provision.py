@@ -137,6 +137,11 @@ class Monday:
         d = self._post(q, {"b": str(board_id), "t": title})
         return d.get("data", {}).get("create_group", {}).get("id", "DRYRUN")
 
+    def verify(self):
+        """Controleer dat de token werkt; geef account-info terug."""
+        d = self._post("query { me { id name email account { id name } } }")
+        return d.get("data", {}).get("me")
+
     def create_column(self, board_id, title, ctype, defaults=None, description=None):
         q = ('mutation ($b:ID!,$t:String!,$c:ColumnType!,$d:JSON,$desc:String) '
              '{ create_column (board_id:$b, title:$t, column_type:$c, defaults:$d, description:$desc) '
@@ -182,8 +187,19 @@ def main():
     api = Monday(token or "DRYRUN", dry_run=args.dry_run)
 
     state = {"workspaces": {}, "boards": {}, "columns": {}}  # columns: {board_key: {col_id: monday_col_id}}
+    errors = []
     mode = "DRY-RUN (geen wijzigingen)" if args.dry_run else "LIVE"
     log(f"== Monday provisioner — {mode} ==\n")
+
+    # ---- Token-precheck ----
+    if not args.dry_run:
+        try:
+            me = api.verify()
+            if not me:
+                sys.exit("Token-check faalde: geen 'me' in respons. Klopt de token?")
+            log(f"Verbonden als {me['name']} <{me['email']}> — account: {me['account']['name']}\n")
+        except Exception as e:
+            sys.exit(f"Kan niet verbinden met Monday API: {e}")
 
     # ---- Fase A: workspaces ----
     log("[A] Workspaces")
@@ -193,17 +209,27 @@ def main():
             wid = existing_ws[ws["name"]]
             log(f"  = bestaat: {ws['name']} ({wid})")
         else:
-            wid = api.create_workspace(ws["name"], s["workspace_kind"], ws.get("description", ""))
-            log(f"  + nieuw:   {ws['name']} ({wid})")
+            try:
+                wid = api.create_workspace(ws["name"], s["workspace_kind"], ws.get("description", ""))
+                log(f"  + nieuw:   {ws['name']} ({wid})")
+            except Exception as e:
+                errors.append(f"workspace '{ws['name']}': {e}")
+                log(f"  ! FOUT bij workspace {ws['name']}: {e}")
+                log("    (maak deze workspace evt. handmatig aan en draai opnieuw)")
+                continue
         state["workspaces"][ws["key"]] = wid
 
     # ---- Fase B: boards + groepen + simpele kolommen ----
     log("\n[B] Boards, groepen en kolommen")
     board_defs = bp["boards"]
     for ws in bp["workspaces"]:
+        if ws["key"] not in state["workspaces"]:
+            log(f"  ! workspace '{ws['name']}' ontbreekt — boards overgeslagen")
+            continue
         wid = state["workspaces"][ws["key"]]
         existing_boards = {} if args.dry_run else api.list_boards(wid)
         for bkey in ws["boards"]:
+          try:
             bdef = board_defs[bkey]
             if bdef["name"] in existing_boards:
                 bid = existing_boards[bdef["name"]]
@@ -241,6 +267,9 @@ def main():
                 cid = api.create_column(bid, col["title"], TYPE_MAP[ctype], defaults)
                 state["columns"][bkey][col["id"]] = cid
                 log(f"      col + {col['title']} [{ctype}]")
+          except Exception as e:
+            errors.append(f"board '{board_defs[bkey]['name']}': {e}")
+            log(f"  ! FOUT bij board {board_defs[bkey]['name']}: {e}")
 
     # ---- Fase C: board_relation kolommen (connect boards) ----
     log("\n[C] Connect-board relaties")
@@ -290,7 +319,19 @@ def main():
     if not args.dry_run:
         STATE_FILE.write_text(json.dumps(state, indent=2), encoding="utf-8")
         log(f"\nState opgeslagen: {STATE_FILE.name}")
-    log("\nKlaar.")
+
+    # ---- samenvatting ----
+    log("\n== Samenvatting ==")
+    log(f"  Workspaces: {len(state['workspaces'])}/{len(bp['workspaces'])}")
+    log(f"  Boards:     {len(state['boards'])}/{len(bp['boards'])}")
+    if errors:
+        log(f"  Fouten:     {len(errors)}")
+        for e in errors:
+            log(f"    - {e}")
+        log("\n  Tip: los de fout op (of maak handmatig aan) en draai opnieuw — het script is idempotent.")
+    else:
+        log("  Fouten:     0")
+    log("\nKlaar." + ("" if args.dry_run else " Bouw dashboards handmatig (zie ../ENTERPRISE-BLUEPRINT.md, Opdracht 10)."))
 
 
 if __name__ == "__main__":
