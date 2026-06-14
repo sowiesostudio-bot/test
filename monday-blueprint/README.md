@@ -6,10 +6,11 @@
 Dit blueprint is leveringsklaar: per onderdeel vind je workspaces, boards, kolommen,
 statussen, relaties, dashboards en een gefaseerd implementatieplan.
 
-> **Let op:** er waren geen concrete brondocumenten aangeleverd in deze repo. De Knowledge
-> Base-structuur hieronder is gebaseerd op de door jou genoemde documenttypen
-> (productdocumenten, handleidingen, FAQ's, technische specs, verkoopinformatie, interne
-> procesdocumentatie). Je kunt je bestaande documenten 1-op-1 in deze categorieën plaatsen.
+> **Let op:** dit hoofddocument beschrijft de **generieke, schaalbare architectuur**.
+> De **concrete invulling voor Beste Partij BV** (Deye thuisbatterijen) — met
+> bedrijfs-, product-, kwalificatie-, advies- en prijskennis als één centrale
+> kennisbron voor n8n, Monday, PandaDoc en de WhatsApp AI-agent — staat in
+> [`knowledge-base/`](./knowledge-base/README.md) (canoniek: `kb.yaml`).
 
 ---
 

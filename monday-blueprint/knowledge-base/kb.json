@@ -1,0 +1,525 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "last_updated": "2026-06-14",
+    "currency": "EUR",
+    "vat_rate": 0.21,
+    "language": "nl"
+  },
+  "company": {
+    "name": "Beste Partij BV",
+    "activity": "Leverancier van Deye thuisbatterijsystemen in Nederland",
+    "specializations": [
+      "Thuisbatterijen",
+      "Hybride omvormers",
+      "Energiebeheer (EMS)",
+      "Dynamische energiehandel",
+      "Noodstroomvoorzieningen"
+    ],
+    "address": {
+      "street": "Boompjes 40",
+      "postcode": "3011 XB",
+      "city": "Rotterdam",
+      "country": "NL"
+    },
+    "registration": {
+      "kvk": "92270883",
+      "btw": "NL861688648B01"
+    }
+  },
+  "products": {
+    "battery": {
+      "brand": "Deye",
+      "model": "SE-F5 Pro-C",
+      "chemistry": "LiFePO4 (LFP)",
+      "module_capacity_kwh": 5.12,
+      "warranty_years": 10,
+      "cycles": "6000+",
+      "expandable": true,
+      "monitoring": "Deye App",
+      "included_standard": [
+        "EMS (energiebeheer)",
+        "Noodstroom",
+        "Dynamische energiehandel"
+      ]
+    },
+    "inverters": [
+      {
+        "family": "SUN-SG01LP1-EU",
+        "phase": "1-fase",
+        "type": "Hybride omvormer (single phase)",
+        "battery_voltage_range_v": "40-60",
+        "max_charge_discharge_current_a": 290,
+        "battery_inputs": 2,
+        "max_parallel_units": 16,
+        "grid_form": "L+N+PE",
+        "rated_voltage_v": "220/230",
+        "grid_frequency_hz": "50/60",
+        "max_efficiency": "97.6%",
+        "euro_efficiency": "96.5%",
+        "ip_rating": "IP65",
+        "battery_charge_periods": 6,
+        "ac_couple_retrofit": true,
+        "generator_support": true,
+        "communication": "RS485/RS232/CAN; GPRS/WIFI/Bluetooth/4G/LAN (optional)",
+        "models": [
+          {
+            "sku": "SUN-12K-SG01LP1-EU",
+            "rated_ac_power_kw": 12,
+            "max_apparent_power_kva": 13.2,
+            "max_pv_input_power_w": 24000
+          },
+          {
+            "sku": "SUN-14K-SG01LP1-EU",
+            "rated_ac_power_kw": 14,
+            "max_apparent_power_kva": 15.4,
+            "max_pv_input_power_w": 28000
+          },
+          {
+            "sku": "SUN-16K-SG01LP1-EU",
+            "rated_ac_power_kw": 16,
+            "max_apparent_power_kva": 17.6,
+            "max_pv_input_power_w": 32000
+          }
+        ]
+      },
+      {
+        "family": "SUN-SG05LP3-EU-SM2",
+        "phase": "3-fase",
+        "type": "Hybride omvormer (three phase), 48V low-voltage, transformer isolation",
+        "battery_voltage_range_v": "40-60",
+        "max_charge_discharge_current_a": 350,
+        "battery_inputs": 2,
+        "max_parallel_units": 10,
+        "unbalanced_output": "100% unbalanced output, max 50% rated power per phase",
+        "grid_form": "3L+N+PE",
+        "rated_voltage_v": "220/380, 230/400",
+        "grid_frequency_hz": "50/60",
+        "max_efficiency": "97.6%",
+        "euro_efficiency": "97.0%",
+        "ip_rating": "IP65",
+        "weight_kg": 51.9,
+        "dimensions_mm": "456x750x268.5",
+        "battery_charge_periods": 6,
+        "ac_couple_retrofit": true,
+        "generator_support": true,
+        "warranty_years": "5/10",
+        "communication": "RS485/RS232/CAN; GPRS/WIFI/Bluetooth/4G/LAN (optional)",
+        "models": [
+          {
+            "sku": "SUN-14K-SG05LP3-EU-SM2",
+            "rated_ac_power_kw": 14,
+            "max_apparent_power_kva": 15.4
+          },
+          {
+            "sku": "SUN-15K-SG05LP3-EU-SM2",
+            "rated_ac_power_kw": 15,
+            "max_apparent_power_kva": 16.5
+          },
+          {
+            "sku": "SUN-16K-SG05LP3-EU-SM2",
+            "rated_ac_power_kw": 16,
+            "max_apparent_power_kva": 17.6
+          },
+          {
+            "sku": "SUN-18K-SG05LP3-EU-SM2",
+            "rated_ac_power_kw": 18,
+            "max_apparent_power_kva": 19.8
+          },
+          {
+            "sku": "SUN-20K-SG05LP3-EU-SM2",
+            "rated_ac_power_kw": 20,
+            "max_apparent_power_kva": 22.0
+          }
+        ]
+      }
+    ]
+  },
+  "qualification": {
+    "required_fields": [
+      {
+        "key": "zonnepanelen",
+        "label": "Aantal zonnepanelen",
+        "type": "integer"
+      },
+      {
+        "key": "verbruik",
+        "label": "Jaarlijks stroomverbruik (kWh)",
+        "type": "integer"
+      },
+      {
+        "key": "opwek",
+        "label": "Jaarlijkse opwek (kWh)",
+        "type": "integer"
+      },
+      {
+        "key": "teruglevering",
+        "label": "Jaarlijkse teruglevering (kWh)",
+        "type": "integer"
+      },
+      {
+        "key": "wp_per_paneel",
+        "label": "Wp per paneel",
+        "type": "integer"
+      },
+      {
+        "key": "fase",
+        "label": "1-fase of 3-fase",
+        "type": "enum",
+        "values": [
+          "1-fase",
+          "3-fase"
+        ]
+      },
+      {
+        "key": "laadpaal",
+        "label": "Laadpaal aanwezig",
+        "type": "boolean"
+      },
+      {
+        "key": "warmtepomp",
+        "label": "Warmtepomp aanwezig",
+        "type": "boolean"
+      },
+      {
+        "key": "airco",
+        "label": "Airco aanwezig",
+        "type": "boolean"
+      },
+      {
+        "key": "meterkastfoto",
+        "label": "Meterkastfoto",
+        "type": "file"
+      },
+      {
+        "key": "email",
+        "label": "Emailadres",
+        "type": "email"
+      },
+      {
+        "key": "postcode",
+        "label": "Postcode",
+        "type": "string"
+      },
+      {
+        "key": "huisnummer",
+        "label": "Huisnummer",
+        "type": "string"
+      }
+    ]
+  },
+  "advice": {
+    "module_capacity_kwh": 5.12,
+    "never_oversize": true,
+    "base_table": [
+      {
+        "max_consumption": 5000,
+        "modules": 1,
+        "advice_kwh": 5
+      },
+      {
+        "max_consumption": 7500,
+        "modules": 2,
+        "advice_kwh": 10
+      },
+      {
+        "max_consumption": 10000,
+        "modules": 3,
+        "advice_kwh": 15
+      },
+      {
+        "max_consumption": null,
+        "modules": 4,
+        "advice_kwh": 20
+      }
+    ],
+    "corrections": {
+      "mode": "review",
+      "rules": [
+        {
+          "key": "laadpaal",
+          "when": "laadpaal == true",
+          "steps": 1
+        },
+        {
+          "key": "warmtepomp",
+          "when": "warmtepomp == true",
+          "steps": 1
+        },
+        {
+          "key": "airco",
+          "when": "airco == true && verbruik > 5000",
+          "steps": 0,
+          "flag": "beoordelen"
+        }
+      ]
+    },
+    "inverter_sizing": [
+      {
+        "advice_kwh": 5,
+        "recommended_kw_range": "5"
+      },
+      {
+        "advice_kwh": 10,
+        "recommended_kw_range": "6-8"
+      },
+      {
+        "advice_kwh": 15,
+        "recommended_kw_range": "8-10"
+      },
+      {
+        "advice_kwh": 20,
+        "recommended_kw_range": "10-12"
+      }
+    ]
+  },
+  "pricing": {
+    "battery_module_eur": 660,
+    "inverter_eur": {
+      "1-fase": {
+        "3.6kW": 600,
+        "5kW": 640,
+        "6kW": 655,
+        "8kW": 900,
+        "10kW": 1300,
+        "12kW": 1330
+      },
+      "3-fase": {
+        "5kW": 1270,
+        "6kW": 1290,
+        "8kW": 1330,
+        "10kW": 1395,
+        "12kW": 1465,
+        "15kW": 1615
+      }
+    },
+    "extras_eur": {
+      "installatie": 1500,
+      "sales": 750,
+      "off_grid": 950,
+      "meterkast_upgrade": 950,
+      "ct_clamps": 150
+    }
+  },
+  "whatsapp_prompt": {
+    "language": "Nederlands",
+    "rules": [
+      "Gebruik korte WhatsApp-berichten.",
+      "Stel slechts één vraag tegelijk.",
+      "Vraag nooit naar EMS.",
+      "Vraag nooit naar noodstroom.",
+      "Vraag nooit naar dynamische handel.",
+      "Deze functies zijn standaard inbegrepen."
+    ],
+    "opening_message": "Bedankt voor uw reactie op onze thuisbatterij advertentie op social media. Om uw situatie goed in kaart te brengen, mag ik vragen hoeveel zonnepanelen u heeft, wat uw jaarlijkse stroomverbruik is, wat uw zonnepanelen jaarlijks opwekken, hoeveel u jaarlijks teruglevert, en of u de wattage (Wp) per paneel weet?\n"
+  },
+  "mappings": {
+    "monday": {
+      "board": "Leads",
+      "columns": [
+        {
+          "name": "Naam",
+          "source": "client.name",
+          "type": "name"
+        },
+        {
+          "name": "Telefoon",
+          "source": "client.phone",
+          "type": "phone"
+        },
+        {
+          "name": "Email",
+          "source": "client.email",
+          "type": "email"
+        },
+        {
+          "name": "Postcode",
+          "source": "postcode",
+          "type": "text"
+        },
+        {
+          "name": "Huisnummer",
+          "source": "huisnummer",
+          "type": "text"
+        },
+        {
+          "name": "Zonnepanelen",
+          "source": "zonnepanelen",
+          "type": "numbers"
+        },
+        {
+          "name": "Wp_per_paneel",
+          "source": "wp_per_paneel",
+          "type": "numbers"
+        },
+        {
+          "name": "Opwek",
+          "source": "opwek",
+          "type": "numbers"
+        },
+        {
+          "name": "Verbruik",
+          "source": "verbruik",
+          "type": "numbers"
+        },
+        {
+          "name": "Teruglevering",
+          "source": "teruglevering",
+          "type": "numbers"
+        },
+        {
+          "name": "Fase",
+          "source": "fase",
+          "type": "status",
+          "labels": [
+            "1-fase",
+            "3-fase"
+          ]
+        },
+        {
+          "name": "Laadpaal",
+          "source": "laadpaal",
+          "type": "status",
+          "labels": [
+            "Ja",
+            "Nee"
+          ]
+        },
+        {
+          "name": "Warmtepomp",
+          "source": "warmtepomp",
+          "type": "status",
+          "labels": [
+            "Ja",
+            "Nee"
+          ]
+        },
+        {
+          "name": "Airco",
+          "source": "airco",
+          "type": "status",
+          "labels": [
+            "Ja",
+            "Nee"
+          ]
+        },
+        {
+          "name": "Meterkastfoto",
+          "source": "meterkastfoto",
+          "type": "file"
+        },
+        {
+          "name": "Advies_Batterij",
+          "source": "advice.battery_kwh",
+          "type": "text"
+        },
+        {
+          "name": "Advies_Omvormer",
+          "source": "advice.inverter_kw",
+          "type": "text"
+        },
+        {
+          "name": "Prijs",
+          "source": "price.total",
+          "type": "numbers"
+        },
+        {
+          "name": "Status",
+          "source": "status",
+          "type": "status",
+          "labels": [
+            "Nieuw",
+            "In gesprek",
+            "Gekwalificeerd",
+            "Offerte verzonden",
+            "Afspraak ingepland",
+            "Gewonnen",
+            "Verloren"
+          ]
+        },
+        {
+          "name": "Offerte_Verzonden",
+          "source": "offerte_verzonden",
+          "type": "status",
+          "labels": [
+            "Ja",
+            "Nee"
+          ]
+        },
+        {
+          "name": "Afspraak_Ingepland",
+          "source": "afspraak_ingepland",
+          "type": "status",
+          "labels": [
+            "Ja",
+            "Nee"
+          ]
+        }
+      ]
+    },
+    "pandadoc": {
+      "variables": [
+        {
+          "var": "Client.Name",
+          "source": "client.name"
+        },
+        {
+          "var": "Client.Email",
+          "source": "client.email"
+        },
+        {
+          "var": "Client.Phone",
+          "source": "client.phone"
+        },
+        {
+          "var": "Client.Postcode",
+          "source": "postcode"
+        },
+        {
+          "var": "Client.Address",
+          "source": "client.address"
+        },
+        {
+          "var": "Client.City",
+          "source": "client.city"
+        },
+        {
+          "var": "Battery.Capacity",
+          "source": "advice.battery_kwh"
+        },
+        {
+          "var": "Battery.Modules",
+          "source": "advice.modules"
+        },
+        {
+          "var": "Inverter.Power",
+          "source": "advice.inverter_kw"
+        },
+        {
+          "var": "Inverter.Phase",
+          "source": "fase"
+        },
+        {
+          "var": "Price.Subtotal",
+          "source": "price.subtotal"
+        },
+        {
+          "var": "Price.VAT",
+          "source": "price.vat"
+        },
+        {
+          "var": "Price.Total",
+          "source": "price.total"
+        },
+        {
+          "var": "Installation.Date",
+          "source": "installation.date"
+        },
+        {
+          "var": "Sales.Advisor",
+          "source": "sales.advisor"
+        }
+      ]
+    }
+  }
+}
