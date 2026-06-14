@@ -1,0 +1,4 @@
+# Secrets — nooit committen
+.monday_token
+*.token
+monday-blueprint/provisioning/.state.json

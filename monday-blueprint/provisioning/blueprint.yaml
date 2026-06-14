@@ -1,0 +1,302 @@
+# =============================================================================
+# MONDAY.COM ENTERPRISE BLUEPRINT — Beste Partij BV
+# Machine-leesbare definitie (consumed by provision.py) EN specificatie.
+# -----------------------------------------------------------------------------
+# Kolomtypes: name, text, long_text, numbers, status, dropdown, people, date,
+#             email, phone, link, file, tags, board_relation, mirror, formula,
+#             item_id, timeline, checkbox
+# board_relation: link_to (board key), multiple (bool)
+# mirror:        via (board_relation kolom 'id' op dit board), column (titel op doelbord)
+#                -> mirrors worden in fase 2 gezet (na alle boards + relaties).
+# =============================================================================
+
+settings:
+  workspace_kind: "open"        # open | closed
+  board_kind: "public"          # public | private | share
+  default_groups: ["Actief", "Afgerond"]
+
+# -----------------------------------------------------------------------------
+# WORKSPACES  (Opdracht 1)
+# -----------------------------------------------------------------------------
+workspaces:
+
+  - key: crm
+    name: "01 — CRM & Sales"
+    description: "Leadmanagement, sales pipeline, accounts en contactpersonen."
+    boards: [leads, opportunities, accounts, contacten]
+
+  - key: cs
+    name: "02 — Customer Success"
+    description: "Klantbeheer, gezondheid, klantontwikkeling, upsell/cross-sell."
+    boards: [klantontwikkeling]
+
+  - key: support
+    name: "03 — Support"
+    description: "Support tickets, incidenten en change requests met SLA-bewaking."
+    boards: [tickets, incidenten, changes]
+
+  - key: ops
+    name: "04 — Operations"
+    description: "Implementaties, projecten en taken (delivery)."
+    boards: [implementaties, projecten, taken]
+
+  - key: product
+    name: "05 — Product Management"
+    description: "Centrale productdatabase en lifecycle."
+    boards: [producten]
+
+  - key: knowledge
+    name: "06 — Knowledge Management"
+    description: "Centrale kennisbank: artikelen + categorieën."
+    boards: [kb_categorieen, kb_artikelen]
+
+  - key: mgmt
+    name: "07 — Management & Reporting"
+    description: "Stuurinformatie, targets en dashboards (cross-workspace)."
+    boards: [targets]
+
+# -----------------------------------------------------------------------------
+# BOARDS  (Opdracht 2-8)
+# -----------------------------------------------------------------------------
+boards:
+
+  # ---------- CRM & SALES ----------
+  leads:
+    name: "Leads"
+    description: "Inkomende leads t/m kwalificatie."
+    groups: ["Nieuw", "In behandeling", "Gekwalificeerd", "Afgesloten"]
+    columns:
+      - {id: lead_id,       title: "Lead ID",         type: item_id}
+      - {id: organisatie,   title: "Organisatie",     type: text}
+      - {id: contact,       title: "Contactpersoon",  type: text}
+      - {id: functie,       title: "Functie",         type: text}
+      - {id: email,         title: "E-mail",          type: email}
+      - {id: telefoon,      title: "Telefoon",        type: phone}
+      - {id: leadbron,      title: "Leadbron",        type: dropdown, labels: ["Website","E-mail","Social","Beurs","Referral","Campagne","Cold"]}
+      - {id: interesse,     title: "Interessegebied", type: dropdown, labels: ["Thuisbatterij","Hybride omvormer","EMS","Noodstroom","Dynamische handel"]}
+      - {id: leadscore,     title: "Leadscore",       type: numbers}
+      - {id: status,        title: "Status",          type: status, labels: ["Nieuw","Contact","In gesprek","Gekwalificeerd","Opportunity","Niet geschikt","Verloren"]}
+      - {id: eigenaar,      title: "Eigenaar",        type: people}
+      - {id: volgende,      title: "Volgende Actie",  type: date}
+      - {id: laatste,       title: "Laatste Contact", type: date}
+      - {id: rel_opp,       title: "Opportunity",     type: board_relation, link_to: opportunities, multiple: false}
+
+  opportunities:
+    name: "Opportunities"
+    description: "Sales pipeline incl. Offorte-offertegegevens."
+    groups: ["Open", "Gewonnen", "Verloren"]
+    columns:
+      - {id: opp_id,        title: "Opportunity ID",   type: item_id}
+      - {id: klant,         title: "Klant",            type: board_relation, link_to: accounts, multiple: false}
+      - {id: product,       title: "Product",          type: board_relation, link_to: producten, multiple: true}
+      - {id: omzet,         title: "Verwachte omzet",  type: numbers}
+      - {id: sluitdatum,    title: "Sluitdatum",       type: date}
+      - {id: fase,          title: "Fase",             type: status, labels: ["Discovery","Analyse","Demo","Offerte","Onderhandeling","Gewonnen","Verloren"]}
+      - {id: kans,          title: "Kans %",           type: numbers}
+      - {id: gewogen,       title: "Gewogen omzet",    type: formula, formula: "{Verwachte omzet}*{Kans %}/100"}
+      - {id: sales_owner,   title: "Sales Owner",      type: people}
+      # --- Offorte integratie (Opdracht 3) ---
+      - {id: off_nummer,    title: "Offorte Nummer",   type: text}
+      - {id: off_status,    title: "Offerte Status",   type: status, labels: ["Concept","Verzonden","Bekeken","Geaccepteerd","Afgewezen","Verlopen"]}
+      - {id: off_waarde,    title: "Offerte Waarde",   type: numbers}
+      - {id: off_link,      title: "Offerte Link",     type: link}
+      - {id: off_datum,     title: "Offerte Datum",    type: date}
+      - {id: off_geldig,    title: "Geldigheid",       type: date}
+      - {id: off_eigenaar,  title: "Offerte Eigenaar", type: people}
+
+  accounts:
+    name: "Accounts"
+    description: "Master: klant-/organisatieaccounts (gedeeld met CS & Support)."
+    groups: ["Actief", "Prospect", "Opgezegd"]
+    columns:
+      - {id: account_id,    title: "Account ID",       type: item_id}
+      - {id: branche,       title: "Branche",          type: dropdown, labels: ["Particulier","Zakelijk","Installateur","Overheid"]}
+      - {id: am,            title: "Accountmanager",   type: people}
+      - {id: status,        title: "Status",           type: status, labels: ["Prospect","Actief","Onboarding","Risico","Opgezegd"]}
+      - {id: contractwaarde,title: "Contractwaarde",   type: numbers}
+      - {id: contracttype,  title: "Contracttype",     type: dropdown, labels: ["Eenmalig","Abonnement","Service","Onderhoud"]}
+      - {id: rel_contacten, title: "Contactpersonen",  type: board_relation, link_to: contacten, multiple: true}
+      - {id: rel_impl,      title: "Implementaties",   type: board_relation, link_to: implementaties, multiple: true}
+      - {id: rel_tickets,   title: "Support Tickets",  type: board_relation, link_to: tickets, multiple: true}
+
+  contacten:
+    name: "Contactpersonen"
+    description: "Personen gekoppeld aan accounts."
+    groups: ["Actief"]
+    columns:
+      - {id: contact_id,    title: "Contact ID",       type: item_id}
+      - {id: functie,       title: "Functie",          type: text}
+      - {id: email,         title: "E-mail",           type: email}
+      - {id: telefoon,      title: "Telefoon",         type: phone}
+      - {id: rel_account,   title: "Organisatie",      type: board_relation, link_to: accounts, multiple: false}
+
+  # ---------- CUSTOMER SUCCESS ----------
+  klantontwikkeling:
+    name: "Klantontwikkeling"
+    description: "Health, upsell/cross-sell, nieuwe opportunities uit bestaande klanten."
+    groups: ["Actief", "Upsell-kans", "Afgerond"]
+    columns:
+      - {id: rel_account,   title: "Klant",            type: board_relation, link_to: accounts, multiple: false}
+      - {id: health,        title: "Gezondheid",       type: status, labels: ["Gezond","Aandacht","Risico"]}
+      - {id: csm,           title: "CS Manager",       type: people}
+      - {id: type,          title: "Type",             type: dropdown, labels: ["Upsell","Cross-sell","Renewal","QBR"]}
+      - {id: potentieel,    title: "Potentiële omzet", type: numbers}
+      - {id: status,        title: "Status",           type: status, labels: ["Idee","In gesprek","Voorstel","Gewonnen","Verloren"]}
+      - {id: rel_opp,       title: "Nieuwe Opportunity",type: board_relation, link_to: opportunities, multiple: false}
+      - {id: volgende,      title: "Volgende Actie",   type: date}
+
+  # ---------- SUPPORT ----------
+  tickets:
+    name: "Support Tickets"
+    description: "Support tickets met SLA-bewaking."
+    groups: ["Open", "Wacht", "Gesloten"]
+    columns:
+      - {id: ticket_id,     title: "Ticket ID",        type: item_id}
+      - {id: rel_account,   title: "Klant",            type: board_relation, link_to: accounts, multiple: false}
+      - {id: rel_product,   title: "Product",          type: board_relation, link_to: producten, multiple: false}
+      - {id: type,          title: "Type",             type: dropdown, labels: ["Vraag","Bug","Storing","Hoe-werkt","Feature request"]}
+      - {id: status,        title: "Status",           type: status, labels: ["Nieuw","In Analyse","In Behandeling","Wacht op Klant","Opgelost","Gesloten"]}
+      - {id: prioriteit,    title: "Prioriteit",       type: status, labels: ["Kritiek","Hoog","Normaal","Laag"]}
+      - {id: kanaal,        title: "Kanaal",           type: dropdown, labels: ["E-mail","Webform","Telefoon","Chat"]}
+      - {id: eigenaar,      title: "Eigenaar",         type: people}
+      - {id: aangemaakt,    title: "Aangemaakt op",    type: date}
+      - {id: eerste_reactie,title: "Eerste Reactie",   type: date}
+      - {id: sla_deadline,  title: "SLA Deadline",     type: date}
+      - {id: opgelost,      title: "Opgelost op",      type: date}
+      - {id: resolutie,     title: "Resolutie",        type: long_text}
+      - {id: rel_kb,        title: "Knowledge Artikel",type: board_relation, link_to: kb_artikelen, multiple: true}
+
+  incidenten:
+    name: "Incidenten"
+    description: "Grootschalige storingen / Sev1-incidenten."
+    groups: ["Actief", "Opgelost"]
+    columns:
+      - {id: incident_id,   title: "Incident ID",      type: item_id}
+      - {id: ernst,         title: "Ernst",            type: status, labels: ["Sev1","Sev2","Sev3"]}
+      - {id: status,        title: "Status",           type: status, labels: ["Open","Onderzoek","Mitigatie","Opgelost","Postmortem"]}
+      - {id: rel_product,   title: "Product",          type: board_relation, link_to: producten, multiple: true}
+      - {id: rel_tickets,   title: "Gekoppelde Tickets",type: board_relation, link_to: tickets, multiple: true}
+      - {id: owner,         title: "Incident Owner",   type: people}
+      - {id: start,         title: "Start",            type: date}
+      - {id: hersteld,      title: "Hersteld",         type: date}
+
+  changes:
+    name: "Change Requests"
+    description: "Wijzigingsverzoeken / RFC's."
+    groups: ["Aangevraagd", "Goedgekeurd", "Uitgevoerd"]
+    columns:
+      - {id: change_id,     title: "Change ID",        type: item_id}
+      - {id: status,        title: "Status",           type: status, labels: ["Aangevraagd","Beoordeling","Goedgekeurd","Afgewezen","Uitgevoerd"]}
+      - {id: impact,        title: "Impact",           type: status, labels: ["Hoog","Midden","Laag"]}
+      - {id: rel_product,   title: "Product",          type: board_relation, link_to: producten, multiple: true}
+      - {id: aanvrager,     title: "Aanvrager",        type: people}
+      - {id: gepland,       title: "Gepland",          type: date}
+
+  # ---------- OPERATIONS ----------
+  implementaties:
+    name: "Implementaties"
+    description: "Onboarding & implementatietrajecten per klant."
+    groups: ["Lopend", "Afgerond"]
+    columns:
+      - {id: impl_id,       title: "Implementatie ID", type: item_id}
+      - {id: rel_account,   title: "Klant",            type: board_relation, link_to: accounts, multiple: false}
+      - {id: rel_opp,       title: "Opportunity",      type: board_relation, link_to: opportunities, multiple: false}
+      - {id: fase,          title: "Fase",             type: status, labels: ["Kick-off","Configuratie","Installatie","Test","Go-Live","Nazorg","Afgerond"]}
+      - {id: health,        title: "Gezondheid",       type: status, labels: ["On track","Risico","Vertraagd"]}
+      - {id: pm,            title: "Projectleider",    type: people}
+      - {id: planning,      title: "Planning",         type: timeline}
+      - {id: golive,        title: "Go-Live datum",    type: date}
+      - {id: rel_projecten, title: "Projecten",        type: board_relation, link_to: projecten, multiple: true}
+      - {id: rel_product,   title: "Producten",        type: board_relation, link_to: producten, multiple: true}
+
+  projecten:
+    name: "Projecten"
+    description: "Projecten binnen implementaties."
+    groups: ["Actief", "Afgerond"]
+    columns:
+      - {id: project_id,    title: "Project ID",       type: item_id}
+      - {id: rel_account,   title: "Klant",            type: board_relation, link_to: accounts, multiple: false}
+      - {id: status,        title: "Status",           type: status, labels: ["Niet gestart","Bezig","On hold","Afgerond"]}
+      - {id: pm,            title: "Projectleider",    type: people}
+      - {id: planning,      title: "Planning",         type: timeline}
+      - {id: budget,        title: "Budget (uren)",    type: numbers}
+      - {id: besteed,       title: "Besteed (uren)",   type: numbers}
+      - {id: rel_taken,     title: "Taken",            type: board_relation, link_to: taken, multiple: true}
+
+  taken:
+    name: "Taken"
+    description: "Uitvoerende taken binnen projecten."
+    groups: ["Te doen", "Bezig", "Klaar"]
+    columns:
+      - {id: status,        title: "Status",           type: status, labels: ["Te doen","Bezig","Wacht","Klaar"]}
+      - {id: prioriteit,    title: "Prioriteit",       type: status, labels: ["Hoog","Normaal","Laag"]}
+      - {id: eigenaar,      title: "Eigenaar",         type: people}
+      - {id: deadline,      title: "Deadline",         type: date}
+      - {id: rel_project,   title: "Project",          type: board_relation, link_to: projecten, multiple: false}
+
+  # ---------- PRODUCT MANAGEMENT ----------
+  producten:
+    name: "Producten"
+    description: "Centrale productdatabase (Opdracht 6)."
+    groups: ["Actief", "In ontwikkeling", "Uitgefaseerd"]
+    columns:
+      - {id: productcode,   title: "Productcode",      type: text}
+      - {id: versie,        title: "Versie",           type: text}
+      - {id: categorie,     title: "Categorie",        type: dropdown, labels: ["Batterij","Omvormer","EMS","Toebehoren","Dienst"]}
+      - {id: owner,         title: "Product Owner",    type: people}
+      - {id: lifecycle,     title: "Lifecycle Status", type: status, labels: ["Concept","Actief","Onderhoud","Uitgefaseerd"]}
+      - {id: prijs,         title: "Lijstprijs (€)",   type: numbers}
+      - {id: rel_kb,        title: "Knowledge Artikelen",type: board_relation, link_to: kb_artikelen, multiple: true}
+
+  # ---------- KNOWLEDGE MANAGEMENT ----------
+  kb_categorieen:
+    name: "KB-Categorieën"
+    description: "Hoofd- en subcategorieën van de kennisbank."
+    groups: ["Productdocumentatie","Supportdocumentatie","Sales Enablement","Interne Processen","FAQ"]
+    columns:
+      - {id: subcategorie,  title: "Subcategorieën",   type: text}
+      - {id: owner,         title: "Eigenaar",         type: people}
+      - {id: rel_artikelen, title: "Artikelen",        type: board_relation, link_to: kb_artikelen, multiple: true}
+
+  kb_artikelen:
+    name: "Knowledge Base"
+    description: "Kennisartikelen & FAQ (Opdracht 8)."
+    groups: ["Gepubliceerd","In bewerking","Archief"]
+    columns:
+      - {id: artikel_id,    title: "Artikel ID",       type: item_id}
+      - {id: samenvatting,  title: "Samenvatting",     type: long_text}
+      - {id: rel_categorie, title: "Categorie",        type: board_relation, link_to: kb_categorieen, multiple: false}
+      - {id: subcategorie,  title: "Subcategorie",     type: dropdown, labels: ["Installatie","Configuratie","Integraties","API","Technische Specificaties","Releases","Troubleshooting","Bekende Problemen","Incident Procedures","Escalaties","Product Sheets","Pitch Decks","Concurrentievergelijkingen","Use Cases","Pricing","Onboarding","FAQ"]}
+      - {id: rel_product,   title: "Product",          type: board_relation, link_to: producten, multiple: true}
+      - {id: tags,          title: "Tags",             type: tags}
+      - {id: auteur,        title: "Auteur",           type: people}
+      - {id: reviewer,      title: "Reviewer",         type: people}
+      - {id: pubstatus,     title: "Publicatiestatus", type: status, labels: ["Concept","Review","Gepubliceerd","Verouderd","Gearchiveerd"]}
+      - {id: versie,        title: "Versie",           type: text}
+      - {id: review_datum,  title: "Laatste Reviewdatum",type: date}
+      - {id: doelgroep,     title: "Doelgroep",        type: dropdown, labels: ["Klant (extern)","Sales","Support","Intern"]}
+
+  # ---------- MANAGEMENT & REPORTING ----------
+  targets:
+    name: "Targets & KPI's"
+    description: "Doelstellingen per kwartaal/team t.b.v. dashboards."
+    groups: ["2026", "2027"]
+    columns:
+      - {id: team,          title: "Team",             type: dropdown, labels: ["Sales","Support","Operations","CS"]}
+      - {id: kpi,           title: "KPI",              type: text}
+      - {id: target,        title: "Target",           type: numbers}
+      - {id: realisatie,    title: "Realisatie",       type: numbers}
+      - {id: periode,       title: "Periode",          type: text}
+      - {id: owner,         title: "Eigenaar",         type: people}
+
+# -----------------------------------------------------------------------------
+# MIRROR-KOLOMMEN (fase 2 — na boards + board_relation kolommen)  (Opdracht 9)
+# via = board_relation kolom-id op dit board; column = titel op het doelbord.
+# -----------------------------------------------------------------------------
+mirrors:
+  - {board: opportunities, title: "Accountmanager (klant)", via: klant,       column: "Accountmanager"}
+  - {board: opportunities, title: "Account status",         via: klant,       column: "Status"}
+  - {board: tickets,       title: "Accountmanager",         via: rel_account, column: "Accountmanager"}
+  - {board: tickets,       title: "SLA-niveau (klant)",     via: rel_account, column: "Contracttype"}
+  - {board: implementaties,title: "Contractwaarde",         via: rel_account, column: "Contractwaarde"}
+  - {board: kb_artikelen,  title: "Productcategorie",       via: rel_product, column: "Categorie"}
