@@ -301,19 +301,46 @@ $wa_url      = 'https://wa.me/' . $so_whatsapp;
 		<h2 class="section-title"><?php esc_html_e( 'Gecertificeerd en', 'samen-omhoog' ); ?> <em><?php esc_html_e( 'aanspreekbaar.', 'samen-omhoog' ); ?></em></h2>
 		<div class="certs-grid">
 			<div class="cert-card reveal magnetic-card">
-				<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M13 2l3 3 4-1 1 4 3 3-3 3 1 4-4 1-3 3-3-3-4 1-1-4-3-3 3-3-1-4 4 1z"/><path d="M9 13l3 3 5-6"/></svg></div>
+				<?php $logo = samen_omhoog_logo_src( 'iso9001.png' ); ?>
+				<?php if ( $logo ) : ?>
+					<img class="cert-brand-img" src="<?php echo esc_url( $logo ); ?>" alt="<?php esc_attr_e( 'ISO 9001 — TÜV NORD', 'samen-omhoog' ); ?>" loading="lazy">
+				<?php else : ?>
+					<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M13 2l3 3 4-1 1 4 3 3-3 3 1 4-4 1-3 3-3-3-4 1-1-4-3-3 3-3-1-4 4 1z"/><path d="M9 13l3 3 5-6"/></svg></div>
+				<?php endif; ?>
 				<div class="cert-title"><?php esc_html_e( 'ISO 9001 Gecertificeerd', 'samen-omhoog' ); ?></div>
-				<p class="cert-desc"><?php esc_html_e( 'Onze organisatie voldoet aan de internationale norm voor kwaliteitsmanagement — consistente, kwalitatieve dienstverlening.', 'samen-omhoog' ); ?></p>
+				<p class="cert-desc"><?php esc_html_e( 'Onze organisatie voldoet aan de internationale norm voor kwaliteitsmanagement (TÜV NORD) — consistente, kwalitatieve dienstverlening.', 'samen-omhoog' ); ?></p>
 			</div>
 			<div class="cert-card reveal magnetic-card">
-				<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><circle cx="13" cy="13" r="10"/><path d="M8 13l3 3 6-7"/></svg></div>
-				<div class="cert-title"><?php esc_html_e( 'Coöperatie Boer & Zorg (CBZ)', 'samen-omhoog' ); ?></div>
-				<p class="cert-desc"><?php esc_html_e( 'Als gecontracteerd zorgaanbieder via CBZ, met bijbehorende klachtenregeling, algemene voorwaarden en vertrouwenspersoon.', 'samen-omhoog' ); ?></p>
+				<?php $logo = samen_omhoog_logo_src( 'sbb.png' ); ?>
+				<?php if ( $logo ) : ?>
+					<img class="cert-brand-img" src="<?php echo esc_url( $logo ); ?>" alt="<?php esc_attr_e( 'SBB Erkend Leerbedrijf', 'samen-omhoog' ); ?>" loading="lazy">
+				<?php else : ?>
+					<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M13 2L3 6v6c0 6 4 9 10 12 6-3 10-6 10-12V6z"/><path d="M9 13l3 3 5-6"/></svg></div>
+				<?php endif; ?>
+				<div class="cert-title"><?php esc_html_e( 'SBB Erkend Leerbedrijf', 'samen-omhoog' ); ?></div>
+				<p class="cert-desc"><?php esc_html_e( 'Erkend door SBB voor het bieden van kwalitatieve stageplekken en leerwerktrajecten — wij leiden vakmensen op.', 'samen-omhoog' ); ?></p>
 			</div>
 			<div class="cert-card reveal magnetic-card">
-				<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M13 2L3 6v6c0 6 4 9 10 12 6-3 10-6 10-12V6z"/><path d="M9 13l3 3 5-6"/></svg></div>
-				<div class="cert-title"><?php esc_html_e( 'SKJ & AVG', 'samen-omhoog' ); ?></div>
-				<p class="cert-desc"><?php esc_html_e( 'Geregistreerde SKJ-jeugdprofessional in huis en zorgvuldige omgang met persoonsgegevens volgens de AVG.', 'samen-omhoog' ); ?></p>
+				<?php $logo = samen_omhoog_logo_src( 'skj.png' ); ?>
+				<?php if ( $logo ) : ?>
+					<img class="cert-brand-img" src="<?php echo esc_url( $logo ); ?>" alt="<?php esc_attr_e( 'SKJ Kwaliteitsregister Jeugd', 'samen-omhoog' ); ?>" loading="lazy">
+				<?php else : ?>
+					<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><circle cx="13" cy="13" r="10"/><path d="M8 13l3 3 6-7"/></svg></div>
+				<?php endif; ?>
+				<div class="cert-title"><?php esc_html_e( 'SKJ Kwaliteitsregister Jeugd', 'samen-omhoog' ); ?></div>
+				<p class="cert-desc"><?php esc_html_e( 'Geregistreerde SKJ-jeugdprofessional in huis. Ook aangesloten bij Coöperatie Boer & Zorg (CBZ) en zorgvuldig volgens de AVG.', 'samen-omhoog' ); ?></p>
+			</div>
+		</div>
+
+		<div class="partner-strip-wrap">
+			<span class="partners-label"><?php esc_html_e( 'Erkend door & in samenwerking met', 'samen-omhoog' ); ?></span>
+			<div class="partner-logos">
+				<?php
+				echo samen_omhoog_partner_logo( 'iso9001.png', 'ISO 9001 — TÜV NORD' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped in helper.
+				echo samen_omhoog_partner_logo( 'sbb.png', 'SBB Erkend Leerbedrijf' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				echo samen_omhoog_partner_logo( 'skj.png', 'SKJ Kwaliteitsregister Jeugd' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				echo samen_omhoog_partner_logo( 'rotary.png', 'Rotary Zwolle – IJsselland' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				?>
 			</div>
 		</div>
 	</div>

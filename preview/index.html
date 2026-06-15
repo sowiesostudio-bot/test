@@ -732,6 +732,9 @@ a { color: inherit; }
 .partner-logos { display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
 .partner-logos img { height:48px; width:auto; object-fit:contain; }
 .partner-wordmark { display:inline-flex; align-items:center; height:48px; padding:0 18px; border:1px solid var(--border); border-radius:12px; background:#fff; font-weight:800; color:var(--forest); font-size:15px; letter-spacing:.01em; }
+.partner-strip-wrap { margin-top:48px; padding-top:40px; border-top:1px solid var(--border); display:flex; flex-direction:column; align-items:center; gap:22px; text-align:center; }
+.partner-strip-wrap .partner-logos { justify-content:center; gap:24px; }
+.partner-strip-wrap .partner-logos img { height:60px; background:#fff; border-radius:12px; padding:8px; border:1px solid var(--border); }
 
 /* RESULTATEN */
 .results { background: var(--forest); }
@@ -1081,20 +1084,26 @@ a { color: inherit; }
 		<h2 class="section-title">Gecertificeerd en <em>aanspreekbaar.</em></h2>
 		<div class="certs-grid">
 			<div class="cert-card reveal magnetic-card">
-				<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M13 2l3 3 4-1 1 4 3 3-3 3 1 4-4 1-3 3-3-3-4 1-1-4-3-3 3-3-1-4 4 1z"/><path d="M9 13l3 3 5-6"/></svg></div>
-				<div class="cert-title">ISO 9001 Gecertificeerd</div>
-				<p class="cert-desc">Onze organisatie voldoet aan de internationale norm voor kwaliteitsmanagement — consistente, kwalitatieve dienstverlening.</p>
+													<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M13 2l3 3 4-1 1 4 3 3-3 3 1 4-4 1-3 3-3-3-4 1-1-4-3-3 3-3-1-4 4 1z"/><path d="M9 13l3 3 5-6"/></svg></div>
+								<div class="cert-title">ISO 9001 Gecertificeerd</div>
+				<p class="cert-desc">Onze organisatie voldoet aan de internationale norm voor kwaliteitsmanagement (TÜV NORD) — consistente, kwalitatieve dienstverlening.</p>
 			</div>
 			<div class="cert-card reveal magnetic-card">
-				<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><circle cx="13" cy="13" r="10"/><path d="M8 13l3 3 6-7"/></svg></div>
-				<div class="cert-title">Coöperatie Boer & Zorg (CBZ)</div>
-				<p class="cert-desc">Als gecontracteerd zorgaanbieder via CBZ, met bijbehorende klachtenregeling, algemene voorwaarden en vertrouwenspersoon.</p>
+													<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M13 2L3 6v6c0 6 4 9 10 12 6-3 10-6 10-12V6z"/><path d="M9 13l3 3 5-6"/></svg></div>
+								<div class="cert-title">SBB Erkend Leerbedrijf</div>
+				<p class="cert-desc">Erkend door SBB voor het bieden van kwalitatieve stageplekken en leerwerktrajecten — wij leiden vakmensen op.</p>
 			</div>
 			<div class="cert-card reveal magnetic-card">
-				<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M13 2L3 6v6c0 6 4 9 10 12 6-3 10-6 10-12V6z"/><path d="M9 13l3 3 5-6"/></svg></div>
-				<div class="cert-title">SKJ & AVG</div>
-				<p class="cert-desc">Geregistreerde SKJ-jeugdprofessional in huis en zorgvuldige omgang met persoonsgegevens volgens de AVG.</p>
+													<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><circle cx="13" cy="13" r="10"/><path d="M8 13l3 3 6-7"/></svg></div>
+								<div class="cert-title">SKJ Kwaliteitsregister Jeugd</div>
+				<p class="cert-desc">Geregistreerde SKJ-jeugdprofessional in huis. Ook aangesloten bij Coöperatie Boer & Zorg (CBZ) en zorgvuldig volgens de AVG.</p>
 			</div>
+		</div>
+
+		<div class="partner-strip-wrap">
+			<span class="partners-label">Erkend door & in samenwerking met</span>
+			<div class="partner-logos">
+				<span class="partner-wordmark">ISO 9001 — TÜV NORD</span><span class="partner-wordmark">SBB Erkend Leerbedrijf</span><span class="partner-wordmark">SKJ Kwaliteitsregister Jeugd</span><span class="partner-wordmark">Rotary Zwolle – IJsselland</span>			</div>
 		</div>
 	</div>
 </section>

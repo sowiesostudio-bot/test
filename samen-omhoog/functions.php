@@ -187,6 +187,20 @@ add_action( 'admin_post_nopriv_samen_omhoog_contact', 'samen_omhoog_handle_conta
 add_action( 'admin_post_samen_omhoog_contact', 'samen_omhoog_handle_contact' );
 
 /**
+ * Return the URL of a logo in /assets/img/partners/ if the file exists, else ''.
+ *
+ * @param string $file Filename (e.g. 'iso9001.png').
+ * @return string URL or empty string.
+ */
+function samen_omhoog_logo_src( $file ) {
+	$path = get_template_directory() . '/assets/img/partners/' . $file;
+	if ( file_exists( $path ) ) {
+		return get_template_directory_uri() . '/assets/img/partners/' . $file;
+	}
+	return '';
+}
+
+/**
  * Render a partner logo.
  *
  * Shows the real logo image when it exists in /assets/img/partners/,

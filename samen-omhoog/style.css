@@ -736,6 +736,9 @@ a { color: inherit; }
 .partner-logos { display:flex; align-items:center; gap:18px; flex-wrap:wrap; }
 .partner-logos img { height:48px; width:auto; object-fit:contain; }
 .partner-wordmark { display:inline-flex; align-items:center; height:48px; padding:0 18px; border:1px solid var(--border); border-radius:12px; background:#fff; font-weight:800; color:var(--forest); font-size:15px; letter-spacing:.01em; }
+.partner-strip-wrap { margin-top:48px; padding-top:40px; border-top:1px solid var(--border); display:flex; flex-direction:column; align-items:center; gap:22px; text-align:center; }
+.partner-strip-wrap .partner-logos { justify-content:center; gap:24px; }
+.partner-strip-wrap .partner-logos img { height:60px; background:#fff; border-radius:12px; padding:8px; border:1px solid var(--border); }
 
 /* RESULTATEN */
 .results { background: var(--forest); }
