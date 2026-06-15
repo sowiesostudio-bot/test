@@ -34,6 +34,17 @@ function home_url( $p = '' ) { return '#home'; }
 function admin_url( $p = '' ) { return '#'; }
 function has_nav_menu( $l ) { return false; }
 function wp_nav_menu( $a ) {}
+function get_template_directory() { global $theme; return $theme; }
+function get_template_directory_uri() { return '../samen-omhoog'; }
+
+function samen_omhoog_partner_logo( $file, $label ) {
+	$path = get_template_directory() . '/assets/img/partners/' . $file;
+	$uri  = get_template_directory_uri() . '/assets/img/partners/' . $file;
+	if ( file_exists( $path ) ) {
+		return '<img src="' . esc_url( $uri ) . '" alt="' . esc_attr( $label ) . '" loading="lazy">';
+	}
+	return '<span class="partner-wordmark">' . esc_html( $label ) . '</span>';
+}
 function wp_nonce_field() { echo '<input type="hidden" name="_wpnonce" value="preview">'; }
 function sanitize_key( $k ) { return preg_replace( '/[^a-z0-9_]/', '', strtolower( (string) $k ) ); }
 function wp_unslash( $v ) { return $v; }

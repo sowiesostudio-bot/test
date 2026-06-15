@@ -187,6 +187,25 @@ add_action( 'admin_post_nopriv_samen_omhoog_contact', 'samen_omhoog_handle_conta
 add_action( 'admin_post_samen_omhoog_contact', 'samen_omhoog_handle_contact' );
 
 /**
+ * Render a partner logo.
+ *
+ * Shows the real logo image when it exists in /assets/img/partners/,
+ * otherwise a clean text wordmark as a fallback (no fake logo).
+ *
+ * @param string $file  Filename in assets/img/partners/ (e.g. 'landstede.png').
+ * @param string $label Partner name (alt text / wordmark text).
+ * @return string
+ */
+function samen_omhoog_partner_logo( $file, $label ) {
+	$path = get_template_directory() . '/assets/img/partners/' . $file;
+	$uri  = get_template_directory_uri() . '/assets/img/partners/' . $file;
+	if ( file_exists( $path ) ) {
+		return '<img src="' . esc_url( $uri ) . '" alt="' . esc_attr( $label ) . '" loading="lazy">';
+	}
+	return '<span class="partner-wordmark">' . esc_html( $label ) . '</span>';
+}
+
+/**
  * Fallback primary menu when the client has not assigned one yet.
  */
 function samen_omhoog_default_menu() {

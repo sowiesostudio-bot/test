@@ -45,13 +45,13 @@ $wa_url      = 'https://wa.me/' . $so_whatsapp;
 			</div>
 
 			<div class="photo-tile tile-small tile-a reveal">
-				<div class="tile-icon">✦</div>
+				<div class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/></svg></div>
 				<strong><?php esc_html_e( 'Inloop', 'samen-omhoog' ); ?></strong>
 				<span><?php esc_html_e( 'Een plek waar je erbij hoort', 'samen-omhoog' ); ?></span>
 			</div>
 
 			<div class="photo-tile tile-small tile-b reveal">
-				<div class="tile-icon">↗</div>
+				<div class="tile-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M9 7h8v8"/></svg></div>
 				<strong><?php esc_html_e( 'Leren door te doen', 'samen-omhoog' ); ?></strong>
 				<span><?php esc_html_e( 'Echte opdrachten in de werkplaats', 'samen-omhoog' ); ?></span>
 			</div>
@@ -155,11 +155,11 @@ $wa_url      = 'https://wa.me/' . $so_whatsapp;
 			<p class="section-subtitle"><?php esc_html_e( 'De werkplaatsen zijn het hart van onze aanpak — geen doel, maar een middel om jongeren te activeren en te laten ontdekken waar hun talent ligt.', 'samen-omhoog' ); ?></p>
 		</div>
 		<div class="work-grid">
-			<div class="work-card reveal magnetic-card"><span class="work-icon">🎬</span><strong><?php esc_html_e( 'Multimedia & podcast', 'samen-omhoog' ); ?></strong></div>
-			<div class="work-card reveal magnetic-card"><span class="work-icon">🔨</span><strong><?php esc_html_e( 'Hout & metaal', 'samen-omhoog' ); ?></strong></div>
-			<div class="work-card reveal magnetic-card"><span class="work-icon">✂️</span><strong><?php esc_html_e( 'Kapsalon', 'samen-omhoog' ); ?></strong></div>
-			<div class="work-card reveal magnetic-card"><span class="work-icon">🚲</span><strong><?php esc_html_e( '(Fat)bike-reparatie', 'samen-omhoog' ); ?></strong></div>
-			<div class="work-card reveal magnetic-card"><span class="work-icon">🛋️</span><strong><?php esc_html_e( 'Huiskamer & leerplek', 'samen-omhoog' ); ?></strong></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v4M8 21h8"/></svg></span><strong><?php esc_html_e( 'Multimedia & podcast', 'samen-omhoog' ); ?></strong></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6-2.5 2.5-6-6z"/><path d="M12 6L3.5 14.5l4 4L16 10"/></svg></span><strong><?php esc_html_e( 'Hout & metaal', 'samen-omhoog' ); ?></strong></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.5 15.5M14.5 14.5L20 20M8.5 8.5L10.5 10.5"/></svg></span><strong><?php esc_html_e( 'Kapsalon', 'samen-omhoog' ); ?></strong></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3.5"/><circle cx="18" cy="17" r="3.5"/><path d="M6 17l4-8h5l3 8M10 9l-1-3H7"/></svg></span><strong><?php esc_html_e( '(Fat)bike-reparatie', 'samen-omhoog' ); ?></strong></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v9h14v-9"/><path d="M9 19v-5h6v5"/></svg></span><strong><?php esc_html_e( 'Huiskamer & leerplek', 'samen-omhoog' ); ?></strong></div>
 		</div>
 	</div>
 </section>
@@ -193,7 +193,6 @@ $wa_url      = 'https://wa.me/' . $so_whatsapp;
 	<div class="programs-grid">
 		<div class="program-card featured reveal magnetic-card">
 			<div>
-				<div class="program-number">★</div>
 				<div class="program-label"><?php esc_html_e( 'Onderwijs & stage onder één dak', 'samen-omhoog' ); ?></div>
 				<h3 class="program-title"><?php esc_html_e( 'Klas Entree — van leren tot diploma', 'samen-omhoog' ); ?></h3>
 				<p class="program-desc"><?php esc_html_e( 'Onderwijs én stage op één plek, samen met StartCollege Landstede, Start.Deltion en de gemeente Zwolle. In een kleine groep toewerken naar een Entree-diploma, mbo-verklaring of praktijkverklaring. Voor anderstalige jongeren vanaf 16 jaar — start schooljaar 2026–2027.', 'samen-omhoog' ); ?></p>
@@ -209,6 +208,17 @@ $wa_url      = 'https://wa.me/' . $so_whatsapp;
 					<li><?php esc_html_e( 'Doorstroom naar werk of vervolgopleiding', 'samen-omhoog' ); ?></li>
 				</ul>
 			</div>
+		</div>
+	</div>
+
+	<div class="partners-line">
+		<span class="partners-label"><?php esc_html_e( 'Klas Entree in samenwerking met', 'samen-omhoog' ); ?></span>
+		<div class="partner-logos">
+			<?php
+			echo samen_omhoog_partner_logo( 'landstede.png', 'StartCollege Landstede' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped -- escaped in helper.
+			echo samen_omhoog_partner_logo( 'deltion.png', 'Start.Deltion' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			echo samen_omhoog_partner_logo( 'zwolle.png', 'Gemeente Zwolle' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+			?>
 		</div>
 	</div>
 
