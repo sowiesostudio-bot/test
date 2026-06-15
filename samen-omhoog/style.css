@@ -121,12 +121,13 @@ a { color: inherit; }
 }
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .nav-logo-mark {
-  width: 88px; height: 34px;
+  width: 150px; height: 40px;
   background: transparent;
   border-radius: 0;
   display: flex; align-items: center; justify-content: flex-start;
   overflow: hidden;
 }
+.footer-logo img { height: 40px; width: auto; background: #fff; border-radius: 10px; padding: 7px 11px; display: inline-block; }
 .nav-logo-mark img { width: 100%; height: 100%; object-fit: contain; object-position: left center; }
 .nav-logo-mark svg { width: 20px; height: 20px; }
 .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--charcoal); }
@@ -712,10 +713,13 @@ a { color: inherit; }
 /* WERKPLAATSEN */
 .workshops { background: var(--cream); }
 .work-grid { display:grid; grid-template-columns: repeat(5,1fr); gap:14px; margin-top:48px; max-width:1200px; }
-.work-card { background:var(--forest); color:#fff; border-radius:20px; padding:26px 18px; text-align:center; transition:transform .2s ease, box-shadow .2s ease; }
+.work-card { background:var(--forest); color:#fff; border-radius:20px; padding:26px 20px; text-align:center; transition:transform .2s ease, box-shadow .2s ease; }
 .work-card:hover { transform:translateY(-3px); box-shadow:0 16px 44px rgba(0,0,0,.12); }
 .work-icon { margin-bottom:14px; display:flex; align-items:center; justify-content:center; height:36px; }
 .work-icon svg { width:32px; height:32px; }
+.work-card strong { font-size:15px; }
+.work-desc { display:block; margin-top:10px; font-size:12px; line-height:1.55; color:rgba(255,255,255,.72); }
+.work-note { max-width:780px; margin:30px auto 0; text-align:center; color:var(--text-muted); font-size:14px; line-height:1.7; font-style:italic; }
 .tile-icon svg { width:22px; height:22px; }
 .work-card strong { display:block; font-size:14px; line-height:1.3; }
 

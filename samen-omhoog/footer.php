@@ -17,7 +17,12 @@ $so_agb      = samen_omhoog_opt( 'agb', '98108329' );
 <footer class="site-footer">
 	<div class="footer-top">
 		<div class="footer-brand">
-			<div class="footer-logo">Samen<span>Omhoog</span></div>
+			<?php $so_footer_logo = samen_omhoog_img_src( 'logo.png' ); ?>
+			<?php if ( $so_footer_logo ) : ?>
+				<div class="footer-logo"><img src="<?php echo esc_url( $so_footer_logo ); ?>" alt="<?php esc_attr_e( 'Samen Omhoog', 'samen-omhoog' ); ?>"></div>
+			<?php else : ?>
+				<div class="footer-logo">Samen<span>Omhoog</span></div>
+			<?php endif; ?>
 			<p class="footer-desc"><?php esc_html_e( 'Een ontwikkelplek voor jongeren in Zwolle — de brug tussen thuis, school, straat en werk. Relatie + Ontwikkeling + Werkervaring = Perspectief.', 'samen-omhoog' ); ?></p>
 			<div class="footer-contact-chips">
 				<span class="footer-chip"><?php echo esc_html( $so_email ); ?></span>

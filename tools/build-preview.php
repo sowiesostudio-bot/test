@@ -37,9 +37,12 @@ function wp_nav_menu( $a ) {}
 function get_template_directory() { global $theme; return $theme; }
 function get_template_directory_uri() { return '../samen-omhoog'; }
 
+function samen_omhoog_img_src( $rel ) {
+	$path = get_template_directory() . '/assets/img/' . $rel;
+	return file_exists( $path ) ? get_template_directory_uri() . '/assets/img/' . $rel : '';
+}
 function samen_omhoog_logo_src( $file ) {
-	$path = get_template_directory() . '/assets/img/partners/' . $file;
-	return file_exists( $path ) ? get_template_directory_uri() . '/assets/img/partners/' . $file : '';
+	return samen_omhoog_img_src( 'partners/' . $file );
 }
 
 function samen_omhoog_partner_logo( $file, $label ) {

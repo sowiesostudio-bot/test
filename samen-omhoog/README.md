@@ -21,7 +21,10 @@ zip -r samen-omhoog.zip samen-omhoog -x "*.DS_Store"
 
 ## Na installatie instellen
 
-- **Logo**: Weergave → Aanpassen → Site-identiteit → Logo (vervangt de tekst "SamenOmhoog" in de balk).
+- **Logo**: twee opties —
+  1. Weergave → Aanpassen → Site-identiteit → Logo (aanbevolen, via WordPress), of
+  2. plaats het bestand `assets/img/logo.png` in het thema; dit verschijnt automatisch in de
+     navigatie (en op een witte chip in de footer) als er geen WordPress-logo is ingesteld.
 - **Contactgegevens**: Weergave → Aanpassen → **Samen Omhoog — Contactgegevens**. Hier stel je in:
   WhatsApp-nummer, telefoon, e-mail, adres, openingstijden en de ontvanger van het contactformulier.
 - **Menu**: Weergave → Menu's → wijs een menu toe aan "Hoofdmenu" en/of "Footer menu".

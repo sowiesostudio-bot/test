@@ -31,6 +31,8 @@
 	<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="nav-logo">
 		<?php if ( has_custom_logo() ) : ?>
 			<div class="nav-logo-mark"><?php the_custom_logo(); ?></div>
+		<?php elseif ( $so_nav_logo = samen_omhoog_img_src( 'logo.png' ) ) : ?>
+			<div class="nav-logo-mark"><img src="<?php echo esc_url( $so_nav_logo ); ?>" alt="<?php esc_attr_e( 'Samen Omhoog', 'samen-omhoog' ); ?>"></div>
 		<?php else : ?>
 			<span class="nav-logo-text">Samen<span>Omhoog</span></span>
 		<?php endif; ?>

@@ -117,12 +117,13 @@ a { color: inherit; }
 }
 .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
 .nav-logo-mark {
-  width: 88px; height: 34px;
+  width: 150px; height: 40px;
   background: transparent;
   border-radius: 0;
   display: flex; align-items: center; justify-content: flex-start;
   overflow: hidden;
 }
+.footer-logo img { height: 40px; width: auto; background: #fff; border-radius: 10px; padding: 7px 11px; display: inline-block; }
 .nav-logo-mark img { width: 100%; height: 100%; object-fit: contain; object-position: left center; }
 .nav-logo-mark svg { width: 20px; height: 20px; }
 .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--charcoal); }
@@ -708,10 +709,13 @@ a { color: inherit; }
 /* WERKPLAATSEN */
 .workshops { background: var(--cream); }
 .work-grid { display:grid; grid-template-columns: repeat(5,1fr); gap:14px; margin-top:48px; max-width:1200px; }
-.work-card { background:var(--forest); color:#fff; border-radius:20px; padding:26px 18px; text-align:center; transition:transform .2s ease, box-shadow .2s ease; }
+.work-card { background:var(--forest); color:#fff; border-radius:20px; padding:26px 20px; text-align:center; transition:transform .2s ease, box-shadow .2s ease; }
 .work-card:hover { transform:translateY(-3px); box-shadow:0 16px 44px rgba(0,0,0,.12); }
 .work-icon { margin-bottom:14px; display:flex; align-items:center; justify-content:center; height:36px; }
 .work-icon svg { width:32px; height:32px; }
+.work-card strong { font-size:15px; }
+.work-desc { display:block; margin-top:10px; font-size:12px; line-height:1.55; color:rgba(255,255,255,.72); }
+.work-note { max-width:780px; margin:30px auto 0; text-align:center; color:var(--text-muted); font-size:14px; line-height:1.7; font-style:italic; }
 .tile-icon svg { width:22px; height:22px; }
 .work-card strong { display:block; font-size:14px; line-height:1.3; }
 
@@ -943,12 +947,13 @@ a { color: inherit; }
 			<p class="section-subtitle">De werkplaatsen zijn het hart van onze aanpak — geen doel, maar een middel om jongeren te activeren en te laten ontdekken waar hun talent ligt.</p>
 		</div>
 		<div class="work-grid">
-			<div class="work-card reveal magnetic-card"><span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v4M8 21h8"/></svg></span><strong>Multimedia & podcast</strong></div>
-			<div class="work-card reveal magnetic-card"><span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6-2.5 2.5-6-6z"/><path d="M12 6L3.5 14.5l4 4L16 10"/></svg></span><strong>Hout & metaal</strong></div>
-			<div class="work-card reveal magnetic-card"><span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.5 15.5M14.5 14.5L20 20M8.5 8.5L10.5 10.5"/></svg></span><strong>Kapsalon</strong></div>
-			<div class="work-card reveal magnetic-card"><span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3.5"/><circle cx="18" cy="17" r="3.5"/><path d="M6 17l4-8h5l3 8M10 9l-1-3H7"/></svg></span><strong>(Fat)bike-reparatie</strong></div>
-			<div class="work-card reveal magnetic-card"><span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v9h14v-9"/><path d="M9 19v-5h6v5"/></svg></span><strong>Huiskamer & leerplek</strong></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2" width="6" height="11" rx="3"/><path d="M5 10a7 7 0 0 0 14 0"/><path d="M12 17v4M8 21h8"/></svg></span><strong>Multimedia & podcast</strong><span class="work-desc">Video, fotografie, podcast en social. Met camera, microfoon en montagesoftware vertellen jongeren hun eigen verhaal en leren ze vertellen, plannen en samenwerken.</span></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 3.5l6 6-2.5 2.5-6-6z"/><path d="M12 6L3.5 14.5l4 4L16 10"/></svg></span><strong>Hout & metaal</strong><span class="work-desc">Een echte werkplaats met handgereedschap en machines. Van ontwerp tot eindproduct: meubels maken, zagen, schuren en lassen — leren door echte opdrachten.</span></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M20 4L8.5 15.5M14.5 14.5L20 20M8.5 8.5L10.5 10.5"/></svg></span><strong>Kapsalon</strong><span class="work-desc">Knippen, verzorgen en klantcontact in een echte salonopstelling. Jongeren bouwen vakvaardigheden én sociale vaardigheden op, met aandacht en begeleiding.</span></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3.5"/><circle cx="18" cy="17" r="3.5"/><path d="M6 17l4-8h5l3 8M10 9l-1-3H7"/></svg></span><strong>(Fat)bike-reparatie</strong><span class="work-desc">Fietsen en fatbikes nakijken, onderhouden en repareren met het juiste gereedschap. Techniek, probleemoplossen en doorzetten — en een tastbaar resultaat.</span></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l9-7 9 7"/><path d="M5 10v9h14v-9"/><path d="M9 19v-5h6v5"/></svg></span><strong>Huiskamer & leerplek</strong><span class="work-desc">Een rustige, veilige plek om te leren, huiswerk te maken, taal te oefenen en even tot rust te komen. Het hart van de inloop — hier begint vaak het contact.</span></div>
 		</div>
+		<p class="work-note">De werkplaatsen zijn geen doel op zich, maar een middel: door echt aan de slag te gaan ontdekken jongeren hun talent, krijgen ze ritme en bouwen ze succeservaringen op.</p>
 	</div>
 </section>
 
@@ -1189,8 +1194,8 @@ a { color: inherit; }
 <footer class="site-footer">
 	<div class="footer-top">
 		<div class="footer-brand">
-			<div class="footer-logo">Samen<span>Omhoog</span></div>
-			<p class="footer-desc">Een ontwikkelplek voor jongeren in Zwolle — de brug tussen thuis, school, straat en werk. Relatie + Ontwikkeling + Werkervaring = Perspectief.</p>
+										<div class="footer-logo">Samen<span>Omhoog</span></div>
+						<p class="footer-desc">Een ontwikkelplek voor jongeren in Zwolle — de brug tussen thuis, school, straat en werk. Relatie + Ontwikkeling + Werkervaring = Perspectief.</p>
 			<div class="footer-contact-chips">
 				<span class="footer-chip">info@samenomhoog.nl</span>
 				<span class="footer-chip">06-28859553</span>
