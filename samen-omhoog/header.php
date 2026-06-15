@@ -17,8 +17,8 @@
 <?php wp_body_open(); ?>
 
 <div class="topbar">
-	<?php esc_html_e( 'Persoonlijke begeleiding, inloop en ontwikkeling in Zwolle.', 'samen-omhoog' ); ?>
-	<a href="<?php echo esc_url( 'https://wa.me/' . samen_omhoog_opt( 'whatsapp', '31684613589' ) ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'WhatsApp ons', 'samen-omhoog' ); ?></a>
+	<?php esc_html_e( 'Dé ontwikkelplek voor jongeren in Zwolle — inloop, werkplaatsen en begeleiding.', 'samen-omhoog' ); ?>
+	<a href="<?php echo esc_url( 'https://wa.me/' . samen_omhoog_opt( 'whatsapp', '31628859553' ) ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'WhatsApp ons', 'samen-omhoog' ); ?></a>
 </div>
 
 <div class="access-tools" aria-hidden="true">
@@ -52,5 +52,5 @@
 	}
 	?>
 
-	<a href="<?php echo esc_url( 'https://wa.me/' . samen_omhoog_opt( 'whatsapp', '31684613589' ) ); ?>" target="_blank" rel="noopener" class="nav-cta"><?php esc_html_e( 'WhatsApp ons →', 'samen-omhoog' ); ?></a>
+	<a href="<?php echo esc_url( 'https://wa.me/' . samen_omhoog_opt( 'whatsapp', '31628859553' ) ); ?>" target="_blank" rel="noopener" class="nav-cta"><?php esc_html_e( 'WhatsApp ons →', 'samen-omhoog' ); ?></a>
 </nav>

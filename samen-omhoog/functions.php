@@ -103,13 +103,16 @@ function samen_omhoog_customize_register( $wp_customize ) {
 	);
 
 	$fields = array(
-		'whatsapp'     => array( __( 'WhatsApp-nummer (internationaal, bijv. 31684613589)', 'samen-omhoog' ), '31684613589' ),
-		'phone'        => array( __( 'Telefoonnummer (weergave)', 'samen-omhoog' ), '06 846 13 589' ),
-		'email'        => array( __( 'E-mailadres', 'samen-omhoog' ), 'info@samenomhoog.nl' ),
-		'address'      => array( __( 'Adres', 'samen-omhoog' ), 'Floresstraat 7, 8022 AD Zwolle' ),
-		'hours_week'   => array( __( 'Openingstijden ma–do', 'samen-omhoog' ), '09:00–17:00' ),
-		'hours_friday' => array( __( 'Openingstijden vrijdag', 'samen-omhoog' ), '09:00–15:00' ),
-		'form_to'      => array( __( 'Ontvanger contactformulier (e-mail)', 'samen-omhoog' ), get_option( 'admin_email' ) ),
+		'whatsapp'      => array( __( 'WhatsApp-nummer (internationaal, bijv. 31628859553)', 'samen-omhoog' ), '31628859553' ),
+		'phone'         => array( __( 'Telefoonnummer (weergave)', 'samen-omhoog' ), '06-28859553' ),
+		'email'         => array( __( 'E-mailadres', 'samen-omhoog' ), 'info@samenomhoog.nl' ),
+		'address'       => array( __( 'Adres', 'samen-omhoog' ), 'Floresstraat 7, 8022 AD Zwolle' ),
+		'hours_week'    => array( __( 'Openingstijden ma–vr', 'samen-omhoog' ), '09:00–17:00' ),
+		'hours_evening' => array( __( 'Avondinloop (di & do)', 'samen-omhoog' ), '19:00–23:00' ),
+		'kvk'           => array( __( 'KvK-nummer', 'samen-omhoog' ), '89792807' ),
+		'rsin'          => array( __( 'RSIN', 'samen-omhoog' ), '865111339' ),
+		'agb'           => array( __( 'AGB-code', 'samen-omhoog' ), '98108329' ),
+		'form_to'       => array( __( 'Ontvanger contactformulier (e-mail)', 'samen-omhoog' ), get_option( 'admin_email' ) ),
 	);
 
 	foreach ( $fields as $key => $data ) {
@@ -188,11 +191,11 @@ add_action( 'admin_post_samen_omhoog_contact', 'samen_omhoog_handle_contact' );
  */
 function samen_omhoog_default_menu() {
 	$items = array(
-		'#hulp'        => __( 'Hulp nodig?', 'samen-omhoog' ),
-		'#programmas'  => __( 'Aanbod', 'samen-omhoog' ),
+		'#aanbod'      => __( 'Wat we bieden', 'samen-omhoog' ),
+		'#werkplaats'  => __( 'Werkplaatsen', 'samen-omhoog' ),
 		'#doelgroepen' => __( 'Voor wie', 'samen-omhoog' ),
-		'#missie'      => __( 'Over ons', 'samen-omhoog' ),
-		'#documenten'  => __( 'Documenten', 'samen-omhoog' ),
+		'#team'        => __( 'Wie wij zijn', 'samen-omhoog' ),
+		'#contact'     => __( 'Contact', 'samen-omhoog' ),
 	);
 	echo '<ul id="primary-menu" class="nav-links">';
 	foreach ( $items as $href => $label ) {

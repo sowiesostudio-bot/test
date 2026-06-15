@@ -5,17 +5,20 @@
  * @package SamenOmhoog
  */
 
-$so_whatsapp = samen_omhoog_opt( 'whatsapp', '31684613589' );
+$so_whatsapp = samen_omhoog_opt( 'whatsapp', '31628859553' );
 $so_email    = samen_omhoog_opt( 'email', 'info@samenomhoog.nl' );
-$so_phone    = samen_omhoog_opt( 'phone', '06 846 13 589' );
+$so_phone    = samen_omhoog_opt( 'phone', '06-28859553' );
 $so_address  = samen_omhoog_opt( 'address', 'Floresstraat 7, 8022 AD Zwolle' );
+$so_kvk      = samen_omhoog_opt( 'kvk', '89792807' );
+$so_rsin     = samen_omhoog_opt( 'rsin', '865111339' );
+$so_agb      = samen_omhoog_opt( 'agb', '98108329' );
 ?>
 
 <footer class="site-footer">
 	<div class="footer-top">
 		<div class="footer-brand">
 			<div class="footer-logo">Samen<span>Omhoog</span></div>
-			<p class="footer-desc"><?php esc_html_e( 'Een veilige, creatieve ontwikkelplek voor jongeren en volwassenen in Zwolle. School of Life — leren door te doen.', 'samen-omhoog' ); ?></p>
+			<p class="footer-desc"><?php esc_html_e( 'Een ontwikkelplek voor jongeren in Zwolle — de brug tussen thuis, school, straat en werk. Relatie + Ontwikkeling + Werkervaring = Perspectief.', 'samen-omhoog' ); ?></p>
 			<div class="footer-contact-chips">
 				<span class="footer-chip"><?php echo esc_html( $so_email ); ?></span>
 				<span class="footer-chip"><?php echo esc_html( $so_phone ); ?></span>
@@ -23,7 +26,7 @@ $so_address  = samen_omhoog_opt( 'address', 'Floresstraat 7, 8022 AD Zwolle' );
 			</div>
 		</div>
 		<div>
-			<div class="footer-col-title"><?php esc_html_e( 'Navigatie', 'samen-omhoog' ); ?></div>
+			<div class="footer-col-title"><?php esc_html_e( "Pagina's", 'samen-omhoog' ); ?></div>
 			<?php
 			if ( has_nav_menu( 'footer' ) ) {
 				wp_nav_menu(
@@ -38,37 +41,39 @@ $so_address  = samen_omhoog_opt( 'address', 'Floresstraat 7, 8022 AD Zwolle' );
 				?>
 				<ul class="footer-links">
 					<li><a href="#home"><?php esc_html_e( 'Home', 'samen-omhoog' ); ?></a></li>
-					<li><a href="#missie"><?php esc_html_e( 'Over Ons', 'samen-omhoog' ); ?></a></li>
-					<li><a href="#programmas"><?php esc_html_e( 'Aanbod', 'samen-omhoog' ); ?></a></li>
+					<li><a href="#aanbod"><?php esc_html_e( 'Wat we bieden', 'samen-omhoog' ); ?></a></li>
+					<li><a href="#team"><?php esc_html_e( 'Wie wij zijn', 'samen-omhoog' ); ?></a></li>
 					<li><a href="#contact"><?php esc_html_e( 'Contact', 'samen-omhoog' ); ?></a></li>
-					<li><a href="#documenten"><?php esc_html_e( 'Documenten', 'samen-omhoog' ); ?></a></li>
 				</ul>
 				<?php
 			}
 			?>
 		</div>
 		<div>
-			<div class="footer-col-title"><?php esc_html_e( "Programma's", 'samen-omhoog' ); ?></div>
+			<div class="footer-col-title"><?php esc_html_e( 'Wat we bieden', 'samen-omhoog' ); ?></div>
 			<ul class="footer-links">
-				<li><a href="#programmas"><?php esc_html_e( "Alle programma's", 'samen-omhoog' ); ?></a></li>
-				<li><a href="#programmas"><?php esc_html_e( 'Ontwikkeling & Werkervaring', 'samen-omhoog' ); ?></a></li>
-				<li><a href="#programmas"><?php esc_html_e( 'Ontmoeting & Welzijn', 'samen-omhoog' ); ?></a></li>
-				<li><a href="#programmas"><?php esc_html_e( 'Zorg & Begeleiding', 'samen-omhoog' ); ?></a></li>
-				<li><a href="#programmas"><?php esc_html_e( 'Ondernemerswerkplaats', 'samen-omhoog' ); ?></a></li>
+				<li><a href="#aanbod"><?php esc_html_e( 'Inloop', 'samen-omhoog' ); ?></a></li>
+				<li><a href="#aanbod"><?php esc_html_e( 'Leerwerk & stage', 'samen-omhoog' ); ?></a></li>
+				<li><a href="#aanbod"><?php esc_html_e( 'Klas Entree', 'samen-omhoog' ); ?></a></li>
+				<li><a href="#aanbod"><?php esc_html_e( 'Zorg & participatie', 'samen-omhoog' ); ?></a></li>
+				<li><a href="#aanbod"><?php esc_html_e( 'Jobcoaching', 'samen-omhoog' ); ?></a></li>
 			</ul>
 		</div>
 		<div>
 			<div class="footer-col-title"><?php esc_html_e( 'Openingstijden', 'samen-omhoog' ); ?></div>
 			<div class="footer-hours">
-				<div class="footer-hour"><span class="day"><?php esc_html_e( 'Maandag – Donderdag', 'samen-omhoog' ); ?></span><span class="time"><?php echo esc_html( samen_omhoog_opt( 'hours_week', '09:00–17:00' ) ); ?></span></div>
-				<div class="footer-hour"><span class="day"><?php esc_html_e( 'Vrijdag', 'samen-omhoog' ); ?></span><span class="time"><?php echo esc_html( samen_omhoog_opt( 'hours_friday', '09:00–15:00' ) ); ?></span></div>
-				<div class="footer-hour"><span class="day"><?php esc_html_e( 'Za & Zo', 'samen-omhoog' ); ?></span><span class="time"><?php esc_html_e( 'Gesloten', 'samen-omhoog' ); ?></span></div>
+				<div class="footer-hour"><span class="day"><?php esc_html_e( 'Maandag – Vrijdag', 'samen-omhoog' ); ?></span><span class="time"><?php echo esc_html( samen_omhoog_opt( 'hours_week', '09:00–17:00' ) ); ?></span></div>
+				<div class="footer-hour"><span class="day"><?php esc_html_e( 'Avondinloop di &amp; do', 'samen-omhoog' ); ?></span><span class="time"><?php echo esc_html( samen_omhoog_opt( 'hours_evening', '19:00–23:00' ) ); ?></span></div>
+				<div class="footer-hour"><span class="day"><?php esc_html_e( 'Za &amp; Zo', 'samen-omhoog' ); ?></span><span class="time"><?php esc_html_e( 'Gesloten', 'samen-omhoog' ); ?></span></div>
 			</div>
 		</div>
 	</div>
 	<div class="footer-bottom">
-		<span>&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> <?php esc_html_e( 'Stichting Samen Omhoog · Zwolle', 'samen-omhoog' ); ?></span>
-		<span><?php echo esc_html( $so_email ); ?> · <?php echo esc_html( $so_phone ); ?></span>
+		<span>&copy; <?php echo esc_html( gmdate( 'Y' ) ); ?> <?php esc_html_e( 'Stichting Samen Omhoog · Zwolle', 'samen-omhoog' ); ?> · <?php
+			/* translators: %1$s KvK number, %2$s RSIN, %3$s AGB code. */
+			echo esc_html( sprintf( __( 'KvK %1$s · RSIN %2$s · AGB %3$s', 'samen-omhoog' ), $so_kvk, $so_rsin, $so_agb ) );
+		?></span>
+		<span><?php esc_html_e( 'ISO 9001 · Klachtenregeling · Coöperatie Boer & Zorg (CBZ) · AVG', 'samen-omhoog' ); ?></span>
 	</div>
 </footer>
 

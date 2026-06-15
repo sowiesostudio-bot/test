@@ -1,1261 +1,1256 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Stichting Samen Omhoog — School of Life · Zwolle</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Stichting Samen Omhoog — Zwolle</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
-  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-  :root {
-    --cream: #FAF7F2;
-    --warm-white: #FFFDF9;
-    --forest: #2D4A35;
-    --forest-light: #3D5E45;
-    --gold: #C8882A;
-    --gold-light: #E8A94A;
-    --charcoal: #1A1A1A;
-    --text: #2C2C2C;
-    --text-muted: #6B6B6B;
-    --border: #E8E0D4;
-    --section-gap: 120px;
-  }
-
-  html { scroll-behavior: smooth; }
-  body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--text); overflow-x: hidden; }
 
 
-  /* INSPIRATION: wellbeing organisation clarity */
-  .topbar {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 101;
-    background: var(--charcoal); color: #fff;
-    height: 34px; display:flex; align-items:center; justify-content:center;
-    font-size: 13px; font-weight: 600; letter-spacing:.01em;
-  }
-  .topbar a { color: var(--gold-light); text-decoration:none; margin-left: 8px; }
-  .access-tools {
-    position: fixed; right: 14px; top: 46%; z-index: 90;
-    display:flex; flex-direction:column; gap:8px;
-  }
-  .access-tools button {
-    background:#fff; border:1px solid var(--border); border-radius:999px;
-    padding:9px 12px; font-size:12px; color:var(--text); box-shadow:0 8px 24px rgba(0,0,0,.08);
-    cursor:pointer; font-weight:700;
-  }
-  .help-finder { background: var(--warm-white); padding: 90px 48px 70px; }
-  .help-inner { max-width:1200px; margin:0 auto; }
-  .help-panel {
-    margin-top:0; position:relative; z-index:5;
-    background:#fff; border-radius:34px; padding:34px;
-    box-shadow:0 30px 90px rgba(0,0,0,.18); border:1px solid rgba(232,224,212,.7);
-  }
-  .help-panel-head { display:flex; justify-content:space-between; gap:24px; align-items:end; margin-bottom:24px; }
-  .help-panel h2 { font-family:'Playfair Display',serif; font-size:34px; line-height:1.1; color:var(--charcoal); }
-  .help-panel p { color:var(--text-muted); line-height:1.6; max-width:520px; }
-  .help-grid { display:grid; grid-template-columns: repeat(4,1fr); gap:14px; }
-  .help-card {
-    background:var(--cream); border:1px solid var(--border); border-radius:22px; padding:22px;
-    text-decoration:none; color:var(--charcoal); transition:.2s ease; min-height:150px;
-  }
-  .help-card:hover { transform:translateY(-3px); box-shadow:0 16px 44px rgba(0,0,0,.08); border-color:rgba(200,136,42,.45); }
-  .help-icon { width:42px; height:42px; background:var(--forest); color:#fff; border-radius:14px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-weight:900; }
-  .help-card strong { display:block; font-size:16px; margin-bottom:8px; }
-  .help-card span { color:var(--text-muted); font-size:13px; line-height:1.5; display:block; }
-  .quick-contact-strip { max-width:1200px; margin:28px auto 0; display:grid; grid-template-columns: repeat(3,1fr); gap:14px; }
-  .quick-contact-item { background:var(--forest); color:#fff; border-radius:18px; padding:18px 20px; display:flex; justify-content:space-between; align-items:center; gap:18px; }
-  .quick-contact-item small { display:block; color:rgba(255,255,255,.55); text-transform:uppercase; letter-spacing:.08em; font-size:10px; font-weight:800; margin-bottom:4px; }
-  .quick-contact-item strong { font-size:15px; }
-  .quick-contact-item a { color:var(--gold-light); text-decoration:none; font-weight:800; font-size:13px; white-space:nowrap; }
-  .audience { background: var(--cream); }
-  .audience-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:.9fr 1.1fr; gap:70px; align-items:start; }
-  .audience-list { display:grid; gap:14px; }
-  .audience-row { background:#fff; border:1px solid var(--border); border-radius:22px; padding:22px 24px; display:grid; grid-template-columns:auto 1fr auto; gap:18px; align-items:center; }
-  .audience-num { width:38px; height:38px; border-radius:50%; background:var(--gold); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-weight:900; }
-  .audience-row strong { display:block; color:var(--charcoal); margin-bottom:4px; }
-  .audience-row span { color:var(--text-muted); font-size:13px; line-height:1.5; }
-  .audience-row em { color:var(--gold); font-style:normal; font-weight:900; }
-  .story-news { background:var(--warm-white); }
-  .story-news-inner { max-width:1200px; margin:0 auto; }
-  .story-grid { margin-top:48px; display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
-  .story-card { background:var(--cream); border:1px solid var(--border); border-radius:26px; padding:28px; }
-  .story-card small { color:var(--gold); text-transform:uppercase; letter-spacing:.1em; font-size:10px; font-weight:900; }
-  .story-card h3 { font-family:'Playfair Display',serif; font-size:24px; line-height:1.15; margin:12px 0; color:var(--charcoal); }
-  .story-card p { color:var(--text-muted); line-height:1.65; font-size:14px; }
-  @media (max-width:768px){
-    .topbar{font-size:11px; padding:0 10px; text-align:center;}
-    nav{top:34px;}
-    .hero{padding-top:134px;}
-    .access-tools{display:none;}
-    .help-finder{padding:60px 22px 20px;}
-    .help-panel{margin-top:0; padding:24px;}
-    .help-panel-head{display:block;}
-    .help-grid,.quick-contact-strip,.audience-inner,.story-grid{grid-template-columns:1fr;}
-    .audience-row{grid-template-columns:auto 1fr;}
-    .audience-row em{display:none;}
-  }
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-  /* NAV */
-  nav {
-    position: fixed; top: 34px; left: 0; right: 0; z-index: 100;
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 0 48px; height: 72px;
-    background: rgba(250, 247, 242, 0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid transparent;
-    transition: all 0.3s ease;
-  }
-  nav.scrolled {
-    border-bottom: 1px solid var(--border);
-    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
-  }
-  .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-  .nav-logo-mark {
-    width: 88px; height: 34px;
-    background: transparent;
-    border-radius: 0;
-    display: flex; align-items: center; justify-content: flex-start;
-    overflow: hidden;
-  }
-  .nav-logo-mark img { width: 100%; height: 100%; object-fit: contain; object-position: left center; }
-  .nav-logo-mark svg { width: 20px; height: 20px; }
-  .nav-logo-text { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--charcoal); display:none; }
-  .nav-logo-text span { color: var(--gold); }
+:root {
+  --cream: #FAF7F2;
+  --warm-white: #FFFDF9;
+  --forest: #2D4A35;
+  --forest-light: #3D5E45;
+  --gold: #C8882A;
+  --gold-light: #E8A94A;
+  --charcoal: #1A1A1A;
+  --text: #2C2C2C;
+  --text-muted: #6B6B6B;
+  --border: #E8E0D4;
+  --section-gap: 120px;
+}
 
-  .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
-  .nav-links a { font-size: 14px; font-weight: 500; color: var(--text); text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s; }
-  .nav-links a:hover { color: var(--gold); }
-  .nav-cta {
-    background: var(--gold); color: #fff; padding: 10px 24px;
-    border-radius: 100px; font-size: 13px; font-weight: 600;
-    text-decoration: none; letter-spacing: 0.03em;
-    transition: background 0.2s, transform 0.15s;
-    white-space: nowrap;
-  }
-  .nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; background: var(--warm-white); color: var(--text); overflow-x: hidden; }
 
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    background: var(--forest);
-    display: grid; grid-template-columns: 1fr 1fr;
-    align-items: center;
-    padding: 154px 48px 80px;
-    position: relative; overflow: hidden;
-  }
-  .hero::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(200,136,42,0.12) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .hero-content { position: relative; z-index: 2; max-width: 640px; }
-  .hero-badge {
-    display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
-    color: rgba(255,255,255,0.85); padding: 7px 16px; border-radius: 100px;
-    font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
-    margin-bottom: 32px;
-  }
-  .hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--gold-light); border-radius: 50%; }
-  .hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(48px, 6vw, 88px);
-    line-height: 1.05;
-    color: #fff; font-weight: 900;
-    margin-bottom: 8px;
-  }
-  .hero h1 em { color: var(--gold-light); font-style: italic; display: block; }
-  .hero-sub {
-    font-size: 18px; color: rgba(255,255,255,0.7);
-    line-height: 1.65; max-width: 480px; margin: 28px 0 44px;
-    font-weight: 300;
-  }
-  .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
-  .btn-primary {
-    background: var(--gold); color: #fff; padding: 16px 32px;
-    border-radius: 100px; font-size: 15px; font-weight: 600;
-    text-decoration: none; letter-spacing: 0.02em;
-    transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px;
-  }
-  .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,136,42,0.35); }
-  .btn-ghost {
-    background: transparent; color: rgba(255,255,255,0.9);
-    padding: 16px 32px; border-radius: 100px; font-size: 15px; font-weight: 500;
-    text-decoration: none; border: 1px solid rgba(255,255,255,0.3);
-    transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px;
-  }
-  .btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.5); }
+img { max-width: 100%; height: auto; }
+a { color: inherit; }
 
-  .hero-visual {
-    position: relative; z-index: 2;
-    display: flex; flex-direction: column; align-items: flex-end; gap: 16px;
-  }
-  .hero-stats {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; max-width: 400px;
-  }
-  .stat-card {
-    background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 20px; padding: 28px 24px;
-    backdrop-filter: blur(8px);
-  }
-  .stat-card .num {
-    font-family: 'Playfair Display', serif;
-    font-size: 42px; font-weight: 900; color: var(--gold-light);
-    line-height: 1; margin-bottom: 6px;
-  }
-  .stat-card .label { font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.4; font-weight: 500; letter-spacing: 0.02em; }
-  .hero-quote {
-    background: rgba(255,255,255,0.06);
-    border: 1px solid rgba(255,255,255,0.1);
-    border-left: 3px solid var(--gold);
-    border-radius: 0 16px 16px 0;
-    padding: 20px 24px; max-width: 400px; width: 100%;
-  }
-  .hero-quote p { font-size: 13px; color: rgba(255,255,255,0.75); font-style: italic; line-height: 1.6; }
-  .hero-quote cite { display: block; font-size: 11px; color: var(--gold-light); margin-top: 8px; font-style: normal; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
+/* INSPIRATION: wellbeing organisation clarity */
+.topbar {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 101;
+  background: var(--charcoal); color: #fff;
+  height: 34px; display:flex; align-items:center; justify-content:center;
+  font-size: 13px; font-weight: 600; letter-spacing:.01em;
+}
+.topbar a { color: var(--gold-light); text-decoration:none; margin-left: 8px; }
+.access-tools {
+  position: fixed; right: 14px; top: 46%; z-index: 90;
+  display:flex; flex-direction:column; gap:8px;
+}
+.access-tools button {
+  background:#fff; border:1px solid var(--border); border-radius:999px;
+  padding:9px 12px; font-size:12px; color:var(--text); box-shadow:0 8px 24px rgba(0,0,0,.08);
+  cursor:pointer; font-weight:700;
+}
+.help-finder { background: var(--warm-white); padding: 90px 48px 70px; }
+.help-inner { max-width:1200px; margin:0 auto; }
+.help-panel {
+  margin-top:0; position:relative; z-index:5;
+  background:#fff; border-radius:34px; padding:34px;
+  box-shadow:0 30px 90px rgba(0,0,0,.18); border:1px solid rgba(232,224,212,.7);
+}
+.help-panel-head { display:flex; justify-content:space-between; gap:24px; align-items:end; margin-bottom:24px; }
+.help-panel h2 { font-family:'Playfair Display',serif; font-size:34px; line-height:1.1; color:var(--charcoal); }
+.help-panel p { color:var(--text-muted); line-height:1.6; max-width:520px; }
+.help-grid { display:grid; grid-template-columns: repeat(4,1fr); gap:14px; }
+.help-card {
+  background:var(--cream); border:1px solid var(--border); border-radius:22px; padding:22px;
+  text-decoration:none; color:var(--charcoal); transition:.2s ease; min-height:150px;
+}
+.help-card:hover { transform:translateY(-3px); box-shadow:0 16px 44px rgba(0,0,0,.08); border-color:rgba(200,136,42,.45); }
+.help-icon { width:42px; height:42px; background:var(--forest); color:#fff; border-radius:14px; display:flex; align-items:center; justify-content:center; margin-bottom:16px; font-weight:900; }
+.help-card strong { display:block; font-size:16px; margin-bottom:8px; }
+.help-card span { color:var(--text-muted); font-size:13px; line-height:1.5; display:block; }
+.quick-contact-strip { max-width:1200px; margin:28px auto 0; display:grid; grid-template-columns: repeat(3,1fr); gap:14px; }
+.quick-contact-item { background:var(--forest); color:#fff; border-radius:18px; padding:18px 20px; display:flex; justify-content:space-between; align-items:center; gap:18px; }
+.quick-contact-item small { display:block; color:rgba(255,255,255,.55); text-transform:uppercase; letter-spacing:.08em; font-size:10px; font-weight:800; margin-bottom:4px; }
+.quick-contact-item strong { font-size:15px; }
+.quick-contact-item a { color:var(--gold-light); text-decoration:none; font-weight:800; font-size:13px; white-space:nowrap; }
+.audience { background: var(--cream); }
+.audience-inner { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:.9fr 1.1fr; gap:70px; align-items:start; }
+.audience-list { display:grid; gap:14px; }
+.audience-row { background:#fff; border:1px solid var(--border); border-radius:22px; padding:22px 24px; display:grid; grid-template-columns:auto 1fr auto; gap:18px; align-items:center; }
+.audience-num { width:38px; height:38px; border-radius:50%; background:var(--gold); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-weight:900; }
+.audience-row strong { display:block; color:var(--charcoal); margin-bottom:4px; }
+.audience-row span { color:var(--text-muted); font-size:13px; line-height:1.5; }
+.audience-row em { color:var(--gold); font-style:normal; font-weight:900; }
+.story-news { background:var(--warm-white); }
+.story-news-inner { max-width:1200px; margin:0 auto; }
+.story-grid { margin-top:48px; display:grid; grid-template-columns:repeat(3,1fr); gap:22px; }
+.story-card { background:var(--cream); border:1px solid var(--border); border-radius:26px; padding:28px; }
+.story-card small { color:var(--gold); text-transform:uppercase; letter-spacing:.1em; font-size:10px; font-weight:900; }
+.story-card h3 { font-family:'Playfair Display',serif; font-size:24px; line-height:1.15; margin:12px 0; color:var(--charcoal); }
+.story-card p { color:var(--text-muted); line-height:1.65; font-size:14px; }
+@media (max-width:768px){
+  .topbar{font-size:11px; padding:0 10px; text-align:center;}
+  nav{top:34px;}
+  .hero{padding-top:134px;}
+  .access-tools{display:none;}
+  .help-finder{padding:60px 22px 20px;}
+  .help-panel{margin-top:0; padding:24px;}
+  .help-panel-head{display:block;}
+  .help-grid,.quick-contact-strip,.audience-inner,.story-grid{grid-template-columns:1fr;}
+  .audience-row{grid-template-columns:auto 1fr;}
+  .audience-row em{display:none;}
+}
 
-  /* SECTION GENERIC */
-  section { padding: var(--section-gap) 48px; }
-  .section-label {
-    font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
-    color: var(--gold); margin-bottom: 16px;
-    display: flex; align-items: center; gap: 10px;
-  }
-  .section-label::before { content: ''; width: 24px; height: 2px; background: var(--gold); border-radius: 2px; }
-  .section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(36px, 4.5vw, 60px);
-    font-weight: 900; line-height: 1.1; color: var(--charcoal);
-  }
-  .section-title em { color: var(--gold); font-style: italic; }
-  .section-subtitle { font-size: 18px; color: var(--text-muted); line-height: 1.65; max-width: 560px; margin-top: 20px; font-weight: 300; }
+/* NAV */
+.site-nav {
+  position: fixed; top: 34px; left: 0; right: 0; z-index: 100;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 48px; height: 72px;
+  background: rgba(250, 247, 242, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+.site-nav.scrolled {
+  border-bottom: 1px solid var(--border);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.nav-logo-mark {
+  width: 88px; height: 34px;
+  background: transparent;
+  border-radius: 0;
+  display: flex; align-items: center; justify-content: flex-start;
+  overflow: hidden;
+}
+.nav-logo-mark img { width: 100%; height: 100%; object-fit: contain; object-position: left center; }
+.nav-logo-mark svg { width: 20px; height: 20px; }
+.nav-logo-text { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--charcoal); }
+.nav-logo-text span { color: var(--gold); }
 
-  /* MISSION */
-  .mission { background: var(--cream); }
-  .mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1200px; margin: 0 auto; }
-  .mission-left {}
-  .mission-text { font-size: 17px; color: var(--text); line-height: 1.8; margin-top: 28px; }
-  .mission-text p + p { margin-top: 18px; }
-  .mission-values { margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
-  .value-item { display: flex; gap: 14px; align-items: flex-start; }
-  .value-icon {
-    width: 40px; height: 40px; border-radius: 12px;
-    background: var(--forest); display: flex; align-items: center; justify-content: center;
-    flex-shrink: 0;
-  }
-  .value-icon svg { width: 18px; height: 18px; }
-  .value-body {}
-  .value-body strong { font-size: 14px; font-weight: 600; color: var(--charcoal); display: block; margin-bottom: 4px; }
-  .value-body p { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+.nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+.nav-links a { font-size: 14px; font-weight: 500; color: var(--text); text-decoration: none; letter-spacing: 0.02em; transition: color 0.2s; }
+.nav-links a:hover { color: var(--gold); }
+.nav-cta {
+  background: var(--gold); color: #fff; padding: 10px 24px;
+  border-radius: 100px; font-size: 13px; font-weight: 600;
+  text-decoration: none; letter-spacing: 0.03em;
+  transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+.nav-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
 
-  .mission-right { position: relative; }
-  .mission-image-placeholder {
-    width: 100%; aspect-ratio: 4/5;
-    background: linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%);
-    border-radius: 32px; position: relative; overflow: hidden;
-    display: flex; align-items: flex-end;
-  }
-  .mission-image-placeholder::before {
-    content: '';
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse at 30% 20%, rgba(200,136,42,0.3) 0%, transparent 60%);
-  }
-  .mission-overlay-card {
-    position: absolute; bottom: -20px; left: -32px;
-    background: #fff;
-    border-radius: 20px; padding: 24px 28px;
-    box-shadow: 0 20px 60px rgba(0,0,0,0.12);
-    min-width: 200px;
-  }
-  .mission-overlay-card .big { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 900; color: var(--forest); line-height: 1; }
-  .mission-overlay-card .small { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
-  .founder-badge {
-    position: absolute; top: 32px; right: -20px;
-    background: var(--gold); color: #fff;
-    border-radius: 16px; padding: 14px 18px;
-    text-align: center; box-shadow: 0 8px 24px rgba(200,136,42,0.4);
-  }
-  .founder-badge .fbig { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; line-height: 1; }
-  .founder-badge .fsmall { font-size: 10px; margin-top: 4px; opacity: 0.85; font-weight: 600; letter-spacing: 0.05em; }
-  .image-big-text {
-    position: absolute; bottom: 40px; left: 0; right: 0;
-    text-align: center; z-index: 2;
-    font-family: 'Playfair Display', serif; font-size: clamp(40px, 5vw, 72px);
-    font-weight: 900; color: rgba(255,255,255,0.12); letter-spacing: -0.02em;
-    line-height: 1;
-  }
+/* HERO */
+.hero {
+  min-height: 100vh;
+  background: var(--forest);
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 154px 48px 80px;
+  position: relative; overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 80% at 80% 50%, rgba(200,136,42,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.hero-content { position: relative; z-index: 2; max-width: 640px; }
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.85); padding: 7px 16px; border-radius: 100px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.hero-badge::before { content: ''; width: 6px; height: 6px; background: var(--gold-light); border-radius: 50%; }
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(48px, 6vw, 88px);
+  line-height: 1.05;
+  color: #fff; font-weight: 900;
+  margin-bottom: 8px;
+}
+.hero h1 em { color: var(--gold-light); font-style: italic; display: block; }
+.hero-sub {
+  font-size: 18px; color: rgba(255,255,255,0.7);
+  line-height: 1.65; max-width: 480px; margin: 28px 0 44px;
+  font-weight: 300;
+}
+.hero-actions { display: flex; gap: 16px; flex-wrap: wrap; }
+.btn-primary {
+  background: var(--gold); color: #fff; padding: 16px 32px;
+  border-radius: 100px; font-size: 15px; font-weight: 600;
+  text-decoration: none; letter-spacing: 0.02em;
+  transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200,136,42,0.35); }
+.btn-ghost {
+  background: transparent; color: rgba(255,255,255,0.9);
+  padding: 16px 32px; border-radius: 100px; font-size: 15px; font-weight: 500;
+  text-decoration: none; border: 1px solid rgba(255,255,255,0.3);
+  transition: all 0.2s; display: inline-flex; align-items: center; gap: 8px;
+}
+.btn-ghost:hover { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.5); }
 
-  /* PROGRAMS */
-  .programs { background: var(--warm-white); }
-  .programs-header { max-width: 1200px; margin: 0 auto 64px; }
-  .programs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1200px; margin: 0 auto; }
-  .program-card {
-    background: var(--cream);
-    border: 1px solid var(--border);
-    border-radius: 28px; padding: 40px;
-    position: relative; overflow: hidden;
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-    cursor: pointer;
-  }
-  .program-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
-  .program-card.featured {
-    background: var(--forest); border-color: var(--forest);
-    grid-column: span 2;
-    display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
-  }
-  .program-card.featured .program-label { color: rgba(255,255,255,0.5); }
-  .program-card.featured .program-title { color: #fff; }
-  .program-card.featured .program-desc { color: rgba(255,255,255,0.65); }
-  .program-card.featured .program-tags .tag { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.15); }
-  .program-card.featured .program-link { color: var(--gold-light); border-color: rgba(255,255,255,0.3); }
-  .program-card.featured .program-link:hover { background: rgba(255,255,255,0.08); }
-  .program-number {
-    position: absolute; top: 32px; right: 36px;
-    font-family: 'Playfair Display', serif;
-    font-size: 72px; font-weight: 900;
-    color: rgba(0,0,0,0.04); line-height: 1;
-    pointer-events: none;
-  }
-  .program-card.featured .program-number { color: rgba(255,255,255,0.05); }
-  .program-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
-  .program-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; color: var(--charcoal); line-height: 1.2; margin-bottom: 16px; }
-  .program-desc { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 24px; }
-  .program-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
-  .tag { font-size: 11px; font-weight: 600; padding: 5px 12px; border-radius: 100px; border: 1px solid var(--border); color: var(--text-muted); background: #fff; letter-spacing: 0.02em; }
-  .program-link {
-    display: inline-flex; align-items: center; gap: 8px;
-    font-size: 13px; font-weight: 600; color: var(--forest);
-    text-decoration: none; padding: 10px 20px; border-radius: 100px;
-    border: 1px solid var(--border); transition: all 0.2s;
-  }
-  .program-link:hover { background: var(--forest); color: #fff; border-color: var(--forest); }
-  .program-link svg { width: 14px; height: 14px; transition: transform 0.2s; }
-  .program-link:hover svg { transform: translateX(2px); }
-  .program-featured-list { list-style: none; }
-  .program-featured-list li {
-    display: flex; align-items: center; gap: 10px;
-    font-size: 14px; color: rgba(255,255,255,0.75);
-    padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-  .program-featured-list li::before { content: '✓'; color: var(--gold-light); font-weight: 700; }
+.hero-visual {
+  position: relative; z-index: 2;
+  display: flex; flex-direction: column; align-items: flex-end; gap: 16px;
+}
+.hero-stats {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 12px; width: 100%; max-width: 400px;
+}
+.stat-card {
+  background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 20px; padding: 28px 24px;
+  backdrop-filter: blur(8px);
+}
+.stat-card .num {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px; font-weight: 900; color: var(--gold-light);
+  line-height: 1; margin-bottom: 6px;
+}
+.stat-card .label { font-size: 12px; color: rgba(255,255,255,0.6); line-height: 1.4; font-weight: 500; letter-spacing: 0.02em; }
+.hero-quote {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-left: 3px solid var(--gold);
+  border-radius: 0 16px 16px 0;
+  padding: 20px 24px; max-width: 400px; width: 100%;
+}
+.hero-quote p { font-size: 13px; color: rgba(255,255,255,0.75); font-style: italic; line-height: 1.6; }
+.hero-quote cite { display: block; font-size: 11px; color: var(--gold-light); margin-top: 8px; font-style: normal; font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; }
 
-  /* FOUNDER */
-  .founder { background: var(--charcoal); padding: var(--section-gap) 48px; }
-  .founder-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1200px; margin: 0 auto; }
-  .founder-portrait {
-    background: linear-gradient(135deg, #2D4A35 0%, #1A1A1A 100%);
-    border-radius: 32px; aspect-ratio: 3/4;
-    position: relative; overflow: hidden;
-  }
-  .founder-portrait::after {
-    content: '"';
-    position: absolute; bottom: 0; right: 0;
-    font-family: 'Playfair Display', serif;
-    font-size: 300px; line-height: 0.7;
-    color: rgba(200,136,42,0.15); pointer-events: none;
-  }
-  .founder-name-big {
-    position: absolute; bottom: 32px; left: 32px; right: 32px;
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(28px, 3.5vw, 48px); font-weight: 900; color: #fff;
-    line-height: 1.1;
-  }
-  .founder-name-big span { color: var(--gold-light); display: block; font-size: 14px; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 6px; font-style: normal; font-family: 'Inter', sans-serif; }
-  .founder-content {}
-  .founder-content .section-label { color: var(--gold); }
-  .founder-content .section-title { color: #fff; }
-  .founder-body { font-size: 16px; color: rgba(255,255,255,0.65); line-height: 1.8; margin-top: 28px; font-weight: 300; }
-  .founder-body p + p { margin-top: 18px; }
-  .founder-quote {
-    background: rgba(255,255,255,0.04);
-    border-left: 3px solid var(--gold);
-    padding: 24px 28px; margin: 36px 0;
-    border-radius: 0 16px 16px 0;
-  }
-  .founder-quote p { font-family: 'Playfair Display', serif; font-size: 22px; color: rgba(255,255,255,0.9); font-style: italic; line-height: 1.5; }
-  .founder-quote cite { display: block; font-size: 12px; color: var(--gold-light); margin-top: 12px; font-style: normal; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
-  .btn-outline-gold {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 14px 28px; border-radius: 100px; border: 1px solid rgba(200,136,42,0.5);
-    color: var(--gold-light); font-size: 14px; font-weight: 600;
-    text-decoration: none; transition: all 0.2s;
-  }
-  .btn-outline-gold:hover { background: var(--gold); color: #fff; border-color: var(--gold); }
+/* SECTION GENERIC */
+.site-section { padding: var(--section-gap) 48px; }
+.section-label {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 16px;
+  display: flex; align-items: center; gap: 10px;
+}
+.section-label::before { content: ''; width: 24px; height: 2px; background: var(--gold); border-radius: 2px; }
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(36px, 4.5vw, 60px);
+  font-weight: 900; line-height: 1.1; color: var(--charcoal);
+}
+.section-title em { color: var(--gold); font-style: italic; }
+.section-subtitle { font-size: 18px; color: var(--text-muted); line-height: 1.65; max-width: 560px; margin-top: 20px; font-weight: 300; }
 
-  /* APPROACH */
-  .approach { background: var(--cream); }
-  .approach-inner { max-width: 1200px; margin: 0 auto; }
-  .approach-header { margin-bottom: 64px; }
-  .steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
-  .steps::before {
-    content: '';
-    position: absolute; top: 28px; left: 10%; right: 10%;
-    height: 1px; background: var(--border);
-  }
-  .step { text-align: center; padding: 0 12px; position: relative; }
-  .step-num {
-    width: 56px; height: 56px; border-radius: 50%;
-    background: var(--forest); color: #fff;
-    display: flex; align-items: center; justify-content: center;
-    font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900;
-    margin: 0 auto 20px; position: relative; z-index: 2;
-    box-shadow: 0 0 0 6px var(--cream);
-  }
-  .step-num.gold { background: var(--gold); box-shadow: 0 0 0 6px var(--cream), 0 8px 24px rgba(200,136,42,0.3); }
-  .step-title { font-size: 15px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
-  .step-desc { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
+/* MISSION */
+.mission { background: var(--cream); }
+.mission-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1200px; margin: 0 auto; }
+.mission-text { font-size: 17px; color: var(--text); line-height: 1.8; margin-top: 28px; }
+.mission-text p + p { margin-top: 18px; }
+.mission-values { margin-top: 48px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.value-item { display: flex; gap: 14px; align-items: flex-start; }
+.value-icon {
+  width: 40px; height: 40px; border-radius: 12px;
+  background: var(--forest); display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.value-icon svg { width: 18px; height: 18px; }
+.value-body strong { font-size: 14px; font-weight: 600; color: var(--charcoal); display: block; margin-bottom: 4px; }
+.value-body p { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
 
-  /* CERTIFICATIONS */
-  .certs { background: var(--warm-white); }
-  .certs-inner { max-width: 1200px; margin: 0 auto; }
-  .certs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
-  .cert-card {
-    background: var(--cream); border: 1px solid var(--border); border-radius: 24px;
-    padding: 36px 32px; transition: transform 0.2s, box-shadow 0.2s;
-  }
-  .cert-card:hover { transform: translateY(-3px); box-shadow: 0 16px 48px rgba(0,0,0,0.07); }
-  .cert-icon {
-    width: 56px; height: 56px; border-radius: 16px;
-    background: var(--forest); display: flex; align-items: center; justify-content: center;
-    margin-bottom: 20px;
-  }
-  .cert-icon svg { width: 26px; height: 26px; }
-  .cert-title { font-size: 18px; font-weight: 700; color: var(--charcoal); margin-bottom: 10px; }
-  .cert-desc { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+.mission-right { position: relative; }
+.mission-image-placeholder {
+  width: 100%; aspect-ratio: 4/5;
+  background: linear-gradient(135deg, var(--forest) 0%, var(--forest-light) 100%);
+  border-radius: 32px; position: relative; overflow: hidden;
+  display: flex; align-items: flex-end;
+}
+.mission-image-placeholder::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse at 30% 20%, rgba(200,136,42,0.3) 0%, transparent 60%);
+}
+.mission-image-placeholder img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.mission-overlay-card {
+  position: absolute; bottom: -20px; left: -32px;
+  background: #fff;
+  border-radius: 20px; padding: 24px 28px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+  min-width: 200px;
+}
+.mission-overlay-card .big { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 900; color: var(--forest); line-height: 1; }
+.mission-overlay-card .small { font-size: 13px; color: var(--text-muted); margin-top: 4px; }
+.founder-badge {
+  position: absolute; top: 32px; right: -20px;
+  background: var(--gold); color: #fff;
+  border-radius: 16px; padding: 14px 18px;
+  text-align: center; box-shadow: 0 8px 24px rgba(200,136,42,0.4);
+}
+.founder-badge .fbig { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900; line-height: 1; }
+.founder-badge .fsmall { font-size: 10px; margin-top: 4px; opacity: 0.85; font-weight: 600; letter-spacing: 0.05em; }
+.image-big-text {
+  position: absolute; bottom: 40px; left: 0; right: 0;
+  text-align: center; z-index: 2;
+  font-family: 'Playfair Display', serif; font-size: clamp(40px, 5vw, 72px);
+  font-weight: 900; color: rgba(255,255,255,0.12); letter-spacing: -0.02em;
+  line-height: 1;
+}
 
+/* PROGRAMS */
+.programs { background: var(--warm-white); }
+.programs-header { max-width: 1200px; margin: 0 auto 64px; }
+.programs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; max-width: 1200px; margin: 0 auto; }
+.program-card {
+  background: var(--cream);
+  border: 1px solid var(--border);
+  border-radius: 28px; padding: 40px;
+  position: relative; overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+.program-card:hover { transform: translateY(-4px); box-shadow: 0 20px 60px rgba(0,0,0,0.08); }
+.program-card.featured {
+  background: var(--forest); border-color: var(--forest);
+  grid-column: span 2;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center;
+}
+.program-card.featured .program-label { color: rgba(255,255,255,0.5); }
+.program-card.featured .program-title { color: #fff; }
+.program-card.featured .program-desc { color: rgba(255,255,255,0.65); }
+.program-card.featured .program-tags .tag { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); border-color: rgba(255,255,255,0.15); }
+.program-card.featured .program-link { color: var(--gold-light); border-color: rgba(255,255,255,0.3); }
+.program-card.featured .program-link:hover { background: rgba(255,255,255,0.08); }
+.program-card.dark { background: var(--forest); border-color: var(--forest); grid-column: span 2; }
+.program-card.dark .program-number { color: rgba(255,255,255,0.05); }
+.program-card.dark .program-title { color:#fff; }
+.program-card.dark .program-desc { color:rgba(255,255,255,0.65); }
+.program-card.dark .program-tags .tag { background:rgba(255,255,255,0.1); color:rgba(255,255,255,0.7); border-color:rgba(255,255,255,0.15); }
+.program-card.dark .program-link { color:var(--gold-light); border-color:rgba(255,255,255,0.3); }
+.program-number {
+  position: absolute; top: 32px; right: 36px;
+  font-family: 'Playfair Display', serif;
+  font-size: 72px; font-weight: 900;
+  color: rgba(0,0,0,0.04); line-height: 1;
+  pointer-events: none;
+}
+.program-card.featured .program-number { color: rgba(255,255,255,0.05); }
+.program-label { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+.program-title { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 900; color: var(--charcoal); line-height: 1.2; margin-bottom: 16px; }
+.program-desc { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 24px; }
+.program-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.tag { font-size: 11px; font-weight: 600; padding: 5px 12px; border-radius: 100px; border: 1px solid var(--border); color: var(--text-muted); background: #fff; letter-spacing: 0.02em; }
+.program-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-size: 13px; font-weight: 600; color: var(--forest);
+  text-decoration: none; padding: 10px 20px; border-radius: 100px;
+  border: 1px solid var(--border); transition: all 0.2s;
+}
+.program-link:hover { background: var(--forest); color: #fff; border-color: var(--forest); }
+.program-link svg { width: 14px; height: 14px; transition: transform 0.2s; }
+.program-link:hover svg { transform: translateX(2px); }
+.program-featured-list { list-style: none; }
+.program-featured-list li {
+  display: flex; align-items: center; gap: 10px;
+  font-size: 14px; color: rgba(255,255,255,0.75);
+  padding: 8px 0; border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.program-featured-list li::before { content: '✓'; color: var(--gold-light); font-weight: 700; }
 
-  .cert-brand-img { width: 64px; height: 64px; object-fit: contain; border-radius: 12px; background:#fff; padding:8px; margin-bottom:20px; }
-  .documents { background: var(--cream); padding-top: 0; }
-  .documents-inner { max-width: 1200px; margin: 0 auto; background: var(--forest); border-radius: 32px; padding: 56px; display:grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items:center; }
-  .documents .section-title { color:#fff; }
-  .documents .section-subtitle { color:rgba(255,255,255,.62); }
-  .doc-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:14px; }
-  .doc-card { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); border-radius:18px; padding:22px; color:#fff; text-decoration:none; transition:.2s ease; }
-  .doc-card:hover { transform: translateY(-2px); background:rgba(255,255,255,.12); }
-  .doc-card strong { display:block; font-size:15px; margin-bottom:8px; }
-  .doc-card span { color: var(--gold-light); font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; }
-  .partner-strip { display:flex; align-items:center; gap:22px; flex-wrap:wrap; margin-top:28px; }
-  .partner-strip img { background:#fff; border-radius:14px; padding:10px; height:58px; width:auto; object-fit:contain; }
-  @media (max-width: 768px) { .documents-inner { grid-template-columns:1fr; padding:32px; } .doc-grid { grid-template-columns:1fr; } }
+/* FOUNDER */
+.founder { background: var(--charcoal); padding: var(--section-gap) 48px; }
+.founder-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1200px; margin: 0 auto; }
+.founder-portrait {
+  background: linear-gradient(135deg, #2D4A35 0%, #1A1A1A 100%);
+  border-radius: 32px; aspect-ratio: 3/4;
+  position: relative; overflow: hidden;
+}
+.founder-portrait img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1; }
+.founder-portrait::after {
+  content: '"';
+  position: absolute; bottom: 0; right: 0;
+  font-family: 'Playfair Display', serif;
+  font-size: 300px; line-height: 0.7;
+  color: rgba(200,136,42,0.15); pointer-events: none;
+}
+.founder-name-big {
+  position: absolute; bottom: 32px; left: 32px; right: 32px;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 3.5vw, 48px); font-weight: 900; color: #fff;
+  line-height: 1.1;
+}
+.founder-name-big span { color: var(--gold-light); display: block; font-size: 14px; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 6px; font-style: normal; font-family: 'Inter', sans-serif; }
+.founder-content .section-label { color: var(--gold); }
+.founder-content .section-title { color: #fff; }
+.founder-body { font-size: 16px; color: rgba(255,255,255,0.65); line-height: 1.8; margin-top: 28px; font-weight: 300; }
+.founder-body p + p { margin-top: 18px; }
+.founder-quote {
+  background: rgba(255,255,255,0.04);
+  border-left: 3px solid var(--gold);
+  padding: 24px 28px; margin: 36px 0;
+  border-radius: 0 16px 16px 0;
+}
+.founder-quote p { font-family: 'Playfair Display', serif; font-size: 22px; color: rgba(255,255,255,0.9); font-style: italic; line-height: 1.5; }
+.founder-quote cite { display: block; font-size: 12px; color: var(--gold-light); margin-top: 12px; font-style: normal; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; }
+.btn-outline-gold {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 14px 28px; border-radius: 100px; border: 1px solid rgba(200,136,42,0.5);
+  color: var(--gold-light); font-size: 14px; font-weight: 600;
+  text-decoration: none; transition: all 0.2s;
+}
+.btn-outline-gold:hover { background: var(--gold); color: #fff; border-color: var(--gold); }
 
-  /* CONTACT */
-  .contact { background: var(--forest); padding: var(--section-gap) 48px; }
-  .contact-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
-  .contact .section-label { color: var(--gold-light); }
-  .contact .section-label::before { background: var(--gold-light); }
-  .contact .section-title { color: #fff; }
-  .contact .section-subtitle { color: rgba(255,255,255,0.6); }
-  .contact-details { margin-top: 48px; display: flex; flex-direction: column; gap: 24px; }
-  .contact-item { display: flex; gap: 16px; align-items: flex-start; }
-  .contact-icon {
-    width: 44px; height: 44px; border-radius: 12px;
-    background: rgba(255,255,255,0.1); flex-shrink: 0;
-    display: flex; align-items: center; justify-content: center;
-  }
-  .contact-icon svg { width: 18px; height: 18px; }
-  .contact-info-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold-light); margin-bottom: 4px; }
-  .contact-info-val { font-size: 16px; color: #fff; font-weight: 500; }
-  .contact-info-sub { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 2px; }
+/* APPROACH */
+.approach { background: var(--cream); }
+.approach-inner { max-width: 1200px; margin: 0 auto; }
+.approach-header { margin-bottom: 64px; }
+.steps { display: grid; grid-template-columns: repeat(5, 1fr); gap: 0; position: relative; }
+.steps::before {
+  content: '';
+  position: absolute; top: 28px; left: 10%; right: 10%;
+  height: 1px; background: var(--border);
+}
+.step { text-align: center; padding: 0 12px; position: relative; }
+.step-num {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--forest); color: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 900;
+  margin: 0 auto 20px; position: relative; z-index: 2;
+  box-shadow: 0 0 0 6px var(--cream);
+}
+.step-num.gold { background: var(--gold); box-shadow: 0 0 0 6px var(--cream), 0 8px 24px rgba(200,136,42,0.3); }
+.step-title { font-size: 15px; font-weight: 700; color: var(--charcoal); margin-bottom: 8px; }
+.step-desc { font-size: 13px; color: var(--text-muted); line-height: 1.55; }
 
-  .contact-form-wrapper {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.12);
-    border-radius: 28px; padding: 40px;
-  }
-  .form-title { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 8px; }
-  .form-sub { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 32px; }
-  .form-group { margin-bottom: 20px; }
-  .form-group label { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.05em; color: rgba(255,255,255,0.6); margin-bottom: 8px; text-transform: uppercase; }
-  .form-group input, .form-group textarea, .form-group select {
-    width: 100%; background: rgba(255,255,255,0.07);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: 12px; padding: 14px 16px;
-    color: #fff; font-size: 15px; font-family: 'Inter', sans-serif;
-    outline: none; transition: border-color 0.2s;
-    appearance: none;
-  }
-  .form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
-  .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-    border-color: var(--gold);
-  }
-  .form-group textarea { resize: vertical; min-height: 120px; }
-  .form-group select option { background: var(--forest); color: #fff; }
-  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-  .btn-submit {
-    width: 100%; background: var(--gold); color: #fff;
-    padding: 16px; border-radius: 12px; border: none;
-    font-size: 15px; font-weight: 700; font-family: 'Inter', sans-serif;
-    cursor: pointer; transition: all 0.2s; letter-spacing: 0.02em;
-    display: flex; align-items: center; justify-content: center; gap: 8px;
-  }
-  .btn-submit:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(200,136,42,0.4); }
+/* CERTIFICATIONS */
+.certs { background: var(--warm-white); }
+.certs-inner { max-width: 1200px; margin: 0 auto; }
+.certs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 56px; }
+.cert-card {
+  background: var(--cream); border: 1px solid var(--border); border-radius: 24px;
+  padding: 36px 32px; transition: transform 0.2s, box-shadow 0.2s;
+}
+.cert-card:hover { transform: translateY(-3px); box-shadow: 0 16px 48px rgba(0,0,0,0.07); }
+.cert-icon {
+  width: 56px; height: 56px; border-radius: 16px;
+  background: var(--forest); display: flex; align-items: center; justify-content: center;
+  margin-bottom: 20px;
+}
+.cert-icon svg { width: 26px; height: 26px; }
+.cert-title { font-size: 18px; font-weight: 700; color: var(--charcoal); margin-bottom: 10px; }
+.cert-desc { font-size: 14px; color: var(--text-muted); line-height: 1.65; }
+.cert-brand-img { width: 64px; height: 64px; object-fit: contain; border-radius: 12px; background:#fff; padding:8px; margin-bottom:20px; }
 
-  /* FOOTER */
-  footer {
-    background: var(--charcoal);
-    padding: 64px 48px 32px;
-  }
-  .footer-top {
-    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
-    max-width: 1200px; margin: 0 auto;
-    padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08);
-  }
-  .footer-brand { }
-  .footer-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 900; color: #fff; margin-bottom: 16px; }
-  .footer-logo span { color: var(--gold); }
-  .footer-desc { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 280px; }
-  .footer-contact-chips { display: flex; flex-direction: column; gap: 8px; margin-top: 20px; }
-  .footer-chip { font-size: 13px; color: rgba(255,255,255,0.55); display: flex; align-items: center; gap: 8px; }
-  .footer-chip::before { content: '→'; color: var(--gold); font-size: 11px; }
-  .footer-col-title { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
-  .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-  .footer-links a { font-size: 14px; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
-  .footer-links a:hover { color: var(--gold); }
-  .footer-hours { display: flex; flex-direction: column; gap: 8px; }
-  .footer-hour { display: flex; justify-content: space-between; gap: 16px; font-size: 13px; }
-  .footer-hour .day { color: rgba(255,255,255,0.45); }
-  .footer-hour .time { color: rgba(255,255,255,0.7); font-weight: 500; }
-  .footer-bottom {
-    max-width: 1200px; margin: 32px auto 0;
-    display: flex; justify-content: space-between; align-items: center; flex-wrap: gap-wrap;
-    font-size: 13px; color: rgba(255,255,255,0.3);
-  }
+/* DOCUMENTS */
+.documents { background: var(--cream); padding-top: 0; }
+.documents-inner { max-width: 1200px; margin: 0 auto; background: var(--forest); border-radius: 32px; padding: 56px; display:grid; grid-template-columns: 1fr 1.2fr; gap: 48px; align-items:center; }
+.documents .section-title { color:#fff; }
+.documents .section-subtitle { color:rgba(255,255,255,.62); }
+.doc-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:14px; }
+.doc-card { background:rgba(255,255,255,.08); border:1px solid rgba(255,255,255,.14); border-radius:18px; padding:22px; color:#fff; text-decoration:none; transition:.2s ease; }
+.doc-card:hover { transform: translateY(-2px); background:rgba(255,255,255,.12); }
+.doc-card strong { display:block; font-size:15px; margin-bottom:8px; }
+.doc-card span { color: var(--gold-light); font-size:12px; font-weight:700; text-transform:uppercase; letter-spacing:.08em; }
+.partner-strip { display:flex; align-items:center; gap:22px; flex-wrap:wrap; margin-top:28px; }
+.partner-strip img { background:#fff; border-radius:14px; padding:10px; height:58px; width:auto; object-fit:contain; }
+@media (max-width: 768px) { .documents-inner { grid-template-columns:1fr; padding:32px; } .doc-grid { grid-template-columns:1fr; } }
 
+/* CONTACT */
+.contact { background: var(--forest); padding: var(--section-gap) 48px; }
+.contact-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+.contact .section-label { color: var(--gold-light); }
+.contact .section-label::before { background: var(--gold-light); }
+.contact .section-title { color: #fff; }
+.contact .section-subtitle { color: rgba(255,255,255,0.6); }
+.contact-details { margin-top: 48px; display: flex; flex-direction: column; gap: 24px; }
+.contact-item { display: flex; gap: 16px; align-items: flex-start; }
+.contact-icon {
+  width: 44px; height: 44px; border-radius: 12px;
+  background: rgba(255,255,255,0.1); flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+}
+.contact-icon svg { width: 18px; height: 18px; }
+.contact-info-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold-light); margin-bottom: 4px; }
+.contact-info-val { font-size: 16px; color: #fff; font-weight: 500; }
+.contact-info-sub { font-size: 12px; color: rgba(255,255,255,0.45); margin-top: 2px; }
 
-  /* POLISH V4: better alignment, more dynamic feel */
-  .hero-content, .programs-header, .approach-header, .certs-inner > .section-label, .certs-inner > .section-title, .certs-inner > .section-subtitle { text-wrap: balance; }
-  .hero { gap: 56px; }
-  .hero-content { padding-left: clamp(0px, 3vw, 42px); }
-  .hero-visual { padding-right: clamp(0px, 3vw, 42px); }
-  .section-label { line-height: 1.2; }
-  .mission-grid, .programs-header, .programs-grid, .founder-grid, .approach-inner, .certs-inner, .contact-inner, .documents-inner, .help-inner { width: min(1200px, 100%); }
-  .program-card, .cert-card, .story-card, .audience-row, .help-card, .stat-card {
-    will-change: transform;
-  }
-  .hero::after {
-    content:''; position:absolute; width:520px; height:520px; border-radius:50%;
-    background: radial-gradient(circle, rgba(232,169,74,.18), transparent 65%);
-    right:-120px; bottom:-140px; animation: floatGlow 8s ease-in-out infinite alternate;
-  }
-  @keyframes floatGlow { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(-40px,-30px,0) scale(1.12); } }
-  .reveal { opacity:0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
-  .reveal.visible { opacity:1; transform: translateY(0); }
-  .magnetic-card { transform-style: preserve-3d; }
-  .magnetic-card:hover { transform: translateY(-6px) rotateX(1.5deg) rotateY(-1.5deg); }
-  .nav-cta, .btn-primary, .btn-submit { position:relative; overflow:hidden; }
-  .nav-cta::before, .btn-primary::before, .btn-submit::before {
-    content:''; position:absolute; inset:0; transform:translateX(-110%);
-    background: linear-gradient(90deg, transparent, rgba(255,255,255,.28), transparent);
-    transition: transform .55s ease;
-  }
-  .nav-cta:hover::before, .btn-primary:hover::before, .btn-submit:hover::before { transform:translateX(110%); }
-  .whatsapp-float {
-    position: fixed; right: 22px; bottom: 22px; z-index: 120;
-    display:flex; align-items:center; gap:10px;
-    background:#25D366; color:#fff; text-decoration:none;
-    padding:14px 18px; border-radius:999px;
-    box-shadow:0 14px 40px rgba(37,211,102,.35);
-    font-size:14px; font-weight:800; letter-spacing:.01em;
-    transition: transform .2s ease, box-shadow .2s ease;
-  }
-  .whatsapp-float:hover { transform: translateY(-3px) scale(1.02); box-shadow:0 18px 50px rgba(37,211,102,.48); }
-  .whatsapp-float svg { width:22px; height:22px; flex:0 0 auto; }
-  .whatsapp-inline {
-    display:inline-flex; align-items:center; gap:9px; background:#25D366; color:#fff!important;
-    padding:11px 18px; border-radius:999px; text-decoration:none; font-weight:800;
-  }
-  .whatsapp-inline svg { width:19px; height:19px; }
-  .quick-contact-item.whatsapp { background:#1f8f4d; }
-  .quick-contact-item.whatsapp a { color:#fff; background:rgba(255,255,255,.16); padding:8px 12px; border-radius:999px; }
-  @media (prefers-reduced-motion: reduce) {
-    .hero::after, .tile-main, .tile-a, .tile-b, .dynamic-quote, .tile-people span, .collage-orb { animation:none; }
-    .reveal { opacity:1; transform:none; transition:none; }
-  }
+.contact-form-wrapper {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 28px; padding: 40px;
+}
+.form-title { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; color: #fff; margin-bottom: 8px; }
+.form-sub { font-size: 14px; color: rgba(255,255,255,0.5); margin-bottom: 32px; }
+.form-group { margin-bottom: 20px; }
+.form-group label { display: block; font-size: 12px; font-weight: 600; letter-spacing: 0.05em; color: rgba(255,255,255,0.6); margin-bottom: 8px; text-transform: uppercase; }
+.form-group input, .form-group textarea, .form-group select {
+  width: 100%; background: rgba(255,255,255,0.07);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 12px; padding: 14px 16px;
+  color: #fff; font-size: 15px; font-family: 'Inter', sans-serif;
+  outline: none; transition: border-color 0.2s;
+  appearance: none;
+}
+.form-group input::placeholder, .form-group textarea::placeholder { color: rgba(255,255,255,0.3); }
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+  border-color: var(--gold);
+}
+.form-group textarea { resize: vertical; min-height: 120px; }
+.form-group select option { background: var(--forest); color: #fff; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-feedback { margin-bottom: 20px; padding: 14px 16px; border-radius: 12px; font-size: 14px; }
+.form-feedback.success { background: rgba(200,136,42,0.18); color: #fff; border: 1px solid rgba(232,169,74,0.5); }
+.form-feedback.error { background: rgba(220,80,80,0.18); color: #fff; border: 1px solid rgba(220,80,80,0.5); }
+.btn-submit {
+  width: 100%; background: var(--gold); color: #fff;
+  padding: 16px; border-radius: 12px; border: none;
+  font-size: 15px; font-weight: 700; font-family: 'Inter', sans-serif;
+  cursor: pointer; transition: all 0.2s; letter-spacing: 0.02em;
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+}
+.btn-submit:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(200,136,42,0.4); }
 
+/* FOOTER */
+.site-footer {
+  background: var(--charcoal);
+  padding: 64px 48px 32px;
+}
+.footer-top {
+  display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+  max-width: 1200px; margin: 0 auto;
+  padding-bottom: 48px; border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.footer-logo { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 900; color: #fff; margin-bottom: 16px; }
+.footer-logo span { color: var(--gold); }
+.footer-desc { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 280px; }
+.footer-contact-chips { display: flex; flex-direction: column; gap: 8px; margin-top: 20px; }
+.footer-chip { font-size: 13px; color: rgba(255,255,255,0.55); display: flex; align-items: center; gap: 8px; }
+.footer-chip::before { content: '→'; color: var(--gold); font-size: 11px; }
+.footer-col-title { font-size: 11px; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 20px; }
+.footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+.footer-links a { font-size: 14px; color: rgba(255,255,255,0.6); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: var(--gold); }
+.footer-hours { display: flex; flex-direction: column; gap: 8px; }
+.footer-hour { display: flex; justify-content: space-between; gap: 16px; font-size: 13px; }
+.footer-hour .day { color: rgba(255,255,255,0.45); }
+.footer-hour .time { color: rgba(255,255,255,0.7); font-weight: 500; }
+.footer-bottom {
+  max-width: 1200px; margin: 32px auto 0;
+  display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+  font-size: 13px; color: rgba(255,255,255,0.3);
+}
 
-  /* V5 lively hero imagery — no statistic blocks on home */
-  .life-collage {
-    position: relative;
-    width: min(520px, 100%);
-    min-height: 560px;
-    margin-left: auto;
-    perspective: 1000px;
-  }
-  .collage-orb {
-    position:absolute; border-radius:999px; filter: blur(2px); opacity:.9; pointer-events:none;
-  }
-  .orb-one {
-    width:230px; height:230px; right:30px; top:38px;
-    background: radial-gradient(circle, rgba(232,169,74,.34), rgba(232,169,74,0));
-    animation: driftOne 8s ease-in-out infinite alternate;
-  }
-  .orb-two {
-    width:170px; height:170px; left:20px; bottom:90px;
-    background: radial-gradient(circle, rgba(255,255,255,.16), rgba(255,255,255,0));
-    animation: driftTwo 9s ease-in-out infinite alternate;
-  }
-  @keyframes driftOne { from{ transform:translate(0,0) scale(1);} to{ transform:translate(-32px,24px) scale(1.15);} }
-  @keyframes driftTwo { from{ transform:translate(0,0) scale(1);} to{ transform:translate(26px,-22px) scale(.92);} }
+/* POLISH: better alignment, more dynamic feel */
+.hero-content, .programs-header, .approach-header, .certs-inner > .section-label, .certs-inner > .section-title, .certs-inner > .section-subtitle { text-wrap: balance; }
+.hero { gap: 56px; }
+.hero-content { padding-left: clamp(0px, 3vw, 42px); }
+.hero-visual { padding-right: clamp(0px, 3vw, 42px); }
+.section-label { line-height: 1.2; }
+.mission-grid, .programs-header, .programs-grid, .founder-grid, .approach-inner, .certs-inner, .contact-inner, .documents-inner, .help-inner { width: min(1200px, 100%); }
+.program-card, .cert-card, .story-card, .audience-row, .help-card, .stat-card { will-change: transform; }
+.hero::after {
+  content:''; position:absolute; width:520px; height:520px; border-radius:50%;
+  background: radial-gradient(circle, rgba(232,169,74,.18), transparent 65%);
+  right:-120px; bottom:-140px; animation: floatGlow 8s ease-in-out infinite alternate;
+}
+@keyframes floatGlow { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(-40px,-30px,0) scale(1.12); } }
+.reveal { opacity:0; transform: translateY(26px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.visible { opacity:1; transform: translateY(0); }
+.magnetic-card { transform-style: preserve-3d; }
+.magnetic-card:hover { transform: translateY(-6px) rotateX(1.5deg) rotateY(-1.5deg); }
+.nav-cta, .btn-primary, .btn-submit { position:relative; overflow:hidden; }
+.nav-cta::before, .btn-primary::before, .btn-submit::before {
+  content:''; position:absolute; inset:0; transform:translateX(-110%);
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,.28), transparent);
+  transition: transform .55s ease;
+}
+.nav-cta:hover::before, .btn-primary:hover::before, .btn-submit:hover::before { transform:translateX(110%); }
+.whatsapp-float {
+  position: fixed; right: 22px; bottom: 22px; z-index: 120;
+  display:flex; align-items:center; gap:10px;
+  background:#25D366; color:#fff; text-decoration:none;
+  padding:14px 18px; border-radius:999px;
+  box-shadow:0 14px 40px rgba(37,211,102,.35);
+  font-size:14px; font-weight:800; letter-spacing:.01em;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.whatsapp-float:hover { transform: translateY(-3px) scale(1.02); box-shadow:0 18px 50px rgba(37,211,102,.48); }
+.whatsapp-float svg { width:22px; height:22px; flex:0 0 auto; }
+.whatsapp-inline {
+  display:inline-flex; align-items:center; gap:9px; background:#25D366; color:#fff!important;
+  padding:11px 18px; border-radius:999px; text-decoration:none; font-weight:800;
+}
+.whatsapp-inline svg { width:19px; height:19px; }
+.quick-contact-item.whatsapp { background:#1f8f4d; }
+.quick-contact-item.whatsapp a { color:#fff; background:rgba(255,255,255,.16); padding:8px 12px; border-radius:999px; }
+@media (prefers-reduced-motion: reduce) {
+  .hero::after, .tile-main, .tile-a, .tile-b, .dynamic-quote, .tile-people span, .collage-orb { animation:none; }
+  .reveal { opacity:1; transform:none; transition:none; }
+}
 
-  .photo-tile {
-    position:absolute;
-    border:1px solid rgba(255,255,255,.16);
-    box-shadow:0 28px 80px rgba(0,0,0,.22);
-    backdrop-filter: blur(10px);
-    overflow:hidden;
-    transform-style:preserve-3d;
-  }
-  .tile-main {
-    inset: 34px 26px 116px 34px;
-    border-radius:38px;
-    background: linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
-    animation: heroCardFloat 7s ease-in-out infinite;
-  }
-  @keyframes heroCardFloat { 0%,100%{ transform:translateY(0) rotate(-1deg);} 50%{ transform:translateY(-14px) rotate(1deg);} }
-  .tile-gradient {
-    position:absolute; inset:0;
-    background:
-      radial-gradient(circle at 22% 20%, rgba(255,255,255,.24), transparent 28%),
-      radial-gradient(circle at 84% 16%, rgba(232,169,74,.38), transparent 34%),
-      linear-gradient(135deg, rgba(250,247,242,.13), rgba(45,74,53,.24));
-  }
-  .tile-gradient::after {
-    content:''; position:absolute; inset:0;
-    background-image: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.16) 42%, transparent 70%);
-    transform:translateX(-110%);
-    animation: lightSweep 5.8s ease-in-out infinite;
-  }
-  @keyframes lightSweep { 0%,35%{ transform:translateX(-120%);} 70%,100%{ transform:translateX(120%);} }
-  .tile-people {
-    position:absolute; left:42px; right:42px; top:90px; height:210px;
-    display:flex; align-items:flex-end; justify-content:center; gap:18px;
-  }
-  .tile-people span {
-    display:block; position:relative; width:74px; height:128px; border-radius:999px 999px 28px 28px;
-    background:rgba(255,255,255,.84);
-    box-shadow: inset 0 -30px 0 rgba(200,136,42,.24);
-    animation: peoplePulse 4.5s ease-in-out infinite;
-  }
-  .tile-people span:nth-child(2){ height:158px; width:86px; background:rgba(232,169,74,.92); animation-delay:.25s; }
-  .tile-people span:nth-child(3){ height:116px; background:rgba(255,255,255,.68); animation-delay:.5s; }
-  .tile-people span::before {
-    content:''; position:absolute; width:54px; height:54px; border-radius:50%; top:-42px; left:50%; transform:translateX(-50%);
-    background:inherit;
-  }
-  @keyframes peoplePulse { 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-7px);} }
-  .tile-caption {
-    position:absolute; left:28px; right:28px; bottom:28px;
-    background:rgba(26,26,26,.34); border:1px solid rgba(255,255,255,.12);
-    border-radius:22px; padding:18px 20px;
-  }
-  .tile-caption small { color:var(--gold-light); text-transform:uppercase; letter-spacing:.12em; font-size:10px; font-weight:900; display:block; margin-bottom:6px; }
-  .tile-caption strong { color:#fff; font-family:'Playfair Display',serif; font-size:25px; line-height:1.1; display:block; }
-  .tile-small {
-    width:205px; min-height:155px; border-radius:28px; padding:22px;
-    background:rgba(255,255,255,.09);
-    color:#fff;
-  }
-  .tile-small strong { display:block; font-size:16px; margin:12px 0 7px; }
-  .tile-small span { display:block; color:rgba(255,255,255,.62); font-size:13px; line-height:1.5; }
-  .tile-icon {
-    width:42px; height:42px; border-radius:14px; display:flex; align-items:center; justify-content:center;
-    background:var(--gold); color:#fff; font-size:22px; font-weight:900;
-  }
-  .tile-a { right:0; top:0; animation: smallFloatA 6.5s ease-in-out infinite; }
-  .tile-b { left:0; bottom:28px; animation: smallFloatB 7.2s ease-in-out infinite; }
-  @keyframes smallFloatA { 0%,100%{ transform:translateY(0) rotate(3deg);} 50%{ transform:translateY(13px) rotate(-1deg);} }
-  @keyframes smallFloatB { 0%,100%{ transform:translateY(0) rotate(-2deg);} 50%{ transform:translateY(-12px) rotate(2deg);} }
-  .dynamic-quote {
-    position:absolute; right:18px; bottom:0; width:310px;
-    background:rgba(255,255,255,.08);
-    transform: rotate(1deg);
-    animation: quoteFloat 8s ease-in-out infinite;
-  }
-  @keyframes quoteFloat { 0%,100%{ transform:translateY(0) rotate(1deg);} 50%{ transform:translateY(-8px) rotate(-1deg);} }
+/* Lively hero imagery */
+.life-collage {
+  position: relative;
+  width: min(520px, 100%);
+  min-height: 560px;
+  margin-left: auto;
+  perspective: 1000px;
+}
+.collage-orb { position:absolute; border-radius:999px; filter: blur(2px); opacity:.9; pointer-events:none; }
+.orb-one {
+  width:230px; height:230px; right:30px; top:38px;
+  background: radial-gradient(circle, rgba(232,169,74,.34), rgba(232,169,74,0));
+  animation: driftOne 8s ease-in-out infinite alternate;
+}
+.orb-two {
+  width:170px; height:170px; left:20px; bottom:90px;
+  background: radial-gradient(circle, rgba(255,255,255,.16), rgba(255,255,255,0));
+  animation: driftTwo 9s ease-in-out infinite alternate;
+}
+@keyframes driftOne { from{ transform:translate(0,0) scale(1);} to{ transform:translate(-32px,24px) scale(1.15);} }
+@keyframes driftTwo { from{ transform:translate(0,0) scale(1);} to{ transform:translate(26px,-22px) scale(.92);} }
 
-  .mission-image-placeholder, .founder-portrait {
-    isolation:isolate;
-  }
-  .mission-image-placeholder::after, .founder-portrait::before {
-    content:''; position:absolute; inset:-40%;
-    background: conic-gradient(from 180deg, transparent, rgba(232,169,74,.18), transparent, rgba(255,255,255,.10), transparent);
-    animation: rotateAura 14s linear infinite;
-    z-index:0;
-  }
-  .image-big-text, .founder-name-big, .founder-portrait::after { z-index:2; }
-  @keyframes rotateAura { to { transform: rotate(360deg); } }
+.photo-tile {
+  position:absolute;
+  border:1px solid rgba(255,255,255,.16);
+  box-shadow:0 28px 80px rgba(0,0,0,.22);
+  backdrop-filter: blur(10px);
+  overflow:hidden;
+  transform-style:preserve-3d;
+}
+.tile-main {
+  inset: 34px 26px 116px 34px;
+  border-radius:38px;
+  background: linear-gradient(145deg, rgba(255,255,255,.12), rgba(255,255,255,.04));
+  animation: heroCardFloat 7s ease-in-out infinite;
+}
+@keyframes heroCardFloat { 0%,100%{ transform:translateY(0) rotate(-1deg);} 50%{ transform:translateY(-14px) rotate(1deg);} }
+.tile-gradient {
+  position:absolute; inset:0;
+  background:
+    radial-gradient(circle at 22% 20%, rgba(255,255,255,.24), transparent 28%),
+    radial-gradient(circle at 84% 16%, rgba(232,169,74,.38), transparent 34%),
+    linear-gradient(135deg, rgba(250,247,242,.13), rgba(45,74,53,.24));
+}
+.tile-gradient::after {
+  content:''; position:absolute; inset:0;
+  background-image: linear-gradient(120deg, transparent 0%, rgba(255,255,255,.16) 42%, transparent 70%);
+  transform:translateX(-110%);
+  animation: lightSweep 5.8s ease-in-out infinite;
+}
+@keyframes lightSweep { 0%,35%{ transform:translateX(-120%);} 70%,100%{ transform:translateX(120%);} }
+.tile-people {
+  position:absolute; left:42px; right:42px; top:90px; height:210px;
+  display:flex; align-items:flex-end; justify-content:center; gap:18px;
+}
+.tile-people span {
+  display:block; position:relative; width:74px; height:128px; border-radius:999px 999px 28px 28px;
+  background:rgba(255,255,255,.84);
+  box-shadow: inset 0 -30px 0 rgba(200,136,42,.24);
+  animation: peoplePulse 4.5s ease-in-out infinite;
+}
+.tile-people span:nth-child(2){ height:158px; width:86px; background:rgba(232,169,74,.92); animation-delay:.25s; }
+.tile-people span:nth-child(3){ height:116px; background:rgba(255,255,255,.68); animation-delay:.5s; }
+.tile-people span::before {
+  content:''; position:absolute; width:54px; height:54px; border-radius:50%; top:-42px; left:50%; transform:translateX(-50%);
+  background:inherit;
+}
+@keyframes peoplePulse { 0%,100%{ transform:translateY(0);} 50%{ transform:translateY(-7px);} }
+.tile-caption {
+  position:absolute; left:28px; right:28px; bottom:28px;
+  background:rgba(26,26,26,.34); border:1px solid rgba(255,255,255,.12);
+  border-radius:22px; padding:18px 20px;
+}
+.tile-caption small { color:var(--gold-light); text-transform:uppercase; letter-spacing:.12em; font-size:10px; font-weight:900; display:block; margin-bottom:6px; }
+.tile-caption strong { color:#fff; font-family:'Playfair Display',serif; font-size:25px; line-height:1.1; display:block; }
+.tile-small {
+  width:205px; min-height:155px; border-radius:28px; padding:22px;
+  background:rgba(255,255,255,.09);
+  color:#fff;
+}
+.tile-small strong { display:block; font-size:16px; margin:12px 0 7px; }
+.tile-small span { display:block; color:rgba(255,255,255,.62); font-size:13px; line-height:1.5; }
+.tile-icon {
+  width:42px; height:42px; border-radius:14px; display:flex; align-items:center; justify-content:center;
+  background:var(--gold); color:#fff; font-size:22px; font-weight:900;
+}
+.tile-a { right:0; top:0; animation: smallFloatA 6.5s ease-in-out infinite; }
+.tile-b { left:0; bottom:28px; animation: smallFloatB 7.2s ease-in-out infinite; }
+@keyframes smallFloatA { 0%,100%{ transform:translateY(0) rotate(3deg);} 50%{ transform:translateY(13px) rotate(-1deg);} }
+@keyframes smallFloatB { 0%,100%{ transform:translateY(0) rotate(-2deg);} 50%{ transform:translateY(-12px) rotate(2deg);} }
+.dynamic-quote {
+  position:absolute; right:18px; bottom:0; width:310px;
+  background:rgba(255,255,255,.08);
+  transform: rotate(1deg);
+  animation: quoteFloat 8s ease-in-out infinite;
+}
+@keyframes quoteFloat { 0%,100%{ transform:translateY(0) rotate(1deg);} 50%{ transform:translateY(-8px) rotate(-1deg);} }
 
-  @media (max-width: 768px) {
-    .life-collage { min-height: 520px; margin:0 auto; }
-    .tile-main { inset: 44px 0 120px 0; }
-    .tile-a { right:0; top:4px; width:178px; }
-    .tile-b { left:0; bottom:38px; width:178px; }
-    .dynamic-quote { right:0; width:min(300px, 92%); }
-    .tile-caption strong { font-size:21px; }
-  }
+.mission-image-placeholder, .founder-portrait { isolation:isolate; }
+.mission-image-placeholder::after, .founder-portrait::before {
+  content:''; position:absolute; inset:-40%;
+  background: conic-gradient(from 180deg, transparent, rgba(232,169,74,.18), transparent, rgba(255,255,255,.10), transparent);
+  animation: rotateAura 14s linear infinite;
+  z-index:0;
+}
+.image-big-text, .founder-name-big, .founder-portrait::after { z-index:2; }
+@keyframes rotateAura { to { transform: rotate(360deg); } }
 
-  /* MOBILE */
-  @media (max-width: 768px) {
-    nav { padding: 0 20px; }
-    .nav-links { display: none; }
-    section { padding: 80px 24px; }
-    .hero { grid-template-columns: 1fr; padding: 100px 24px 64px; gap: 48px; }
-    .hero-visual { align-items: center; }
-    .hero-stats { grid-template-columns: 1fr 1fr; max-width: 100%; }
-    .mission-grid { grid-template-columns: 1fr; gap: 48px; }
-    .programs-grid { grid-template-columns: 1fr; }
-    .program-card.featured { grid-column: span 1; grid-template-columns: 1fr; }
-    .founder-grid { grid-template-columns: 1fr; gap: 48px; }
-    .steps { grid-template-columns: 1fr; gap: 32px; }
-    .steps::before { display: none; }
-    .certs-grid { grid-template-columns: 1fr; }
-    .contact-inner { grid-template-columns: 1fr; gap: 48px; }
-    .footer-top { grid-template-columns: 1fr; gap: 32px; }
-    .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
-  }
+@media (max-width: 768px) {
+  .life-collage { min-height: 520px; margin:0 auto; }
+  .tile-main { inset: 44px 0 120px 0; }
+  .tile-a { right:0; top:4px; width:178px; }
+  .tile-b { left:0; bottom:38px; width:178px; }
+  .dynamic-quote { right:0; width:min(300px, 92%); }
+  .tile-caption strong { font-size:21px; }
+}
+
+/* APPROACH — 4-step variant */
+.steps.four { grid-template-columns: repeat(4, 1fr); }
+.steps.four::before { left: 12%; right: 12%; }
+
+/* WERKPLAATSEN */
+.workshops { background: var(--cream); }
+.work-grid { display:grid; grid-template-columns: repeat(5,1fr); gap:14px; margin-top:48px; max-width:1200px; }
+.work-card { background:var(--forest); color:#fff; border-radius:20px; padding:26px 18px; text-align:center; transition:transform .2s ease, box-shadow .2s ease; }
+.work-card:hover { transform:translateY(-3px); box-shadow:0 16px 44px rgba(0,0,0,.12); }
+.work-icon { font-size:28px; margin-bottom:12px; display:block; }
+.work-card strong { display:block; font-size:14px; line-height:1.3; }
+
+/* VOOR WIE — extra intro line */
+.audience-age { display:inline-block; margin-top:14px; background:var(--gold); color:#fff; font-weight:800; font-size:13px; padding:6px 14px; border-radius:999px; }
+
+/* AANBOD — ingangen */
+.ingang-grid { display:grid; grid-template-columns: repeat(4,1fr); gap:16px; max-width:1200px; margin:48px auto 0; }
+.ingang-card { background:var(--cream); border:1px solid var(--border); border-radius:22px; padding:24px; display:flex; flex-direction:column; }
+.ingang-card h3 { font-family:'Playfair Display',serif; font-size:19px; color:var(--charcoal); margin-bottom:10px; }
+.ingang-card p { color:var(--text-muted); font-size:13px; line-height:1.6; margin-bottom:16px; flex:1; }
+.ingang-fin { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.06em; color:var(--gold); background:#fff; border:1px solid var(--border); border-radius:999px; padding:6px 12px; align-self:flex-start; }
+.ingang-card.soon { background:var(--warm-white); border-style:dashed; }
+
+/* RESULTATEN */
+.results { background: var(--forest); }
+.results .section-label { color: var(--gold-light); }
+.results .section-label::before { background: var(--gold-light); }
+.results .section-title { color:#fff; }
+.results .section-subtitle { color: rgba(255,255,255,.62); }
+.results-grid { display:grid; grid-template-columns: repeat(5,1fr); gap:16px; margin-top:48px; }
+.result-stat { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:20px; padding:30px 20px; text-align:center; }
+.result-stat .rnum { font-family:'Playfair Display',serif; font-size:40px; font-weight:900; color:var(--gold-light); line-height:1; }
+.result-stat .rlabel { color:rgba(255,255,255,.62); font-size:12px; margin-top:10px; line-height:1.4; }
+
+/* TEAM */
+.team { background: var(--warm-white); }
+.team-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:20px; margin-top:56px; max-width:1200px; }
+.team-card { background:var(--cream); border:1px solid var(--border); border-radius:22px; padding:26px; }
+.team-avatar { width:54px; height:54px; border-radius:50%; background:var(--forest); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-weight:900; font-size:19px; margin-bottom:16px; }
+.team-card h3 { font-size:17px; color:var(--charcoal); margin-bottom:2px; }
+.team-role { color:var(--gold); font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.06em; margin-bottom:12px; }
+.team-card p { color:var(--text-muted); font-size:13px; line-height:1.6; }
+
+@media (max-width: 900px) {
+  .work-grid, .results-grid { grid-template-columns: repeat(3,1fr); }
+  .ingang-grid { grid-template-columns: 1fr 1fr; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .steps.four { grid-template-columns: 1fr; }
+  .work-grid, .results-grid, .ingang-grid, .team-grid { grid-template-columns: 1fr; }
+  .site-nav { padding: 0 20px; }
+  .nav-links { display: none; }
+  .site-section { padding: 80px 24px; }
+  .hero { grid-template-columns: 1fr; padding: 100px 24px 64px; gap: 48px; }
+  .hero-visual { align-items: center; }
+  .hero-stats { grid-template-columns: 1fr 1fr; max-width: 100%; }
+  .mission-grid { grid-template-columns: 1fr; gap: 48px; }
+  .programs-grid { grid-template-columns: 1fr; }
+  .program-card.featured, .program-card.dark { grid-column: span 1; grid-template-columns: 1fr; }
+  .founder-grid { grid-template-columns: 1fr; gap: 48px; }
+  .steps { grid-template-columns: 1fr; gap: 32px; }
+  .steps::before { display: none; }
+  .certs-grid { grid-template-columns: 1fr; }
+  .contact-inner { grid-template-columns: 1fr; gap: 48px; }
+  .footer-top { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+}
+
 </style>
 </head>
-<body>
+<body class="home preview">
 
-<div class="topbar">Persoonlijke begeleiding, inloop en ontwikkeling in Zwolle. <a href="https://wa.me/31684613589" target="_blank" rel="noopener">WhatsApp ons</a></div>
-<div class="access-tools"><button>Lees voor</button><button>Simpele tekst</button><button>Vertalen</button></div>
+<div class="topbar">
+	Dé ontwikkelplek voor jongeren in Zwolle — inloop, werkplaatsen en begeleiding.	<a href="https://wa.me/31628859553" target="_blank" rel="noopener">WhatsApp ons</a>
+</div>
 
-<!-- NAV -->
-<nav id="mainNav">
-  <a href="#" class="nav-logo">
-    <div class="nav-logo-mark"><img src="https://base44.app/api/apps/6a2c034964b6eaddc5f9702f/files/mp/public/6a2c034964b6eaddc5f9702f/d88a38ad5_image.png_" alt="Samen Omhoog logo"></div>
-    <span class="nav-logo-text">Samen<span>Omhoog</span></span>
-  </a>
-  <ul class="nav-links">
-    <li><a href="#hulp">Hulp nodig?</a></li>
-    <li><a href="#programmas">Aanbod</a></li>
-    <li><a href="#doelgroepen">Voor wie</a></li>
-    <li><a href="#missie">Over ons</a></li>
-    <li><a href="#documenten">Documenten</a></li>
-  </ul>
-  <a href="https://wa.me/31684613589" target="_blank" rel="noopener" class="nav-cta">WhatsApp ons →</a>
+<div class="access-tools" aria-hidden="true">
+	<button type="button">Lees voor</button>
+	<button type="button">Simpele tekst</button>
+	<button type="button">Vertalen</button>
+</div>
+
+<nav class="site-nav" id="mainNav">
+	<a href="#home" class="nav-logo">
+					<span class="nav-logo-text">Samen<span>Omhoog</span></span>
+			</a>
+
+	<ul id="primary-menu" class="nav-links"><li><a href="#aanbod">Wat we bieden</a></li><li><a href="#werkplaats">Werkplaatsen</a></li><li><a href="#doelgroepen">Voor wie</a></li><li><a href="#team">Wie wij zijn</a></li><li><a href="#contact">Contact</a></li></ul>
+	<a href="https://wa.me/31628859553" target="_blank" rel="noopener" class="nav-cta">WhatsApp ons →</a>
 </nav>
 
 <!-- HERO -->
-<section class="hero" id="home">
-  <div class="hero-content">
-    <div class="hero-badge">Zwolle — School of Life</div>
-    <h1>Ieder mens heeft<em>talent.</em>Wij helpen het te laten zien.</h1>
-    <p class="hero-sub">Stichting Samen Omhoog is een plek waar jongeren en volwassenen zichzelf ontdekken, vaardigheden opbouwen en samen groeien — op hun manier, in hun tempo.</p>
-    <div class="hero-actions">
-      <a href="#programmas" class="btn-primary">Ontdek ons aanbod →</a>
-      <a href="#missie" class="btn-ghost">Ons verhaal</a>
-    </div>
-  </div>
-  <div class="hero-visual">
-    <div class="life-collage" aria-label="Samen Omhoog in beeld">
-      <div class="collage-orb orb-one"></div>
-      <div class="collage-orb orb-two"></div>
+<section class="hero site-section" id="home">
+	<div class="hero-content">
+		<div class="hero-badge">Stichting Samen Omhoog · Zwolle</div>
+		<h1>Dé ontwikkelplek waar <em>jongeren vooruitkomen.</em></h1>
+		<p class="hero-sub">Een plek om te oefenen met het leven. In onze werkplaatsen ontdekken jongeren hun talent, doen ze werkervaring op en bouwen ze perspectief op richting onderwijs, werk en meedoen. En het is méér dan dat: een community waar je erbij hoort.</p>
+		<div class="hero-actions">
+			<a href="#aanbod" class="btn-primary">Bekijk wat we bieden →</a>
+			<a href="#contact" class="btn-ghost">Plan een kennismaking</a>
+		</div>
+	</div>
+	<div class="hero-visual">
+		<div class="life-collage" aria-label="Samen Omhoog in beeld">
+			<div class="collage-orb orb-one"></div>
+			<div class="collage-orb orb-two"></div>
 
-      <div class="photo-tile tile-main reveal">
-        <div class="tile-gradient"></div>
-        <div class="tile-people">
-          <span></span><span></span><span></span>
-        </div>
-        <div class="tile-caption">
-          <small>School of Life</small>
-          <strong>Samen ontdekken wat wél kan</strong>
-        </div>
-      </div>
+			<div class="photo-tile tile-main reveal">
+				<div class="tile-gradient"></div>
+				<div class="tile-people"><span></span><span></span><span></span></div>
+				<div class="tile-caption">
+					<small>Onze aanpak</small>
+					<strong>Relatie + Ontwikkeling + Werkervaring = Perspectief</strong>
+				</div>
+			</div>
 
-      <div class="photo-tile tile-small tile-a reveal">
-        <div class="tile-icon">✦</div>
-        <strong>Ontmoeten</strong>
-        <span>Een plek waar je welkom bent</span>
-      </div>
+			<div class="photo-tile tile-small tile-a reveal">
+				<div class="tile-icon">✦</div>
+				<strong>Inloop</strong>
+				<span>Een plek waar je erbij hoort</span>
+			</div>
 
-      <div class="photo-tile tile-small tile-b reveal">
-        <div class="tile-icon">↗</div>
-        <strong>Leren door te doen</strong>
-        <span>Praktijk, ritme en vertrouwen</span>
-      </div>
+			<div class="photo-tile tile-small tile-b reveal">
+				<div class="tile-icon">↗</div>
+				<strong>Leren door te doen</strong>
+				<span>Echte opdrachten in de werkplaats</span>
+			</div>
 
-      <div class="hero-quote dynamic-quote reveal">
-        <p>"Als jij gelooft in iemand voordat ze in zichzelf geloven — dan verander je een leven."</p>
-        <cite>Abdiwahab Ali, Oprichter</cite>
-      </div>
-    </div>
-  </div>
+			<div class="hero-quote dynamic-quote reveal">
+				<p>"Ieder mens heeft talent. Niet iedereen past in hetzelfde systeem."</p>
+				<cite>Stichting Samen Omhoog</cite>
+			</div>
+		</div>
+	</div>
 </section>
 
-<!-- HULP FINDER -->
+<!-- CONTACT-ROUTE FINDER -->
 <section class="help-finder" id="hulp">
-  <div class="help-inner">
-    <div class="help-panel">
-      <div class="help-panel-head">
-        <div>
-          <div class="section-label">Waar kunnen we je mee helpen?</div>
-          <h2>Kies snel wat bij jou past.</h2>
-        </div>
-        <p>Geïnspireerd op sterke welzijnssites: bezoekers moeten meteen kunnen kiezen waar ze voor komen — zonder te zoeken.</p>
-      </div>
-      <div class="help-grid">
-        <a href="#programmas" class="help-card reveal magnetic-card"><div class="help-icon">1</div><strong>Ik zoek begeleiding</strong><span>Structuur, dagbesteding, ambulante begeleiding of persoonlijke ondersteuning.</span></a>
-        <a href="#programmas" class="help-card reveal magnetic-card"><div class="help-icon">2</div><strong>Ik wil leren of werken</strong><span>Werkervaring, Klas Entree, stageplekken en praktijkgericht leren.</span></a>
-        <a href="#programmas" class="help-card reveal magnetic-card"><div class="help-icon">3</div><strong>Ik wil mensen ontmoeten</strong><span>Inloop, activiteiten, welzijn en een plek waar je welkom bent.</span></a>
-        <a href="#contact" class="help-card reveal magnetic-card"><div class="help-icon">4</div><strong>Ik ben verwijzer</strong><span>Voor professionals, gemeenten, scholen en wijkteams die willen aanmelden.</span></a>
-      </div>
-    </div>
-    <div class="quick-contact-strip">
-      <div class="quick-contact-item whatsapp"><div><small>Direct contact</small><strong>WhatsApp met Samen Omhoog</strong></div><a href="https://wa.me/31684613589" target="_blank" rel="noopener">App ons</a></div>
-      <div class="quick-contact-item"><div><small>Mail ons</small><strong>info@samenomhoog.nl</strong></div><a href="mailto:info@samenomhoog.nl">Mail</a></div>
-      <div class="quick-contact-item"><div><small>Locatie</small><strong>Floresstraat 7, Zwolle</strong></div><a href="#contact">Route</a></div>
-    </div>
-  </div>
+	<div class="help-inner">
+		<div class="help-panel">
+			<div class="help-panel-head">
+				<div>
+					<div class="section-label">Hoe wil je contact?</div>
+					<h2>Kies wat bij je past.</h2>
+				</div>
+				<p>Voor jongeren die een plek zoeken, verwijzers die willen aanmelden en partners die willen bijdragen — de deur staat open.</p>
+			</div>
+			<div class="help-grid">
+				<a href="https://wa.me/31628859553" target="_blank" rel="noopener" class="help-card reveal magnetic-card"><div class="help-icon">1</div><strong>Voor jongeren</strong><span>Loop binnen bij de inloop of stuur een berichtje. Geen drempel, geen verplichting.</span></a>
+				<a href="#contact" class="help-card reveal magnetic-card"><div class="help-icon">2</div><strong>Voor verwijzers & gemeenten</strong><span>Plan een kennismaking en ontdek waarvoor je jongeren bij ons kunt aanmelden.</span></a>
+				<a href="#contact" class="help-card reveal magnetic-card"><div class="help-icon">3</div><strong>Steun ons</strong><span>Word partner, vrijwilliger of donateur en help jongeren vooruit.</span></a>
+				<a href="#aanbod" class="help-card reveal magnetic-card"><div class="help-icon">4</div><strong>Ik wil leren of werken</strong><span>Werkplaatsen, Klas Entree, stage en leerwerktrajecten onder één dak.</span></a>
+			</div>
+		</div>
+		<div class="quick-contact-strip">
+			<div class="quick-contact-item whatsapp"><div><small>Direct contact</small><strong>WhatsApp / bel ons</strong></div><a href="https://wa.me/31628859553" target="_blank" rel="noopener">06-28859553</a></div>
+			<div class="quick-contact-item"><div><small>Mail ons</small><strong>info@samenomhoog.nl</strong></div><a href="mailto:info@samenomhoog.nl">Mail</a></div>
+			<div class="quick-contact-item"><div><small>Locatie</small><strong>Floresstraat 7, 8022 AD Zwolle</strong></div><a href="#contact">Route</a></div>
+		</div>
+	</div>
 </section>
 
-<!-- MISSIE -->
-<section class="mission" id="missie">
-  <div class="mission-grid">
-    <div class="mission-left">
-      <div class="section-label">Onze missie</div>
-      <h2 class="section-title">Waarom we<br>doen wat we <em>doen.</em></h2>
-      <div class="mission-text">
-        <p>Omdat we geloven dat niemand buitengesloten hoeft te worden. Dat groei voor iedereen mogelijk is. Dat het echte leven de beste school is.</p>
-        <p>Stichting Samen Omhoog is opgericht vanuit de overtuiging dat jongeren en volwassenen die extra ondersteuning nodig hebben, meer verdienen dan een systeem. Ze verdienen een plek. Een gemeenschap. Mensen die in hen geloven.</p>
-      </div>
-      <div class="mission-values">
-        <div class="value-item">
-          <div class="value-icon">
-            <svg viewBox="0 0 18 18" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round">
-              <circle cx="9" cy="7" r="3.5"/><path d="M2 16c0-3.5 3.1-6 7-6s7 2.5 7 6"/>
-            </svg>
-          </div>
-          <div class="value-body">
-            <strong>Menselijkheid boven systemen</strong>
-            <p>We denken vanuit de mens, niet vanuit regelgeving.</p>
-          </div>
-        </div>
-        <div class="value-item">
-          <div class="value-icon">
-            <svg viewBox="0 0 18 18" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round">
-              <path d="M9 2 L9 9 L13 13"/><circle cx="9" cy="9" r="7"/>
-            </svg>
-          </div>
-          <div class="value-body">
-            <strong>Eigen tempo</strong>
-            <p>Groei heeft geen deadline. We werken in jouw ritme.</p>
-          </div>
-        </div>
-        <div class="value-item">
-          <div class="value-icon">
-            <svg viewBox="0 0 18 18" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round">
-              <path d="M3 9 L7 13 L15 5"/>
-            </svg>
-          </div>
-          <div class="value-body">
-            <strong>Leren door te doen</strong>
-            <p>Praktijk en echte ervaringen als motor voor groei.</p>
-          </div>
-        </div>
-        <div class="value-item">
-          <div class="value-icon">
-            <svg viewBox="0 0 18 18" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round">
-              <path d="M9 2 C5 4 2 7 2 10 C2 14 5.5 16 9 16 C12.5 16 16 14 16 10 C16 7 13 4 9 2Z"/>
-            </svg>
-          </div>
-          <div class="value-body">
-            <strong>Veiligheid & inclusiviteit</strong>
-            <p>Een plek waar iedereen zichzelf kan zijn.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="mission-right">
-      <div class="mission-image-placeholder">
-        <div class="image-big-text">Samen<br>Omhoog</div>
-        <div class="founder-badge">
-          <div class="fbig">Abdi</div>
-          <div class="fsmall">Oprichter</div>
-        </div>
-      </div>
-      <div class="mission-overlay-card">
-        <div class="big">10+</div>
-        <div class="small">Jaar ervaring in Zwolle</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROGRAMMA'S -->
-<section class="programs" id="programmas">
-  <div class="programs-header">
-    <div class="section-label">Ons aanbod</div>
-    <h2 class="section-title">Niet één weg.<br><em>Maar de jouwe.</em></h2>
-    <p class="section-subtitle">Vier programma's. Elk anders, maar allemaal gericht op groei, verbinding en eigen regie.</p>
-  </div>
-  <div class="programs-grid">
-
-    <div class="program-card featured reveal magnetic-card">
-      <div>
-        <div class="program-number">01</div>
-        <div class="program-label">Programma 01</div>
-        <h3 class="program-title">Ontwikkeling &amp; Werkervaring</h3>
-        <p class="program-desc">Leer in een echte werkomgeving, bouw vaardigheden op en ontdek wat jou energie geeft. Met begeleiding die echt luistert en SBB-erkende stage en leerwerktrajecten.</p>
-        <a href="https://samenomhoog.nl/aanbod/" class="program-link" target="_blank">Meer ontdekken <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
-      </div>
-      <div>
-        <ul class="program-featured-list">
-          <li>Stage en leerwerktrajecten</li>
-          <li>Klas Entree</li>
-          <li>Praktijkgericht leren</li>
-          <li>Persoonlijke begeleiding</li>
-          <li>SBB erkend leerbedrijf</li>
-          <li>Doorstroom naar werk of opleiding</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="program-card reveal magnetic-card">
-      <div class="program-number">02</div>
-      <div class="program-label">Programma 02</div>
-      <h3 class="program-title">Ontmoeting &amp; Welzijn</h3>
-      <p class="program-desc">Een open deur voor iedereen. Kom binnen, ontmoet mensen, doe mee en voel je thuis. Geen drempel te hoog — gewoon binnenlopen.</p>
-      <div class="program-tags">
-        <span class="tag">Laagdrempelige inloop</span>
-        <span class="tag">Sociale activiteiten</span>
-        <span class="tag">Avondinloop di &amp; do</span>
-      </div>
-      <a href="https://samenomhoog.nl/aanbod/" class="program-link" target="_blank">Meer ontdekken <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
-    </div>
-
-    <div class="program-card reveal magnetic-card">
-      <div class="program-number">03</div>
-      <div class="program-label">Programma 03</div>
-      <h3 class="program-title">Zorg &amp; Begeleiding</h3>
-      <p class="program-desc">Praktische ondersteuning in kleine groepen. Altijd persoonlijk, altijd gericht op groei. Met dagbesteding, ambulante begeleiding en WMO-beschikkingen.</p>
-      <div class="program-tags">
-        <span class="tag">Dagbesteding</span>
-        <span class="tag">Ambulante begeleiding</span>
-        <span class="tag">WMO &amp; beschikkingen</span>
-      </div>
-      <a href="https://samenomhoog.nl/aanbod/" class="program-link" target="_blank">Meer ontdekken <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
-    </div>
-
-    <div class="program-card reveal magnetic-card" style="grid-column: span 2; background: var(--forest); border-color: var(--forest);">
-      <div class="program-number" style="color: rgba(255,255,255,0.05);">04</div>
-      <div class="program-label">Programma 04</div>
-      <h3 class="program-title" style="color:#fff;">Ondernemerswerkplaats</h3>
-      <p class="program-desc" style="color:rgba(255,255,255,0.65);">Voor wie een eigen onderneming wil starten of laten groeien. Coaching, netwerk, werkplek en praktische tools — alles wat je nodig hebt om te ondernemen.</p>
-      <div class="program-tags">
-        <span class="tag" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.15);">Ondernemerscoaching</span>
-        <span class="tag" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.15);">Workshops</span>
-        <span class="tag" style="background:rgba(255,255,255,0.1);color:rgba(255,255,255,0.7);border-color:rgba(255,255,255,0.15);">Netwerk van ondernemers</span>
-      </div>
-      <a href="https://samenomhoog.nl/aanbod/" class="program-link" style="color:var(--gold-light);border-color:rgba(255,255,255,0.3);" target="_blank">Meer ontdekken <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
-    </div>
-
-  </div>
-</section>
-
-<!-- FOUNDER -->
-<section class="founder" id="verhaal">
-  <div class="founder-grid">
-    <div class="founder-portrait">
-      <div class="founder-name-big">
-        <span>Oprichter &amp; directeur</span>
-        Abdiwahab Ali
-      </div>
-    </div>
-    <div class="founder-content">
-      <div class="section-label">Het verhaal van Abdi</div>
-      <h2 class="section-title" style="color:#fff;">Van zoekend<br>naar <em>gids.</em></h2>
-      <div class="founder-body">
-        <p>Abdiwahab Ali — voor iedereen gewoon Abdi — reisde op zijn elfde alleen van Somalië naar Nederland. Hij kende de taal niet, kende niemand, en navigeerde een systeem dat weinig ruimte liet voor wie hij was.</p>
-        <p>Maar Abdi leerde. Door te doen. Door fouten. Door vol te houden. Hij vond zijn passie in meubelmakerij, sociaal ondernemerschap en film.</p>
-      </div>
-      <div class="founder-quote">
-        <p>"Als jij gelooft in iemand voordat ze in zichzelf geloven — dan verander je een leven."</p>
-        <cite>Abdiwahab Ali, oprichter Stichting Samen Omhoog</cite>
-      </div>
-      <a href="https://samenomhoog.nl/over-ons/" class="btn-outline-gold" target="_blank">Lees het volledige verhaal →</a>
-    </div>
-  </div>
-</section>
-
-
-<!-- DOELGROEPEN -->
-<section class="audience" id="doelgroepen">
-  <div class="audience-inner">
-    <div>
-      <div class="section-label">Voor wie zijn we er?</div>
-      <h2 class="section-title">Een duidelijke ingang voor <em>iedere bezoeker.</em></h2>
-      <p class="section-subtitle">Net als bij grote welzijnsorganisaties maken we de route helder: deelnemers, ouders, professionals en gemeenten vinden meteen hun plek.</p>
-    </div>
-    <div class="audience-list">
-      <div class="audience-row reveal magnetic-card"><div class="audience-num">1</div><div><strong>Jongeren & volwassenen</strong><span>Voor wie structuur, begeleiding, werkervaring, aansluiting of daginvulling zoekt.</span></div><em>→</em></div>
-      <div class="audience-row reveal magnetic-card"><div class="audience-num">2</div><div><strong>Ouders & familie</strong><span>Voor wie iemand wil aanmelden of eerst rustig wil overleggen wat passend is.</span></div><em>→</em></div>
-      <div class="audience-row reveal magnetic-card"><div class="audience-num">3</div><div><strong>Professionals & verwijzers</strong><span>Voor wijkteams, scholen, zorgpartijen en sociale professionals die willen samenwerken.</span></div><em>→</em></div>
-      <div class="audience-row reveal magnetic-card"><div class="audience-num">4</div><div><strong>Gemeenten & partners</strong><span>Voor WMO, beschikkingen, participatie, leerwerk en maatschappelijke samenwerkingen.</span></div><em>→</em></div>
-    </div>
-  </div>
-</section>
-
-<!-- VERHALEN / ACTUEEL -->
-<section class="story-news">
-  <div class="story-news-inner">
-    <div class="section-label">Verhalen & actualiteit</div>
-    <h2 class="section-title">Laat zien wat welzijn <em>doet.</em></h2>
-    <p class="section-subtitle">De voorbeeldsites gebruiken verhalen en nieuws om vertrouwen te bouwen. Deze sectie maakt Samen Omhoog menselijker en levendiger.</p>
-    <div class="story-grid">
-      <div class="story-card reveal magnetic-card"><small>Ervaringsverhaal</small><h3>“Ik kwam binnen en voelde: hier mag ik zijn.”</h3><p>Een plek waar mensen gezien worden, zonder oordeel en zonder ingewikkelde drempels.</p></div>
-      <div class="story-card reveal magnetic-card"><small>Uit de werkplaats</small><h3>Leren door te doen in een echte omgeving.</h3><p>Van praktische vaardigheden tot zelfvertrouwen: groei ontstaat wanneer iemand mag proberen.</p></div>
-      <div class="story-card reveal magnetic-card"><small>Samenwerking</small><h3>Met scholen, wijkteams en gemeenten.</h3><p>Samen zorgen we dat mensen sneller de juiste ondersteuning en plek vinden.</p></div>
-    </div>
-  </div>
+<!-- MISSIE / WAAROM -->
+<section class="mission site-section" id="missie">
+	<div class="mission-grid">
+		<div class="mission-left">
+			<div class="section-label">Waarom wij bestaan</div>
+			<h2 class="section-title">De brug tussen thuis, school, straat en <em>werk.</em></h2>
+			<div class="mission-text">
+				<p>De veilige tussenstap waar jongeren kunnen landen, tot rust komen en stap voor stap doorgroeien naar onderwijs, werk en zelfstandigheid — op één plek waar welzijn, participatie en zorg samenkomen, verbonden door ontwikkeling. En waar je erbij hoort.</p>
+				<p>Wij geloven dat jongeren niet geholpen zijn met veroordeling, maar met perspectief, positieve voorbeelden en een omgeving waarin zij ontdekken waar hun talenten liggen. Onze methodiek is geworteld in de presentiebenadering (naar Andries Baart): ontwikkeling begint met gezien, gehoord en begrepen worden.</p>
+			</div>
+			<div class="mission-values">
+				<div class="value-item">
+					<div class="value-icon"><svg viewBox="0 0 18 18" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"><circle cx="9" cy="7" r="3.5"/><path d="M2 16c0-3.5 3.1-6 7-6s7 2.5 7 6"/></svg></div>
+					<div class="value-body"><strong>Talentontwikkeling</strong><p>Iedere jongere heeft talenten die ontdekt kunnen worden.</p></div>
+				</div>
+				<div class="value-item">
+					<div class="value-icon"><svg viewBox="0 0 18 18" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"><path d="M3 9 L7 13 L15 5"/></svg></div>
+					<div class="value-body"><strong>Kansgericht</strong><p>Wij creëren kansen waar jongeren die zelf nog niet zien.</p></div>
+				</div>
+				<div class="value-item">
+					<div class="value-icon"><svg viewBox="0 0 18 18" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"><path d="M9 2 L9 9 L13 13"/><circle cx="9" cy="9" r="7"/></svg></div>
+					<div class="value-body"><strong>Eigenaarschap</strong><p>Jongeren leren verantwoordelijkheid nemen voor hun keuzes.</p></div>
+				</div>
+				<div class="value-item">
+					<div class="value-icon"><svg viewBox="0 0 18 18" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"><path d="M9 2 C5 4 2 7 2 10 C2 14 5.5 16 9 16 C12.5 16 16 14 16 10 C16 7 13 4 9 2Z"/></svg></div>
+					<div class="value-body"><strong>Succeservaringen</strong><p>Groei ontstaat door te ervaren dat je iets kunt.</p></div>
+				</div>
+			</div>
+		</div>
+		<div class="mission-right">
+			<div class="mission-image-placeholder">
+				<div class="image-big-text">Samen<br>Omhoog</div>
+				<div class="founder-badge"><div class="fbig">14–27</div><div class="fsmall">Voor jongeren</div></div>
+			</div>
+			<div class="mission-overlay-card"><div class="big">±230</div><div class="small">Jongeren & bezoekers bereikt</div></div>
+		</div>
+	</div>
 </section>
 
 <!-- AANPAK -->
-<section class="approach" id="aanpak">
-  <div class="approach-inner">
-    <div class="approach-header">
-      <div class="section-label">Zo werken wij</div>
-      <h2 class="section-title">Van eerste stap naar<br><em>eigen regie.</em></h2>
-    </div>
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">1</div>
-        <div class="step-title">Kennismaking</div>
-        <p class="step-desc">Geen formulieren, geen druk. Gewoon een goed gesprek over jou en je wensen.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">2</div>
-        <div class="step-title">Persoonlijk plan</div>
-        <p class="step-desc">Samen stellen we een traject op dat past bij jou — jouw mogelijkheden, tempo en wensen.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">3</div>
-        <div class="step-title">Aan de slag</div>
-        <p class="step-desc">Je start met activiteiten of werkervaring. Altijd met iemand naast je die je ondersteunt.</p>
-      </div>
-      <div class="step">
-        <div class="step-num">4</div>
-        <div class="step-title">Groeien</div>
-        <p class="step-desc">Je bouwt vertrouwen op, ontdekt je talenten en zet stappen die je nooit voor mogelijk had gehouden.</p>
-      </div>
-      <div class="step">
-        <div class="step-num gold">5</div>
-        <div class="step-title">Eigen regie</div>
-        <p class="step-desc">Uiteindelijk sta jij aan het roer. We helpen je zo zelfstandig mogelijk te worden.</p>
-      </div>
-    </div>
-  </div>
+<section class="approach site-section" id="aanpak">
+	<div class="approach-inner">
+		<div class="approach-header">
+			<div class="section-label">Onze aanpak</div>
+			<h2 class="section-title">Wij kijken naar mogelijkheden,<br><em>niet naar beperkingen.</em></h2>
+			<p class="section-subtitle">Ontwikkeling begint bij de relatie. Pas als een jongere zich gezien en veilig voelt, groeit de rest.</p>
+		</div>
+		<div class="steps four">
+			<div class="step"><div class="step-num">1</div><div class="step-title">Relatie</div><p class="step-desc">Nabijheid en rolmodellen die de taal spreken. Gezien, gehoord en begrepen worden komt eerst.</p></div>
+			<div class="step"><div class="step-num">2</div><div class="step-title">Ontwikkeling</div><p class="step-desc">Hard skills én soft skills: samenwerken, communiceren, initiatief nemen en verantwoordelijkheid dragen.</p></div>
+			<div class="step"><div class="step-num">3</div><div class="step-title">Werkervaring</div><p class="step-desc">Praktisch aan de slag met echte opdrachten in de werkplaatsen — leren door te doen.</p></div>
+			<div class="step"><div class="step-num gold">4</div><div class="step-title">Perspectief</div><p class="step-desc">Doorstroom naar onderwijs, werk en zelfstandigheid — meedoen in de samenleving.</p></div>
+		</div>
+	</div>
 </section>
 
-<!-- CERTIFICATIONS -->
-<section class="certs">
-  <div class="certs-inner">
-    <div class="section-label">Kwaliteit &amp; certificering</div>
-    <h2 class="section-title">Gecertificeerd en<br><em>aanspreekbaar.</em></h2>
-    <div class="certs-grid">
-      <div class="cert-card reveal magnetic-card">
-        <img class="cert-brand-img" src="https://base44.app/api/apps/6a2c034964b6eaddc5f9702f/files/mp/public/6a2c034964b6eaddc5f9702f/beea9f84e_ISO_9001_1_.png_" alt="ISO 9001 certificering">
-        <div class="cert-title">ISO 9001 Gecertificeerd</div>
-        <p class="cert-desc">Onze organisatie voldoet aan de internationale norm voor kwaliteitsmanagement. Dit garandeert consistente, kwalitatieve dienstverlening.</p>
-      </div>
-      <div class="cert-card reveal magnetic-card">
-        <img class="cert-brand-img" src="https://base44.app/api/apps/6a2c034964b6eaddc5f9702f/files/mp/public/6a2c034964b6eaddc5f9702f/c75a5b0a3_SBB-logo-2.png_" alt="SBB erkend leerbedrijf">
-        <div class="cert-title">SBB Erkend Leerbedrijf</div>
-        <p class="cert-desc">We zijn erkend door Stichting Beroepsonderwijs Bedrijfsleven voor het bieden van kwalitatieve stageplekken en leerwerktrajecten.</p>
-      </div>
-      <div class="cert-card reveal magnetic-card">
-        <img class="cert-brand-img" src="https://base44.app/api/apps/6a2c034964b6eaddc5f9702f/files/mp/public/6a2c034964b6eaddc5f9702f/365f38212_downloaden.png_" alt="CBZ">
-        <div class="cert-title">Aangesloten bij CBZ</div>
-        <p class="cert-desc">Via Coöperatie Boer en Zorg bieden we zorg met bijbehorende klachtenregeling, algemene voorwaarden en vertrouwenspersoon.</p>
-      </div>
-    </div>
-  </div>
+<!-- WERKPLAATSEN -->
+<section class="workshops site-section" id="werkplaats">
+	<div class="approach-inner">
+		<div class="approach-header">
+			<div class="section-label">De werkplaatsen</div>
+			<h2 class="section-title">Leren door te <em>doen.</em></h2>
+			<p class="section-subtitle">De werkplaatsen zijn het hart van onze aanpak — geen doel, maar een middel om jongeren te activeren en te laten ontdekken waar hun talent ligt.</p>
+		</div>
+		<div class="work-grid">
+			<div class="work-card reveal magnetic-card"><span class="work-icon">🎬</span><strong>Multimedia & podcast</strong></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon">🔨</span><strong>Hout & metaal</strong></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon">✂️</span><strong>Kapsalon</strong></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon">🚲</span><strong>(Fat)bike-reparatie</strong></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon">🛋️</span><strong>Huiskamer & leerplek</strong></div>
+		</div>
+	</div>
 </section>
 
-<!-- DOCUMENTEN -->
-<section class="documents" id="documenten">
-  <div class="documents-inner">
-    <div>
-      <div class="section-label">Officiële documenten</div>
-      <h2 class="section-title">Transparant, veilig en professioneel.</h2>
-      <p class="section-subtitle">Alle belangrijke documenten zijn direct beschikbaar voor deelnemers, ouders, verwijzers en partners.</p>
-      <div class="partner-strip">
-        <img src="https://base44.app/api/apps/6a2c034964b6eaddc5f9702f/files/mp/public/6a2c034964b6eaddc5f9702f/beea9f84e_ISO_9001_1_.png_" alt="ISO 9001">
-        <img src="https://base44.app/api/apps/6a2c034964b6eaddc5f9702f/files/mp/public/6a2c034964b6eaddc5f9702f/c75a5b0a3_SBB-logo-2.png_" alt="SBB">
-        <img src="https://base44.app/api/apps/6a2c034964b6eaddc5f9702f/files/mp/public/6a2c034964b6eaddc5f9702f/0f9c8f625_RotaryLogo_EN21.jpg_" alt="Rotary">
-      </div>
-    </div>
-    <div class="doc-grid">
-      <a class="doc-card" href="https://base44.app/api/apps/6a2c034964b6eaddc5f9702f/files/mp/public/6a2c034964b6eaddc5f9702f/565275220_KlachtenregelingdeelnemersSSO.pdf_" target="_blank"><strong>Klachtenregeling deelnemers SSO</strong><span>PDF downloaden →</span></a>
-      <a class="doc-card" href="https://base44.app/api/apps/6a2c034964b6eaddc5f9702f/files/mp/public/6a2c034964b6eaddc5f9702f/0b37dedf5_Algemenevoorwaardenzorgverlening.pdf_" target="_blank"><strong>Algemene voorwaarden zorgverlening</strong><span>PDF downloaden →</span></a>
-      <a class="doc-card" href="https://base44.app/api/apps/6a2c034964b6eaddc5f9702f/files/mp/public/6a2c034964b6eaddc5f9702f/e56079b24_Huisregels.pdf_" target="_blank"><strong>Huisregels</strong><span>PDF downloaden →</span></a>
-    </div>
-  </div>
+<!-- VOOR WIE -->
+<section class="audience site-section" id="doelgroepen">
+	<div class="audience-inner">
+		<div>
+			<div class="section-label">Voor wie</div>
+			<h2 class="section-title">Voor jongeren met talent dat <em>ruimte verdient.</em></h2>
+			<p class="section-subtitle">Iedere jongere is anders. Wat hen verbindt, is de behoefte aan een veilige plek, tijd en iemand die in ze gelooft. Wij sluiten aan bij waar zij staan — en kijken vooruit.</p>
+			<span class="audience-age">14 tot 27 jaar</span>
+		</div>
+		<div class="audience-list">
+			<div class="audience-row reveal magnetic-card"><div class="audience-num">1</div><div><strong>Nieuwkomers</strong><span>Kort in Nederland en klaar om mee te doen — vanuit het praktijkonderwijs, de ISK of een integratiejaar.</span></div><em>→</em></div>
+			<div class="audience-row reveal magnetic-card"><div class="audience-num">2</div><div><strong>Klaar voor een kans</strong><span>Jongeren die op school of stage hun plek nog niet vonden, maar met de juiste begeleiding opbloeien.</span></div><em>→</em></div>
+			<div class="audience-row reveal magnetic-card"><div class="audience-num">3</div><div><strong>Op zoek naar richting</strong><span>Jongeren die hun draai nog zoeken en weer ritme, perspectief en motivatie willen vinden.</span></div><em>→</em></div>
+			<div class="audience-row reveal magnetic-card"><div class="audience-num">4</div><div><strong>Klaar voor een nieuwe start</strong><span>Jongeren die een tijd buiten beeld waren en bij ons opnieuw kunnen opbouwen.</span></div><em>→</em></div>
+		</div>
+	</div>
+</section>
+
+<!-- AANBOD -->
+<section class="programs site-section" id="aanbod">
+	<div class="programs-header">
+		<div class="section-label">Wat we bieden</div>
+		<h2 class="section-title">Eén doel: ontwikkeling.<br><em>Eén plek. Meerdere ingangen.</em></h2>
+		<p class="section-subtitle">Elke jongere komt bij ons om zich te ontwikkelen. Dat doen we onder één dak, via meerdere ingangen — elk met een eigen financiering, zodat verwijzers precies weten waarvoor ze kunnen aanmelden.</p>
+	</div>
+
+	<div class="programs-grid">
+		<div class="program-card featured reveal magnetic-card">
+			<div>
+				<div class="program-number">★</div>
+				<div class="program-label">Onderwijs & stage onder één dak</div>
+				<h3 class="program-title">Klas Entree — van leren tot diploma</h3>
+				<p class="program-desc">Onderwijs én stage op één plek, samen met StartCollege Landstede, Start.Deltion en de gemeente Zwolle. In een kleine groep toewerken naar een Entree-diploma, mbo-verklaring of praktijkverklaring. Voor anderstalige jongeren vanaf 16 jaar — start schooljaar 2026–2027.</p>
+				<a href="#contact" class="program-link">Plan een kennismaking <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
+			</div>
+			<div>
+				<ul class="program-featured-list">
+					<li>1 plek: onderwijs én stage onder één dak</li>
+					<li>Max. 10 studenten per klas, veel aandacht</li>
+					<li>Eigen leerplan op het tempo van de student</li>
+					<li>Examen op de werkplek, leren in de echte context</li>
+					<li>Taal in de praktijk</li>
+					<li>Doorstroom naar werk of vervolgopleiding</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="ingang-grid">
+		<div class="ingang-card reveal magnetic-card"><h3>Inloop</h3><p>Laagdrempelige ontmoeting, structuur en een luisterend oor — overdag en in de avond. Velen vinden via de inloop hun weg terug.</p><span class="ingang-fin">Financiering: subsidie</span></div>
+		<div class="ingang-card reveal magnetic-card"><h3>Leerwerktrajecten & stage</h3><p>Begeleide leer- en werkplekken (De Groene Draad) richting een reguliere stage of het afronden van school.</p><span class="ingang-fin">Onderwijs · subsidie</span></div>
+		<div class="ingang-card reveal magnetic-card"><h3>Klas Entree</h3><p>Onderwijs én stage op één plek, richting Entree-diploma of praktijkverklaring.</p><span class="ingang-fin">I.s.m. onderwijs</span></div>
+		<div class="ingang-card reveal magnetic-card"><h3>Sociale activering</h3><p>Betekenisvolle daginvulling en taal- en cultuurondersteuning, ook voor nieuwkomers en AMV'ers.</p><span class="ingang-fin">Financiering: subsidie</span></div>
+		<div class="ingang-card reveal magnetic-card"><h3>Zorgtrajecten</h3><p>Ambulante begeleiding en groepsaanbod wanneer een jongere meer nodig heeft — als gecontracteerd aanbieder via Coöperatie Boer & Zorg.</p><span class="ingang-fin">Jeugdwet / Wmo · op maat</span></div>
+		<div class="ingang-card reveal magnetic-card"><h3>Participatietrajecten</h3><p>Meedoen en groeien richting werk en zelfstandigheid.</p><span class="ingang-fin">Inkoop · op maat</span></div>
+		<div class="ingang-card reveal magnetic-card"><h3>Jobcoaching</h3><p>Persoonlijke begeleiding richting werk, stage en de arbeidsmarkt.</p><span class="ingang-fin">Op maat</span></div>
+		<div class="ingang-card soon reveal magnetic-card"><h3>Trainingen</h3><p>Aanbod in ontwikkeling — hier komt binnenkort meer over.</p><span class="ingang-fin">Binnenkort</span></div>
+	</div>
+</section>
+
+<!-- RESULTATEN -->
+<section class="results site-section">
+	<div class="approach-inner">
+		<div class="approach-header">
+			<div class="section-label">Wat het oplevert</div>
+			<h2 class="section-title">Resultaat begint al bij <em>binnenkomen.</em></h2>
+			<p class="section-subtitle">Een jongere die via de inloop binnenkomt en weer de weg terugvindt naar onderwijs, stage of een dagritme — dat is op zichzelf al een resultaat.</p>
+		</div>
+		<div class="results-grid">
+			<div class="result-stat reveal"><div class="rnum">±230</div><div class="rlabel">Unieke jongeren & bezoekers bereikt</div></div>
+			<div class="result-stat reveal"><div class="rnum">55</div><div class="rlabel">Jongeren op een stageplek</div></div>
+			<div class="result-stat reveal"><div class="rnum">20</div><div class="rlabel">Zorgtrajecten</div></div>
+			<div class="result-stat reveal"><div class="rnum">150</div><div class="rlabel">Bezoekers van de inloop</div></div>
+			<div class="result-stat reveal"><div class="rnum">6</div><div class="rlabel">Participatietrajecten</div></div>
+		</div>
+	</div>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder site-section" id="verhaal">
+	<div class="founder-grid">
+		<div class="founder-portrait">
+			<div class="founder-name-big"><span>Oprichter · Manager Uitvoering & Ontwikkeling</span>Abdiwahab Ali</div>
+		</div>
+		<div class="founder-content">
+			<div class="section-label">De oprichter</div>
+			<h2 class="section-title">Rolmodellen<br>spreken de <em>taal.</em></h2>
+			<div class="founder-body">
+				<p>Samen Omhoog is opgericht door Abdiwahab Ali. Hij kwam op jonge leeftijd alleen naar Nederland en weet uit eigen ervaring hoe het is om je weg te zoeken — met vallen en opstaan, en uiteindelijk een nieuwe richting in meubelmakerij, ondernemerschap en film.</p>
+				<p>Vanuit die herkenning begeleidt hij jongeren met één overtuiging: ieder mens heeft potentieel, ongeacht achtergrond of omstandigheden. Hij staat zelf als rolmodel en begeleider op de werkvloer; zijn nabijheid vormt het fundament onder onze aanpak.</p>
+			</div>
+			<div class="founder-quote">
+				<p>"Door nabijheid en een gedeelde leefwereld bereiken we jongeren die voor anderen onbereikbaar blijven."</p>
+				<cite>Stichting Samen Omhoog</cite>
+			</div>
+			<a href="#team" class="btn-outline-gold">Maak kennis met het team →</a>
+		</div>
+	</div>
+</section>
+
+<!-- TEAM -->
+<section class="team site-section" id="team">
+	<div class="certs-inner">
+		<div class="section-label">Wie wij zijn</div>
+		<h2 class="section-title">Verschillende achtergronden, <em>één missie.</em></h2>
+		<p class="section-subtitle">It takes a village. Bij Samen Omhoog ontmoet een jongere niet één begeleider, maar een hecht team van professionals, vakmensen en ervaringsdeskundigen die hun leefwereld kennen.</p>
+		<div class="team-grid">
+			<div class="team-card reveal magnetic-card"><div class="team-avatar">AA</div><h3>Abdi Ali</h3><div class="team-role">Manager Uitvoering & Ontwikkeling</div><p>Oprichter en rolmodel; ook als begeleider op de werkvloer. Vond na een moeilijke weg zijn richting in meubelmakerij, ondernemerschap en film.</p></div>
+			<div class="team-card reveal magnetic-card"><div class="team-avatar">MH</div><h3>Marijn Hageman</h3><div class="team-role">Manager Organisatie & Strategie</div><p>Veiligheidskundige met een achtergrond binnen politie en veiligheid. Bouwt aan de organisatie, strategie en samenwerking.</p></div>
+			<div class="team-card reveal magnetic-card"><div class="team-avatar">AA</div><h3>Ali Abdulle</h3><div class="team-role">Manager Facilitair & Beheer</div><p>Ook begeleider op de werkvloer; ervaringsdeskundige die zonder opleiding opnieuw begon en een eigen bedrijf opbouwde.</p></div>
+			<div class="team-card reveal magnetic-card"><div class="team-avatar">EB</div><h3>Esther Brinkman</h3><div class="team-role">Trajectcoördinator Zorg & Participatie</div><p>Achtergrond in de reclassering, met ervaring in de TBS- en GGZ-sector. Begeleiding en jobcoaching.</p></div>
+			<div class="team-card reveal magnetic-card"><div class="team-avatar">SP</div><h3>Sonja van der Ploeg</h3><div class="team-role">Docent & jobcoach</div><p>Verzorgt onderwijs, jobcoaching en sociale activering.</p></div>
+			<div class="team-card reveal magnetic-card"><div class="team-avatar">YA</div><h3>Yassine Assad</h3><div class="team-role">SKJ-jeugdprofessional</div><p>Geregistreerd jeugdprofessional. Begeleiding van jongeren vanuit de (verlengde) Jeugdwet. Daarnaast werkzaam bij het COA.</p></div>
+			<div class="team-card reveal magnetic-card"><div class="team-avatar">RK</div><h3>Robbert Kaspers</h3><div class="team-role">Werkmeester</div><p>Meubelmaker en luchtvaarttechnicus; brengt vakmanschap, discipline en praktijkervaring de werkplaats in.</p></div>
+			<div class="team-card reveal magnetic-card"><div class="team-avatar">SH</div><h3>Shaakir Haashi</h3><div class="team-role">Sociale activering</div><p>Ervaringsdeskundige met een migratieachtergrond; betrokken bij de sociale activering voor praktische vragen en ondersteuning.</p></div>
+			<div class="team-card reveal magnetic-card" style="background:var(--forest);border-color:var(--forest);"><div class="team-avatar" style="background:var(--gold);">+</div><h3 style="color:#fff;">Ons netwerk</h3><div class="team-role" style="color:var(--gold-light);">Samen om één jongere heen</div><p style="color:rgba(255,255,255,.7);">Naast ons vaste team werken we met een netwerk van ondernemers, scholen, wijkteams en zorgpartners.</p></div>
+		</div>
+	</div>
+</section>
+
+<!-- CERTIFICERINGEN -->
+<section class="certs site-section">
+	<div class="certs-inner">
+		<div class="section-label">Kwaliteit & certificering</div>
+		<h2 class="section-title">Gecertificeerd en <em>aanspreekbaar.</em></h2>
+		<div class="certs-grid">
+			<div class="cert-card reveal magnetic-card">
+				<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M13 2l3 3 4-1 1 4 3 3-3 3 1 4-4 1-3 3-3-3-4 1-1-4-3-3 3-3-1-4 4 1z"/><path d="M9 13l3 3 5-6"/></svg></div>
+				<div class="cert-title">ISO 9001 Gecertificeerd</div>
+				<p class="cert-desc">Onze organisatie voldoet aan de internationale norm voor kwaliteitsmanagement — consistente, kwalitatieve dienstverlening.</p>
+			</div>
+			<div class="cert-card reveal magnetic-card">
+				<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><circle cx="13" cy="13" r="10"/><path d="M8 13l3 3 6-7"/></svg></div>
+				<div class="cert-title">Coöperatie Boer & Zorg (CBZ)</div>
+				<p class="cert-desc">Als gecontracteerd zorgaanbieder via CBZ, met bijbehorende klachtenregeling, algemene voorwaarden en vertrouwenspersoon.</p>
+			</div>
+			<div class="cert-card reveal magnetic-card">
+				<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M13 2L3 6v6c0 6 4 9 10 12 6-3 10-6 10-12V6z"/><path d="M9 13l3 3 5-6"/></svg></div>
+				<div class="cert-title">SKJ & AVG</div>
+				<p class="cert-desc">Geregistreerde SKJ-jeugdprofessional in huis en zorgvuldige omgang met persoonsgegevens volgens de AVG.</p>
+			</div>
+		</div>
+	</div>
 </section>
 
 <!-- CONTACT -->
-<section class="contact" id="contact">
-  <div class="contact-inner">
-    <div>
-      <div class="section-label">Contact opnemen</div>
-      <h2 class="section-title">We horen<br><em>graag van je.</em></h2>
-      <p class="section-subtitle">Of je nu voor jezelf belt, voor je kind, of als verwijzer — geen drempel te hoog.</p>
-      <div class="contact-details">
-        <div class="contact-item">
-          <div class="contact-icon">
-            <svg viewBox="0 0 18 18" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round">
-              <path d="M3 4C3 3.4 3.4 3 4 3h3l1.5 3L7 8c1 2 3 4 5 5l2-1.5 3 1.5v3c0 .6-.4 1-1 1C8.5 17 1 9.5 1 4c0-.4.4-1 1-1"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-info-label">Telefoon</div>
-            <div class="contact-info-val"><a class="whatsapp-inline" href="https://wa.me/31684613589" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.44 3 4.07 8.36 4.07 14.96c0 2.11.55 4.17 1.6 5.98L4 29l8.27-1.63a11.9 11.9 0 0 0 5.77 1.47H18.05C24.64 28.84 30 23.48 30 16.88 30 10.3 22.64 3 16.04 3Zm7.04 17.16c-.3.85-1.74 1.63-2.4 1.73-.62.1-1.4.14-2.26-.14-.52-.17-1.2-.39-2.06-.77-3.62-1.56-5.98-5.2-6.16-5.44-.18-.24-1.47-1.96-1.47-3.74s.93-2.65 1.26-3.01c.33-.36.72-.45.96-.45h.69c.22.01.52-.08.81.62.3.72 1.02 2.5 1.11 2.68.09.18.15.39.03.63-.12.24-.18.39-.36.6-.18.21-.38.47-.54.63-.18.18-.37.38-.16.74.21.36.93 1.54 2 2.5 1.37 1.22 2.53 1.6 2.9 1.78.36.18.57.15.78-.09.21-.24.9-1.05 1.14-1.41.24-.36.48-.3.81-.18.33.12 2.1.99 2.46 1.17.36.18.6.27.69.42.09.15.09.87-.21 1.72Z"/></svg>WhatsApp ons</a></div>
-            <div class="contact-info-sub">Snelste manier om ons te bereiken</div>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <svg viewBox="0 0 18 18" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round">
-              <rect x="2" y="4" width="14" height="10" rx="2"/>
-              <path d="M2 6l7 5 7-5"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-info-label">E-mail</div>
-            <div class="contact-info-val">info@samenomhoog.nl</div>
-            <div class="contact-info-sub">Reactie binnen 1–2 werkdagen</div>
-          </div>
-        </div>
-        <div class="contact-item">
-          <div class="contact-icon">
-            <svg viewBox="0 0 18 18" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round">
-              <path d="M9 2C6.2 2 4 4.2 4 7c0 4 5 9 5 9s5-5 5-9c0-2.8-2.2-5-5-5z"/>
-              <circle cx="9" cy="7" r="1.5"/>
-            </svg>
-          </div>
-          <div>
-            <div class="contact-info-label">Adres</div>
-            <div class="contact-info-val">Floresstraat 7, 8022 AD Zwolle</div>
-            <div class="contact-info-sub">Ma–do 09:00–17:00 · Vr tot 15:00</div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="contact-form-wrapper">
-      <div class="form-title">Stuur een bericht</div>
-      <div class="form-sub">We reageren zo snel mogelijk — meestal binnen één werkdag.</div>
-      <form action="https://samenomhoog.nl/contact/" method="post">
-        <div class="form-row">
-          <div class="form-group">
-            <label>Naam</label>
-            <input type="text" placeholder="Jouw naam">
-          </div>
-          <div class="form-group">
-            <label>E-mail</label>
-            <input type="email" placeholder="jouw@email.nl">
-          </div>
-        </div>
-        <div class="form-group">
-          <label>Telefoon</label>
-          <input type="tel" placeholder="06 ...">
-        </div>
-        <div class="form-group">
-          <label>Onderwerp</label>
-          <select>
-            <option value="">Kies een onderwerp</option>
-            <option>Informatie over een programma</option>
-            <option>Aanmelding deelnemer</option>
-            <option>Verwijzing als professional</option>
-            <option>Samenwerking</option>
-            <option>Vrijwilligerswerk</option>
-            <option>Iets anders</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label>Bericht</label>
-          <textarea placeholder="Schrijf hier je bericht..."></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Verstuur bericht →</button>
-      </form>
-    </div>
-  </div>
+<section class="contact site-section" id="contact">
+	<div class="contact-inner">
+		<div>
+			<div class="section-label">Contact</div>
+			<h2 class="section-title">Kom langs, bel <em>of mail.</em></h2>
+			<p class="section-subtitle">Voor jongeren die een plek zoeken, verwijzers die willen aanmelden en partners die willen bijdragen — we denken graag mee.</p>
+			<div class="contact-details">
+				<div class="contact-item">
+					<div class="contact-icon"><svg viewBox="0 0 18 18" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round"><path d="M3 4C3 3.4 3.4 3 4 3h3l1.5 3L7 8c1 2 3 4 5 5l2-1.5 3 1.5v3c0 .6-.4 1-1 1C8.5 17 1 9.5 1 4c0-.4.4-1 1-1"/></svg></div>
+					<div>
+						<div class="contact-info-label">Telefoon / WhatsApp</div>
+						<div class="contact-info-val"><a class="whatsapp-inline" href="https://wa.me/31628859553" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.44 3 4.07 8.36 4.07 14.96c0 2.11.55 4.17 1.6 5.98L4 29l8.27-1.63a11.9 11.9 0 0 0 5.77 1.47H18.05C24.64 28.84 30 23.48 30 16.88 30 10.3 22.64 3 16.04 3Zm7.04 17.16c-.3.85-1.74 1.63-2.4 1.73-.62.1-1.4.14-2.26-.14-.52-.17-1.2-.39-2.06-.77-3.62-1.56-5.98-5.2-6.16-5.44-.18-.24-1.47-1.96-1.47-3.74s.93-2.65 1.26-3.01c.33-.36.72-.45.96-.45h.69c.22.01.52-.08.81.62.3.72 1.02 2.5 1.11 2.68.09.18.15.39.03.63-.12.24-.18.39-.36.6-.18.21-.38.47-.54.63-.18.18-.37.38-.16.74.21.36.93 1.54 2 2.5 1.37 1.22 2.53 1.6 2.9 1.78.36.18.57.15.78-.09.21-.24.9-1.05 1.14-1.41.24-.36.48-.3.81-.18.33.12 2.1.99 2.46 1.17.36.18.6.27.69.42.09.15.09.87-.21 1.72Z"/></svg>06-28859553</a></div>
+						<div class="contact-info-sub">Snelste manier om ons te bereiken</div>
+					</div>
+				</div>
+				<div class="contact-item">
+					<div class="contact-icon"><svg viewBox="0 0 18 18" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round"><rect x="2" y="4" width="14" height="10" rx="2"/><path d="M2 6l7 5 7-5"/></svg></div>
+					<div>
+						<div class="contact-info-label">E-mail</div>
+						<div class="contact-info-val"><a href="mailto:info@samenomhoog.nl" style="color:#fff;text-decoration:none;">info@samenomhoog.nl</a></div>
+						<div class="contact-info-sub">Reactie binnen 1–2 werkdagen</div>
+					</div>
+				</div>
+				<div class="contact-item">
+					<div class="contact-icon"><svg viewBox="0 0 18 18" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round"><path d="M9 2C6.2 2 4 4.2 4 7c0 4 5 9 5 9s5-5 5-9c0-2.8-2.2-5-5-5z"/><circle cx="9" cy="7" r="1.5"/></svg></div>
+					<div>
+						<div class="contact-info-label">Bezoek</div>
+						<div class="contact-info-val">Floresstraat 7, 8022 AD Zwolle</div>
+						<div class="contact-info-sub">Ma–vr 09:00–17:00 · Avondinloop di & do 19:00–23:00</div>
+					</div>
+				</div>
+				<div class="contact-item">
+					<div class="contact-icon"><svg viewBox="0 0 18 18" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round"><rect x="2.5" y="3.5" width="13" height="11" rx="1.5"/><path d="M2.5 7h13"/></svg></div>
+					<div>
+						<div class="contact-info-label">Organisatie</div>
+						<div class="contact-info-val">KvK 89792807</div>
+						<div class="contact-info-sub">RSIN 865111339 · AGB 98108329</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="contact-form-wrapper">
+			<div class="form-title">Plan een kennismaking</div>
+			<div class="form-sub">We reageren zo snel mogelijk — meestal binnen één werkdag.</div>
+
+			
+			<form action="#" method="post">
+				<input type="hidden" name="action" value="samen_omhoog_contact">
+				<input type="hidden" name="_wpnonce" value="preview">				<div style="position:absolute;left:-9999px;" aria-hidden="true">
+					<label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+				</div>
+				<div class="form-row">
+					<div class="form-group"><label>Naam</label><input type="text" name="so_name" placeholder="Jouw naam" required></div>
+					<div class="form-group"><label>E-mail</label><input type="email" name="so_email" placeholder="jouw@email.nl" required></div>
+				</div>
+				<div class="form-group"><label>Telefoon</label><input type="tel" name="so_phone" placeholder="06 ..."></div>
+				<div class="form-group">
+					<label>Ik ben...</label>
+					<select name="so_subject">
+						<option value="">Kies een onderwerp</option>
+						<option>Jongere — ik zoek een plek</option>
+						<option>Ouder / familie</option>
+						<option>Verwijzer / professional</option>
+						<option>Gemeente / partner</option>
+						<option>Klas Entree (onderwijs)</option>
+						<option>Vrijwilliger / donateur</option>
+						<option>Iets anders</option>
+					</select>
+				</div>
+				<div class="form-group"><label>Bericht</label><textarea name="so_message" placeholder="Schrijf hier je bericht..." required></textarea></div>
+				<button type="submit" class="btn-submit">Verstuur bericht →</button>
+			</form>
+		</div>
+	</div>
 </section>
 
-<!-- FOOTER -->
-<footer>
-  <div class="footer-top">
-    <div class="footer-brand">
-      <div class="footer-logo"><img src="https://base44.app/api/apps/6a2c034964b6eaddc5f9702f/files/mp/public/6a2c034964b6eaddc5f9702f/d88a38ad5_image.png_" alt="Samen Omhoog" style="width:150px;height:auto;background:#fff;border-radius:12px;padding:6px;"></div>
-      <p class="footer-desc">Een veilige, creatieve ontwikkelplek voor jongeren en volwassenen in Zwolle. School of Life — leren door te doen.</p>
-      <div class="footer-contact-chips">
-        <span class="footer-chip">info@samenomhoog.nl</span>
-        <span class="footer-chip">06 846 13 589</span>
-        <span class="footer-chip">Floresstraat 7, 8022 AD Zwolle</span>
-      </div>
-    </div>
-    <div>
-      <div class="footer-col-title">Navigatie</div>
-      <ul class="footer-links">
-        <li><a href="https://samenomhoog.nl">Home</a></li>
-        <li><a href="https://samenomhoog.nl/over-ons/">Over Ons</a></li>
-        <li><a href="https://samenomhoog.nl/aanbod/">Aanbod</a></li>
-        <li><a href="https://samenomhoog.nl/contact/">Contact</a></li>
-        <li><a href="https://samenomhoog.nl/documenten/">Documenten</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-col-title">Programma's</div>
-      <ul class="footer-links">
-        <li><a href="https://samenomhoog.nl/aanbod/">Alle programma's</a></li>
-        <li><a href="https://samenomhoog.nl/aanbod/">Ontwikkeling &amp; Werkervaring</a></li>
-        <li><a href="https://samenomhoog.nl/aanbod/">Ontmoeting &amp; Welzijn</a></li>
-        <li><a href="https://samenomhoog.nl/aanbod/">Zorg &amp; Begeleiding</a></li>
-        <li><a href="https://samenomhoog.nl/aanbod/">Ondernemerswerkplaats</a></li>
-      </ul>
-    </div>
-    <div>
-      <div class="footer-col-title">Openingstijden</div>
-      <div class="footer-hours">
-        <div class="footer-hour"><span class="day">Maandag – Donderdag</span><span class="time">09:00–17:00</span></div>
-        <div class="footer-hour"><span class="day">Vrijdag</span><span class="time">09:00–15:00</span></div>
-        <div class="footer-hour"><span class="day">Za &amp; Zo</span><span class="time">Gesloten</span></div>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <span>© 2026 Stichting Samen Omhoog · Zwolle</span>
-    <span>info@samenomhoog.nl · 06 846 13 589</span>
-  </div>
+
+<footer class="site-footer">
+	<div class="footer-top">
+		<div class="footer-brand">
+			<div class="footer-logo">Samen<span>Omhoog</span></div>
+			<p class="footer-desc">Een ontwikkelplek voor jongeren in Zwolle — de brug tussen thuis, school, straat en werk. Relatie + Ontwikkeling + Werkervaring = Perspectief.</p>
+			<div class="footer-contact-chips">
+				<span class="footer-chip">info@samenomhoog.nl</span>
+				<span class="footer-chip">06-28859553</span>
+				<span class="footer-chip">Floresstraat 7, 8022 AD Zwolle</span>
+			</div>
+		</div>
+		<div>
+			<div class="footer-col-title">Pagina's</div>
+							<ul class="footer-links">
+					<li><a href="#home">Home</a></li>
+					<li><a href="#aanbod">Wat we bieden</a></li>
+					<li><a href="#team">Wie wij zijn</a></li>
+					<li><a href="#contact">Contact</a></li>
+				</ul>
+						</div>
+		<div>
+			<div class="footer-col-title">Wat we bieden</div>
+			<ul class="footer-links">
+				<li><a href="#aanbod">Inloop</a></li>
+				<li><a href="#aanbod">Leerwerk & stage</a></li>
+				<li><a href="#aanbod">Klas Entree</a></li>
+				<li><a href="#aanbod">Zorg & participatie</a></li>
+				<li><a href="#aanbod">Jobcoaching</a></li>
+			</ul>
+		</div>
+		<div>
+			<div class="footer-col-title">Openingstijden</div>
+			<div class="footer-hours">
+				<div class="footer-hour"><span class="day">Maandag – Vrijdag</span><span class="time">09:00–17:00</span></div>
+				<div class="footer-hour"><span class="day">Avondinloop di &amp; do</span><span class="time">19:00–23:00</span></div>
+				<div class="footer-hour"><span class="day">Za &amp; Zo</span><span class="time">Gesloten</span></div>
+			</div>
+		</div>
+	</div>
+	<div class="footer-bottom">
+		<span>&copy; 2026 Stichting Samen Omhoog · Zwolle · KvK 89792807 · RSIN 865111339 · AGB 98108329</span>
+		<span>ISO 9001 · Klachtenregeling · Coöperatie Boer & Zorg (CBZ) · AVG</span>
+	</div>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/31684613589" target="_blank" rel="noopener" aria-label="WhatsApp Samen Omhoog">
-  <svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.44 3 4.07 8.36 4.07 14.96c0 2.11.55 4.17 1.6 5.98L4 29l8.27-1.63a11.9 11.9 0 0 0 5.77 1.47H18.05C24.64 28.84 30 23.48 30 16.88 30 10.3 22.64 3 16.04 3Zm7.04 17.16c-.3.85-1.74 1.63-2.4 1.73-.62.1-1.4.14-2.26-.14-.52-.17-1.2-.39-2.06-.77-3.62-1.56-5.98-5.2-6.16-5.44-.18-.24-1.47-1.96-1.47-3.74s.93-2.65 1.26-3.01c.33-.36.72-.45.96-.45h.69c.22.01.52-.08.81.62.3.72 1.02 2.5 1.11 2.68.09.18.15.39.03.63-.12.24-.18.39-.36.6-.18.21-.38.47-.54.63-.18.18-.37.38-.16.74.21.36.93 1.54 2 2.5 1.37 1.22 2.53 1.6 2.9 1.78.36.18.57.15.78-.09.21-.24.9-1.05 1.14-1.41.24-.36.48-.3.81-.18.33.12 2.1.99 2.46 1.17.36.18.6.27.69.42.09.15.09.87-.21 1.72Z"/></svg>
-  <span>WhatsApp</span>
+<a class="whatsapp-float" href="https://wa.me/31628859553" target="_blank" rel="noopener" aria-label="WhatsApp Samen Omhoog">
+	<svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.44 3 4.07 8.36 4.07 14.96c0 2.11.55 4.17 1.6 5.98L4 29l8.27-1.63a11.9 11.9 0 0 0 5.77 1.47H18.05C24.64 28.84 30 23.48 30 16.88 30 10.3 22.64 3 16.04 3Zm7.04 17.16c-.3.85-1.74 1.63-2.4 1.73-.62.1-1.4.14-2.26-.14-.52-.17-1.2-.39-2.06-.77-3.62-1.56-5.98-5.2-6.16-5.44-.18-.24-1.47-1.96-1.47-3.74s.93-2.65 1.26-3.01c.33-.36.72-.45.96-.45h.69c.22.01.52-.08.81.62.3.72 1.02 2.5 1.11 2.68.09.18.15.39.03.63-.12.24-.18.39-.36.6-.18.21-.38.47-.54.63-.18.18-.37.38-.16.74.21.36.93 1.54 2 2.5 1.37 1.22 2.53 1.6 2.9 1.78.36.18.57.15.78-.09.21-.24.9-1.05 1.14-1.41.24-.36.48-.3.81-.18.33.12 2.1.99 2.46 1.17.36.18.6.27.69.42.09.15.09.87-.21 1.72Z"/></svg>
+	<span>WhatsApp</span>
 </a>
 
 <script>
-  const nav = document.getElementById('mainNav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-  });
+/* Samen Omhoog theme — interactions */
+( function () {
+	'use strict';
 
-  const revealEls = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.14 });
-  revealEls.forEach((el, index) => {
-    el.style.transitionDelay = `${Math.min(index % 6, 5) * 70}ms`;
-    observer.observe(el);
-  });
+	// Sticky nav shadow on scroll.
+	var nav = document.getElementById( 'mainNav' );
+	if ( nav ) {
+		var onScroll = function () {
+			nav.classList.toggle( 'scrolled', window.scrollY > 40 );
+		};
+		window.addEventListener( 'scroll', onScroll, { passive: true } );
+		onScroll();
+	}
+
+	// Reveal-on-scroll animation.
+	var revealEls = document.querySelectorAll( '.reveal' );
+	if ( revealEls.length && 'IntersectionObserver' in window ) {
+		var observer = new IntersectionObserver( function ( entries ) {
+			entries.forEach( function ( entry ) {
+				if ( entry.isIntersecting ) {
+					entry.target.classList.add( 'visible' );
+					observer.unobserve( entry.target );
+				}
+			} );
+		}, { threshold: 0.14 } );
+
+		revealEls.forEach( function ( el, index ) {
+			el.style.transitionDelay = ( Math.min( index % 6, 5 ) * 70 ) + 'ms';
+			observer.observe( el );
+		} );
+	} else {
+		revealEls.forEach( function ( el ) {
+			el.classList.add( 'visible' );
+		} );
+	}
+} )();
+
 </script>
 </body>
 </html>

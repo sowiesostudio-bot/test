@@ -2,27 +2,32 @@
 /**
  * Front page template — the Samen Omhoog landing page.
  *
+ * Content based on the live site samenomhoog.nl (home, aanbod, team, contact).
+ *
  * @package SamenOmhoog
  */
 
 get_header();
 
-$so_whatsapp = samen_omhoog_opt( 'whatsapp', '31684613589' );
+$so_whatsapp = samen_omhoog_opt( 'whatsapp', '31628859553' );
 $so_email    = samen_omhoog_opt( 'email', 'info@samenomhoog.nl' );
-$so_phone    = samen_omhoog_opt( 'phone', '06 846 13 589' );
+$so_phone    = samen_omhoog_opt( 'phone', '06-28859553' );
 $so_address  = samen_omhoog_opt( 'address', 'Floresstraat 7, 8022 AD Zwolle' );
+$so_kvk      = samen_omhoog_opt( 'kvk', '89792807' );
+$so_rsin     = samen_omhoog_opt( 'rsin', '865111339' );
+$so_agb      = samen_omhoog_opt( 'agb', '98108329' );
 $wa_url      = 'https://wa.me/' . $so_whatsapp;
 ?>
 
 <!-- HERO -->
 <section class="hero site-section" id="home">
 	<div class="hero-content">
-		<div class="hero-badge"><?php esc_html_e( 'Zwolle — School of Life', 'samen-omhoog' ); ?></div>
-		<h1><?php esc_html_e( 'Ieder mens heeft', 'samen-omhoog' ); ?><em><?php esc_html_e( 'talent.', 'samen-omhoog' ); ?></em><?php esc_html_e( 'Wij helpen het te laten zien.', 'samen-omhoog' ); ?></h1>
-		<p class="hero-sub"><?php esc_html_e( 'Stichting Samen Omhoog is een plek waar jongeren en volwassenen zichzelf ontdekken, vaardigheden opbouwen en samen groeien — op hun manier, in hun tempo.', 'samen-omhoog' ); ?></p>
+		<div class="hero-badge"><?php esc_html_e( 'Stichting Samen Omhoog · Zwolle', 'samen-omhoog' ); ?></div>
+		<h1><?php esc_html_e( 'Dé ontwikkelplek waar', 'samen-omhoog' ); ?> <em><?php esc_html_e( 'jongeren vooruitkomen.', 'samen-omhoog' ); ?></em></h1>
+		<p class="hero-sub"><?php esc_html_e( 'Een plek om te oefenen met het leven. In onze werkplaatsen ontdekken jongeren hun talent, doen ze werkervaring op en bouwen ze perspectief op richting onderwijs, werk en meedoen. En het is méér dan dat: een community waar je erbij hoort.', 'samen-omhoog' ); ?></p>
 		<div class="hero-actions">
-			<a href="#programmas" class="btn-primary"><?php esc_html_e( 'Ontdek ons aanbod →', 'samen-omhoog' ); ?></a>
-			<a href="#missie" class="btn-ghost"><?php esc_html_e( 'Ons verhaal', 'samen-omhoog' ); ?></a>
+			<a href="#aanbod" class="btn-primary"><?php esc_html_e( 'Bekijk wat we bieden →', 'samen-omhoog' ); ?></a>
+			<a href="#contact" class="btn-ghost"><?php esc_html_e( 'Plan een kennismaking', 'samen-omhoog' ); ?></a>
 		</div>
 	</div>
 	<div class="hero-visual">
@@ -34,202 +39,92 @@ $wa_url      = 'https://wa.me/' . $so_whatsapp;
 				<div class="tile-gradient"></div>
 				<div class="tile-people"><span></span><span></span><span></span></div>
 				<div class="tile-caption">
-					<small><?php esc_html_e( 'School of Life', 'samen-omhoog' ); ?></small>
-					<strong><?php esc_html_e( 'Samen ontdekken wat wél kan', 'samen-omhoog' ); ?></strong>
+					<small><?php esc_html_e( 'Onze aanpak', 'samen-omhoog' ); ?></small>
+					<strong><?php esc_html_e( 'Relatie + Ontwikkeling + Werkervaring = Perspectief', 'samen-omhoog' ); ?></strong>
 				</div>
 			</div>
 
 			<div class="photo-tile tile-small tile-a reveal">
 				<div class="tile-icon">✦</div>
-				<strong><?php esc_html_e( 'Ontmoeten', 'samen-omhoog' ); ?></strong>
-				<span><?php esc_html_e( 'Een plek waar je welkom bent', 'samen-omhoog' ); ?></span>
+				<strong><?php esc_html_e( 'Inloop', 'samen-omhoog' ); ?></strong>
+				<span><?php esc_html_e( 'Een plek waar je erbij hoort', 'samen-omhoog' ); ?></span>
 			</div>
 
 			<div class="photo-tile tile-small tile-b reveal">
 				<div class="tile-icon">↗</div>
 				<strong><?php esc_html_e( 'Leren door te doen', 'samen-omhoog' ); ?></strong>
-				<span><?php esc_html_e( 'Praktijk, ritme en vertrouwen', 'samen-omhoog' ); ?></span>
+				<span><?php esc_html_e( 'Echte opdrachten in de werkplaats', 'samen-omhoog' ); ?></span>
 			</div>
 
 			<div class="hero-quote dynamic-quote reveal">
-				<p><?php esc_html_e( '"Als jij gelooft in iemand voordat ze in zichzelf geloven — dan verander je een leven."', 'samen-omhoog' ); ?></p>
-				<cite><?php esc_html_e( 'Abdiwahab Ali, Oprichter', 'samen-omhoog' ); ?></cite>
+				<p><?php esc_html_e( '"Ieder mens heeft talent. Niet iedereen past in hetzelfde systeem."', 'samen-omhoog' ); ?></p>
+				<cite><?php esc_html_e( 'Stichting Samen Omhoog', 'samen-omhoog' ); ?></cite>
 			</div>
 		</div>
 	</div>
 </section>
 
-<!-- HULP FINDER -->
+<!-- CONTACT-ROUTE FINDER -->
 <section class="help-finder" id="hulp">
 	<div class="help-inner">
 		<div class="help-panel">
 			<div class="help-panel-head">
 				<div>
-					<div class="section-label"><?php esc_html_e( 'Waar kunnen we je mee helpen?', 'samen-omhoog' ); ?></div>
-					<h2><?php esc_html_e( 'Kies snel wat bij jou past.', 'samen-omhoog' ); ?></h2>
+					<div class="section-label"><?php esc_html_e( 'Hoe wil je contact?', 'samen-omhoog' ); ?></div>
+					<h2><?php esc_html_e( 'Kies wat bij je past.', 'samen-omhoog' ); ?></h2>
 				</div>
-				<p><?php esc_html_e( 'Bezoekers moeten meteen kunnen kiezen waar ze voor komen — zonder te zoeken.', 'samen-omhoog' ); ?></p>
+				<p><?php esc_html_e( 'Voor jongeren die een plek zoeken, verwijzers die willen aanmelden en partners die willen bijdragen — de deur staat open.', 'samen-omhoog' ); ?></p>
 			</div>
 			<div class="help-grid">
-				<a href="#programmas" class="help-card reveal magnetic-card"><div class="help-icon">1</div><strong><?php esc_html_e( 'Ik zoek begeleiding', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'Structuur, dagbesteding, ambulante begeleiding of persoonlijke ondersteuning.', 'samen-omhoog' ); ?></span></a>
-				<a href="#programmas" class="help-card reveal magnetic-card"><div class="help-icon">2</div><strong><?php esc_html_e( 'Ik wil leren of werken', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'Werkervaring, Klas Entree, stageplekken en praktijkgericht leren.', 'samen-omhoog' ); ?></span></a>
-				<a href="#programmas" class="help-card reveal magnetic-card"><div class="help-icon">3</div><strong><?php esc_html_e( 'Ik wil mensen ontmoeten', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'Inloop, activiteiten, welzijn en een plek waar je welkom bent.', 'samen-omhoog' ); ?></span></a>
-				<a href="#contact" class="help-card reveal magnetic-card"><div class="help-icon">4</div><strong><?php esc_html_e( 'Ik ben verwijzer', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'Voor professionals, gemeenten, scholen en wijkteams die willen aanmelden.', 'samen-omhoog' ); ?></span></a>
+				<a href="<?php echo esc_url( $wa_url ); ?>" target="_blank" rel="noopener" class="help-card reveal magnetic-card"><div class="help-icon">1</div><strong><?php esc_html_e( 'Voor jongeren', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'Loop binnen bij de inloop of stuur een berichtje. Geen drempel, geen verplichting.', 'samen-omhoog' ); ?></span></a>
+				<a href="#contact" class="help-card reveal magnetic-card"><div class="help-icon">2</div><strong><?php esc_html_e( 'Voor verwijzers & gemeenten', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'Plan een kennismaking en ontdek waarvoor je jongeren bij ons kunt aanmelden.', 'samen-omhoog' ); ?></span></a>
+				<a href="#contact" class="help-card reveal magnetic-card"><div class="help-icon">3</div><strong><?php esc_html_e( 'Steun ons', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'Word partner, vrijwilliger of donateur en help jongeren vooruit.', 'samen-omhoog' ); ?></span></a>
+				<a href="#aanbod" class="help-card reveal magnetic-card"><div class="help-icon">4</div><strong><?php esc_html_e( 'Ik wil leren of werken', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'Werkplaatsen, Klas Entree, stage en leerwerktrajecten onder één dak.', 'samen-omhoog' ); ?></span></a>
 			</div>
 		</div>
 		<div class="quick-contact-strip">
-			<div class="quick-contact-item whatsapp"><div><small><?php esc_html_e( 'Direct contact', 'samen-omhoog' ); ?></small><strong><?php esc_html_e( 'WhatsApp met Samen Omhoog', 'samen-omhoog' ); ?></strong></div><a href="<?php echo esc_url( $wa_url ); ?>" target="_blank" rel="noopener"><?php esc_html_e( 'App ons', 'samen-omhoog' ); ?></a></div>
+			<div class="quick-contact-item whatsapp"><div><small><?php esc_html_e( 'Direct contact', 'samen-omhoog' ); ?></small><strong><?php esc_html_e( 'WhatsApp / bel ons', 'samen-omhoog' ); ?></strong></div><a href="<?php echo esc_url( $wa_url ); ?>" target="_blank" rel="noopener"><?php echo esc_html( $so_phone ); ?></a></div>
 			<div class="quick-contact-item"><div><small><?php esc_html_e( 'Mail ons', 'samen-omhoog' ); ?></small><strong><?php echo esc_html( $so_email ); ?></strong></div><a href="mailto:<?php echo esc_attr( $so_email ); ?>"><?php esc_html_e( 'Mail', 'samen-omhoog' ); ?></a></div>
 			<div class="quick-contact-item"><div><small><?php esc_html_e( 'Locatie', 'samen-omhoog' ); ?></small><strong><?php echo esc_html( $so_address ); ?></strong></div><a href="#contact"><?php esc_html_e( 'Route', 'samen-omhoog' ); ?></a></div>
 		</div>
 	</div>
 </section>
 
-<!-- MISSIE -->
+<!-- MISSIE / WAAROM -->
 <section class="mission site-section" id="missie">
 	<div class="mission-grid">
 		<div class="mission-left">
-			<div class="section-label"><?php esc_html_e( 'Onze missie', 'samen-omhoog' ); ?></div>
-			<h2 class="section-title"><?php esc_html_e( 'Waarom we', 'samen-omhoog' ); ?><br><?php esc_html_e( 'doen wat we', 'samen-omhoog' ); ?> <em><?php esc_html_e( 'doen.', 'samen-omhoog' ); ?></em></h2>
+			<div class="section-label"><?php esc_html_e( 'Waarom wij bestaan', 'samen-omhoog' ); ?></div>
+			<h2 class="section-title"><?php esc_html_e( 'De brug tussen thuis, school, straat en', 'samen-omhoog' ); ?> <em><?php esc_html_e( 'werk.', 'samen-omhoog' ); ?></em></h2>
 			<div class="mission-text">
-				<p><?php esc_html_e( 'Omdat we geloven dat niemand buitengesloten hoeft te worden. Dat groei voor iedereen mogelijk is. Dat het echte leven de beste school is.', 'samen-omhoog' ); ?></p>
-				<p><?php esc_html_e( 'Stichting Samen Omhoog is opgericht vanuit de overtuiging dat jongeren en volwassenen die extra ondersteuning nodig hebben, meer verdienen dan een systeem. Ze verdienen een plek. Een gemeenschap. Mensen die in hen geloven.', 'samen-omhoog' ); ?></p>
+				<p><?php esc_html_e( 'De veilige tussenstap waar jongeren kunnen landen, tot rust komen en stap voor stap doorgroeien naar onderwijs, werk en zelfstandigheid — op één plek waar welzijn, participatie en zorg samenkomen, verbonden door ontwikkeling. En waar je erbij hoort.', 'samen-omhoog' ); ?></p>
+				<p><?php esc_html_e( 'Wij geloven dat jongeren niet geholpen zijn met veroordeling, maar met perspectief, positieve voorbeelden en een omgeving waarin zij ontdekken waar hun talenten liggen. Onze methodiek is geworteld in de presentiebenadering (naar Andries Baart): ontwikkeling begint met gezien, gehoord en begrepen worden.', 'samen-omhoog' ); ?></p>
 			</div>
 			<div class="mission-values">
 				<div class="value-item">
 					<div class="value-icon"><svg viewBox="0 0 18 18" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"><circle cx="9" cy="7" r="3.5"/><path d="M2 16c0-3.5 3.1-6 7-6s7 2.5 7 6"/></svg></div>
-					<div class="value-body"><strong><?php esc_html_e( 'Menselijkheid boven systemen', 'samen-omhoog' ); ?></strong><p><?php esc_html_e( 'We denken vanuit de mens, niet vanuit regelgeving.', 'samen-omhoog' ); ?></p></div>
-				</div>
-				<div class="value-item">
-					<div class="value-icon"><svg viewBox="0 0 18 18" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"><path d="M9 2 L9 9 L13 13"/><circle cx="9" cy="9" r="7"/></svg></div>
-					<div class="value-body"><strong><?php esc_html_e( 'Eigen tempo', 'samen-omhoog' ); ?></strong><p><?php esc_html_e( 'Groei heeft geen deadline. We werken in jouw ritme.', 'samen-omhoog' ); ?></p></div>
+					<div class="value-body"><strong><?php esc_html_e( 'Talentontwikkeling', 'samen-omhoog' ); ?></strong><p><?php esc_html_e( 'Iedere jongere heeft talenten die ontdekt kunnen worden.', 'samen-omhoog' ); ?></p></div>
 				</div>
 				<div class="value-item">
 					<div class="value-icon"><svg viewBox="0 0 18 18" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"><path d="M3 9 L7 13 L15 5"/></svg></div>
-					<div class="value-body"><strong><?php esc_html_e( 'Leren door te doen', 'samen-omhoog' ); ?></strong><p><?php esc_html_e( 'Praktijk en echte ervaringen als motor voor groei.', 'samen-omhoog' ); ?></p></div>
+					<div class="value-body"><strong><?php esc_html_e( 'Kansgericht', 'samen-omhoog' ); ?></strong><p><?php esc_html_e( 'Wij creëren kansen waar jongeren die zelf nog niet zien.', 'samen-omhoog' ); ?></p></div>
+				</div>
+				<div class="value-item">
+					<div class="value-icon"><svg viewBox="0 0 18 18" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"><path d="M9 2 L9 9 L13 13"/><circle cx="9" cy="9" r="7"/></svg></div>
+					<div class="value-body"><strong><?php esc_html_e( 'Eigenaarschap', 'samen-omhoog' ); ?></strong><p><?php esc_html_e( 'Jongeren leren verantwoordelijkheid nemen voor hun keuzes.', 'samen-omhoog' ); ?></p></div>
 				</div>
 				<div class="value-item">
 					<div class="value-icon"><svg viewBox="0 0 18 18" fill="none" stroke="#fff" stroke-width="1.5" stroke-linecap="round"><path d="M9 2 C5 4 2 7 2 10 C2 14 5.5 16 9 16 C12.5 16 16 14 16 10 C16 7 13 4 9 2Z"/></svg></div>
-					<div class="value-body"><strong><?php esc_html_e( 'Veiligheid & inclusiviteit', 'samen-omhoog' ); ?></strong><p><?php esc_html_e( 'Een plek waar iedereen zichzelf kan zijn.', 'samen-omhoog' ); ?></p></div>
+					<div class="value-body"><strong><?php esc_html_e( 'Succeservaringen', 'samen-omhoog' ); ?></strong><p><?php esc_html_e( 'Groei ontstaat door te ervaren dat je iets kunt.', 'samen-omhoog' ); ?></p></div>
 				</div>
 			</div>
 		</div>
 		<div class="mission-right">
 			<div class="mission-image-placeholder">
 				<div class="image-big-text">Samen<br>Omhoog</div>
-				<div class="founder-badge"><div class="fbig">Abdi</div><div class="fsmall"><?php esc_html_e( 'Oprichter', 'samen-omhoog' ); ?></div></div>
+				<div class="founder-badge"><div class="fbig">14–27</div><div class="fsmall"><?php esc_html_e( 'Voor jongeren', 'samen-omhoog' ); ?></div></div>
 			</div>
-			<div class="mission-overlay-card"><div class="big">10+</div><div class="small"><?php esc_html_e( 'Jaar ervaring in Zwolle', 'samen-omhoog' ); ?></div></div>
-		</div>
-	</div>
-</section>
-
-<!-- PROGRAMMA'S -->
-<section class="programs site-section" id="programmas">
-	<div class="programs-header">
-		<div class="section-label"><?php esc_html_e( 'Ons aanbod', 'samen-omhoog' ); ?></div>
-		<h2 class="section-title"><?php esc_html_e( 'Niet één weg.', 'samen-omhoog' ); ?><br><em><?php esc_html_e( 'Maar de jouwe.', 'samen-omhoog' ); ?></em></h2>
-		<p class="section-subtitle"><?php esc_html_e( "Vier programma's. Elk anders, maar allemaal gericht op groei, verbinding en eigen regie.", 'samen-omhoog' ); ?></p>
-	</div>
-	<div class="programs-grid">
-		<div class="program-card featured reveal magnetic-card">
-			<div>
-				<div class="program-number">01</div>
-				<div class="program-label"><?php esc_html_e( 'Programma 01', 'samen-omhoog' ); ?></div>
-				<h3 class="program-title"><?php esc_html_e( 'Ontwikkeling & Werkervaring', 'samen-omhoog' ); ?></h3>
-				<p class="program-desc"><?php esc_html_e( 'Leer in een echte werkomgeving, bouw vaardigheden op en ontdek wat jou energie geeft. Met begeleiding die echt luistert en SBB-erkende stage en leerwerktrajecten.', 'samen-omhoog' ); ?></p>
-				<a href="#contact" class="program-link"><?php esc_html_e( 'Meer ontdekken', 'samen-omhoog' ); ?> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
-			</div>
-			<div>
-				<ul class="program-featured-list">
-					<li><?php esc_html_e( 'Stage en leerwerktrajecten', 'samen-omhoog' ); ?></li>
-					<li><?php esc_html_e( 'Klas Entree', 'samen-omhoog' ); ?></li>
-					<li><?php esc_html_e( 'Praktijkgericht leren', 'samen-omhoog' ); ?></li>
-					<li><?php esc_html_e( 'Persoonlijke begeleiding', 'samen-omhoog' ); ?></li>
-					<li><?php esc_html_e( 'SBB erkend leerbedrijf', 'samen-omhoog' ); ?></li>
-					<li><?php esc_html_e( 'Doorstroom naar werk of opleiding', 'samen-omhoog' ); ?></li>
-				</ul>
-			</div>
-		</div>
-
-		<div class="program-card reveal magnetic-card">
-			<div class="program-number">02</div>
-			<div class="program-label"><?php esc_html_e( 'Programma 02', 'samen-omhoog' ); ?></div>
-			<h3 class="program-title"><?php esc_html_e( 'Ontmoeting & Welzijn', 'samen-omhoog' ); ?></h3>
-			<p class="program-desc"><?php esc_html_e( 'Een open deur voor iedereen. Kom binnen, ontmoet mensen, doe mee en voel je thuis. Geen drempel te hoog — gewoon binnenlopen.', 'samen-omhoog' ); ?></p>
-			<div class="program-tags"><span class="tag"><?php esc_html_e( 'Laagdrempelige inloop', 'samen-omhoog' ); ?></span><span class="tag"><?php esc_html_e( 'Sociale activiteiten', 'samen-omhoog' ); ?></span><span class="tag"><?php esc_html_e( 'Avondinloop di & do', 'samen-omhoog' ); ?></span></div>
-			<a href="#contact" class="program-link"><?php esc_html_e( 'Meer ontdekken', 'samen-omhoog' ); ?> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
-		</div>
-
-		<div class="program-card reveal magnetic-card">
-			<div class="program-number">03</div>
-			<div class="program-label"><?php esc_html_e( 'Programma 03', 'samen-omhoog' ); ?></div>
-			<h3 class="program-title"><?php esc_html_e( 'Zorg & Begeleiding', 'samen-omhoog' ); ?></h3>
-			<p class="program-desc"><?php esc_html_e( 'Praktische ondersteuning in kleine groepen. Altijd persoonlijk, altijd gericht op groei. Met dagbesteding, ambulante begeleiding en WMO-beschikkingen.', 'samen-omhoog' ); ?></p>
-			<div class="program-tags"><span class="tag"><?php esc_html_e( 'Dagbesteding', 'samen-omhoog' ); ?></span><span class="tag"><?php esc_html_e( 'Ambulante begeleiding', 'samen-omhoog' ); ?></span><span class="tag"><?php esc_html_e( 'WMO & beschikkingen', 'samen-omhoog' ); ?></span></div>
-			<a href="#contact" class="program-link"><?php esc_html_e( 'Meer ontdekken', 'samen-omhoog' ); ?> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
-		</div>
-
-		<div class="program-card dark reveal magnetic-card">
-			<div class="program-number">04</div>
-			<div class="program-label"><?php esc_html_e( 'Programma 04', 'samen-omhoog' ); ?></div>
-			<h3 class="program-title"><?php esc_html_e( 'Ondernemerswerkplaats', 'samen-omhoog' ); ?></h3>
-			<p class="program-desc"><?php esc_html_e( 'Voor wie een eigen onderneming wil starten of laten groeien. Coaching, netwerk, werkplek en praktische tools — alles wat je nodig hebt om te ondernemen.', 'samen-omhoog' ); ?></p>
-			<div class="program-tags"><span class="tag"><?php esc_html_e( 'Ondernemerscoaching', 'samen-omhoog' ); ?></span><span class="tag"><?php esc_html_e( 'Workshops', 'samen-omhoog' ); ?></span><span class="tag"><?php esc_html_e( 'Netwerk van ondernemers', 'samen-omhoog' ); ?></span></div>
-			<a href="#contact" class="program-link"><?php esc_html_e( 'Meer ontdekken', 'samen-omhoog' ); ?> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
-		</div>
-	</div>
-</section>
-
-<!-- FOUNDER -->
-<section class="founder site-section" id="verhaal">
-	<div class="founder-grid">
-		<div class="founder-portrait">
-			<div class="founder-name-big"><span><?php esc_html_e( 'Oprichter & directeur', 'samen-omhoog' ); ?></span><?php esc_html_e( 'Abdiwahab Ali', 'samen-omhoog' ); ?></div>
-		</div>
-		<div class="founder-content">
-			<div class="section-label"><?php esc_html_e( 'Het verhaal van Abdi', 'samen-omhoog' ); ?></div>
-			<h2 class="section-title"><?php esc_html_e( 'Van zoekend', 'samen-omhoog' ); ?><br><?php esc_html_e( 'naar', 'samen-omhoog' ); ?> <em><?php esc_html_e( 'gids.', 'samen-omhoog' ); ?></em></h2>
-			<div class="founder-body">
-				<p><?php esc_html_e( 'Abdiwahab Ali — voor iedereen gewoon Abdi — reisde op zijn elfde alleen van Somalië naar Nederland. Hij kende de taal niet, kende niemand, en navigeerde een systeem dat weinig ruimte liet voor wie hij was.', 'samen-omhoog' ); ?></p>
-				<p><?php esc_html_e( 'Maar Abdi leerde. Door te doen. Door fouten. Door vol te houden. Hij vond zijn passie in meubelmakerij, sociaal ondernemerschap en film.', 'samen-omhoog' ); ?></p>
-			</div>
-			<div class="founder-quote">
-				<p><?php esc_html_e( '"Als jij gelooft in iemand voordat ze in zichzelf geloven — dan verander je een leven."', 'samen-omhoog' ); ?></p>
-				<cite><?php esc_html_e( 'Abdiwahab Ali, oprichter Stichting Samen Omhoog', 'samen-omhoog' ); ?></cite>
-			</div>
-			<a href="#contact" class="btn-outline-gold"><?php esc_html_e( 'Lees het volledige verhaal →', 'samen-omhoog' ); ?></a>
-		</div>
-	</div>
-</section>
-
-<!-- DOELGROEPEN -->
-<section class="audience site-section" id="doelgroepen">
-	<div class="audience-inner">
-		<div>
-			<div class="section-label"><?php esc_html_e( 'Voor wie zijn we er?', 'samen-omhoog' ); ?></div>
-			<h2 class="section-title"><?php esc_html_e( 'Een duidelijke ingang voor', 'samen-omhoog' ); ?> <em><?php esc_html_e( 'iedere bezoeker.', 'samen-omhoog' ); ?></em></h2>
-			<p class="section-subtitle"><?php esc_html_e( 'We maken de route helder: deelnemers, ouders, professionals en gemeenten vinden meteen hun plek.', 'samen-omhoog' ); ?></p>
-		</div>
-		<div class="audience-list">
-			<div class="audience-row reveal magnetic-card"><div class="audience-num">1</div><div><strong><?php esc_html_e( 'Jongeren & volwassenen', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'Voor wie structuur, begeleiding, werkervaring, aansluiting of daginvulling zoekt.', 'samen-omhoog' ); ?></span></div><em>→</em></div>
-			<div class="audience-row reveal magnetic-card"><div class="audience-num">2</div><div><strong><?php esc_html_e( 'Ouders & familie', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'Voor wie iemand wil aanmelden of eerst rustig wil overleggen wat passend is.', 'samen-omhoog' ); ?></span></div><em>→</em></div>
-			<div class="audience-row reveal magnetic-card"><div class="audience-num">3</div><div><strong><?php esc_html_e( 'Professionals & verwijzers', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'Voor wijkteams, scholen, zorgpartijen en sociale professionals die willen samenwerken.', 'samen-omhoog' ); ?></span></div><em>→</em></div>
-			<div class="audience-row reveal magnetic-card"><div class="audience-num">4</div><div><strong><?php esc_html_e( 'Gemeenten & partners', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'Voor WMO, beschikkingen, participatie, leerwerk en maatschappelijke samenwerkingen.', 'samen-omhoog' ); ?></span></div><em>→</em></div>
-		</div>
-	</div>
-</section>
-
-<!-- VERHALEN / ACTUEEL -->
-<section class="story-news site-section">
-	<div class="story-news-inner">
-		<div class="section-label"><?php esc_html_e( 'Verhalen & actualiteit', 'samen-omhoog' ); ?></div>
-		<h2 class="section-title"><?php esc_html_e( 'Laat zien wat welzijn', 'samen-omhoog' ); ?> <em><?php esc_html_e( 'doet.', 'samen-omhoog' ); ?></em></h2>
-		<p class="section-subtitle"><?php esc_html_e( 'Verhalen en nieuws bouwen vertrouwen. Deze sectie maakt Samen Omhoog menselijker en levendiger.', 'samen-omhoog' ); ?></p>
-		<div class="story-grid">
-			<div class="story-card reveal magnetic-card"><small><?php esc_html_e( 'Ervaringsverhaal', 'samen-omhoog' ); ?></small><h3><?php esc_html_e( '“Ik kwam binnen en voelde: hier mag ik zijn.”', 'samen-omhoog' ); ?></h3><p><?php esc_html_e( 'Een plek waar mensen gezien worden, zonder oordeel en zonder ingewikkelde drempels.', 'samen-omhoog' ); ?></p></div>
-			<div class="story-card reveal magnetic-card"><small><?php esc_html_e( 'Uit de werkplaats', 'samen-omhoog' ); ?></small><h3><?php esc_html_e( 'Leren door te doen in een echte omgeving.', 'samen-omhoog' ); ?></h3><p><?php esc_html_e( 'Van praktische vaardigheden tot zelfvertrouwen: groei ontstaat wanneer iemand mag proberen.', 'samen-omhoog' ); ?></p></div>
-			<div class="story-card reveal magnetic-card"><small><?php esc_html_e( 'Samenwerking', 'samen-omhoog' ); ?></small><h3><?php esc_html_e( 'Met scholen, wijkteams en gemeenten.', 'samen-omhoog' ); ?></h3><p><?php esc_html_e( 'Samen zorgen we dat mensen sneller de juiste ondersteuning en plek vinden.', 'samen-omhoog' ); ?></p></div>
+			<div class="mission-overlay-card"><div class="big">±230</div><div class="small"><?php esc_html_e( 'Jongeren & bezoekers bereikt', 'samen-omhoog' ); ?></div></div>
 		</div>
 	</div>
 </section>
@@ -238,15 +133,153 @@ $wa_url      = 'https://wa.me/' . $so_whatsapp;
 <section class="approach site-section" id="aanpak">
 	<div class="approach-inner">
 		<div class="approach-header">
-			<div class="section-label"><?php esc_html_e( 'Zo werken wij', 'samen-omhoog' ); ?></div>
-			<h2 class="section-title"><?php esc_html_e( 'Van eerste stap naar', 'samen-omhoog' ); ?><br><em><?php esc_html_e( 'eigen regie.', 'samen-omhoog' ); ?></em></h2>
+			<div class="section-label"><?php esc_html_e( 'Onze aanpak', 'samen-omhoog' ); ?></div>
+			<h2 class="section-title"><?php esc_html_e( 'Wij kijken naar mogelijkheden,', 'samen-omhoog' ); ?><br><em><?php esc_html_e( 'niet naar beperkingen.', 'samen-omhoog' ); ?></em></h2>
+			<p class="section-subtitle"><?php esc_html_e( 'Ontwikkeling begint bij de relatie. Pas als een jongere zich gezien en veilig voelt, groeit de rest.', 'samen-omhoog' ); ?></p>
 		</div>
-		<div class="steps">
-			<div class="step"><div class="step-num">1</div><div class="step-title"><?php esc_html_e( 'Kennismaking', 'samen-omhoog' ); ?></div><p class="step-desc"><?php esc_html_e( 'Geen formulieren, geen druk. Gewoon een goed gesprek over jou en je wensen.', 'samen-omhoog' ); ?></p></div>
-			<div class="step"><div class="step-num">2</div><div class="step-title"><?php esc_html_e( 'Persoonlijk plan', 'samen-omhoog' ); ?></div><p class="step-desc"><?php esc_html_e( 'Samen stellen we een traject op dat past bij jou — jouw mogelijkheden, tempo en wensen.', 'samen-omhoog' ); ?></p></div>
-			<div class="step"><div class="step-num">3</div><div class="step-title"><?php esc_html_e( 'Aan de slag', 'samen-omhoog' ); ?></div><p class="step-desc"><?php esc_html_e( 'Je start met activiteiten of werkervaring. Altijd met iemand naast je die je ondersteunt.', 'samen-omhoog' ); ?></p></div>
-			<div class="step"><div class="step-num">4</div><div class="step-title"><?php esc_html_e( 'Groeien', 'samen-omhoog' ); ?></div><p class="step-desc"><?php esc_html_e( 'Je bouwt vertrouwen op, ontdekt je talenten en zet stappen die je nooit voor mogelijk had gehouden.', 'samen-omhoog' ); ?></p></div>
-			<div class="step"><div class="step-num gold">5</div><div class="step-title"><?php esc_html_e( 'Eigen regie', 'samen-omhoog' ); ?></div><p class="step-desc"><?php esc_html_e( 'Uiteindelijk sta jij aan het roer. We helpen je zo zelfstandig mogelijk te worden.', 'samen-omhoog' ); ?></p></div>
+		<div class="steps four">
+			<div class="step"><div class="step-num">1</div><div class="step-title"><?php esc_html_e( 'Relatie', 'samen-omhoog' ); ?></div><p class="step-desc"><?php esc_html_e( 'Nabijheid en rolmodellen die de taal spreken. Gezien, gehoord en begrepen worden komt eerst.', 'samen-omhoog' ); ?></p></div>
+			<div class="step"><div class="step-num">2</div><div class="step-title"><?php esc_html_e( 'Ontwikkeling', 'samen-omhoog' ); ?></div><p class="step-desc"><?php esc_html_e( 'Hard skills én soft skills: samenwerken, communiceren, initiatief nemen en verantwoordelijkheid dragen.', 'samen-omhoog' ); ?></p></div>
+			<div class="step"><div class="step-num">3</div><div class="step-title"><?php esc_html_e( 'Werkervaring', 'samen-omhoog' ); ?></div><p class="step-desc"><?php esc_html_e( 'Praktisch aan de slag met echte opdrachten in de werkplaatsen — leren door te doen.', 'samen-omhoog' ); ?></p></div>
+			<div class="step"><div class="step-num gold">4</div><div class="step-title"><?php esc_html_e( 'Perspectief', 'samen-omhoog' ); ?></div><p class="step-desc"><?php esc_html_e( 'Doorstroom naar onderwijs, werk en zelfstandigheid — meedoen in de samenleving.', 'samen-omhoog' ); ?></p></div>
+		</div>
+	</div>
+</section>
+
+<!-- WERKPLAATSEN -->
+<section class="workshops site-section" id="werkplaats">
+	<div class="approach-inner">
+		<div class="approach-header">
+			<div class="section-label"><?php esc_html_e( 'De werkplaatsen', 'samen-omhoog' ); ?></div>
+			<h2 class="section-title"><?php esc_html_e( 'Leren door te', 'samen-omhoog' ); ?> <em><?php esc_html_e( 'doen.', 'samen-omhoog' ); ?></em></h2>
+			<p class="section-subtitle"><?php esc_html_e( 'De werkplaatsen zijn het hart van onze aanpak — geen doel, maar een middel om jongeren te activeren en te laten ontdekken waar hun talent ligt.', 'samen-omhoog' ); ?></p>
+		</div>
+		<div class="work-grid">
+			<div class="work-card reveal magnetic-card"><span class="work-icon">🎬</span><strong><?php esc_html_e( 'Multimedia & podcast', 'samen-omhoog' ); ?></strong></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon">🔨</span><strong><?php esc_html_e( 'Hout & metaal', 'samen-omhoog' ); ?></strong></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon">✂️</span><strong><?php esc_html_e( 'Kapsalon', 'samen-omhoog' ); ?></strong></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon">🚲</span><strong><?php esc_html_e( '(Fat)bike-reparatie', 'samen-omhoog' ); ?></strong></div>
+			<div class="work-card reveal magnetic-card"><span class="work-icon">🛋️</span><strong><?php esc_html_e( 'Huiskamer & leerplek', 'samen-omhoog' ); ?></strong></div>
+		</div>
+	</div>
+</section>
+
+<!-- VOOR WIE -->
+<section class="audience site-section" id="doelgroepen">
+	<div class="audience-inner">
+		<div>
+			<div class="section-label"><?php esc_html_e( 'Voor wie', 'samen-omhoog' ); ?></div>
+			<h2 class="section-title"><?php esc_html_e( 'Voor jongeren met talent dat', 'samen-omhoog' ); ?> <em><?php esc_html_e( 'ruimte verdient.', 'samen-omhoog' ); ?></em></h2>
+			<p class="section-subtitle"><?php esc_html_e( 'Iedere jongere is anders. Wat hen verbindt, is de behoefte aan een veilige plek, tijd en iemand die in ze gelooft. Wij sluiten aan bij waar zij staan — en kijken vooruit.', 'samen-omhoog' ); ?></p>
+			<span class="audience-age"><?php esc_html_e( '14 tot 27 jaar', 'samen-omhoog' ); ?></span>
+		</div>
+		<div class="audience-list">
+			<div class="audience-row reveal magnetic-card"><div class="audience-num">1</div><div><strong><?php esc_html_e( 'Nieuwkomers', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'Kort in Nederland en klaar om mee te doen — vanuit het praktijkonderwijs, de ISK of een integratiejaar.', 'samen-omhoog' ); ?></span></div><em>→</em></div>
+			<div class="audience-row reveal magnetic-card"><div class="audience-num">2</div><div><strong><?php esc_html_e( 'Klaar voor een kans', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'Jongeren die op school of stage hun plek nog niet vonden, maar met de juiste begeleiding opbloeien.', 'samen-omhoog' ); ?></span></div><em>→</em></div>
+			<div class="audience-row reveal magnetic-card"><div class="audience-num">3</div><div><strong><?php esc_html_e( 'Op zoek naar richting', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'Jongeren die hun draai nog zoeken en weer ritme, perspectief en motivatie willen vinden.', 'samen-omhoog' ); ?></span></div><em>→</em></div>
+			<div class="audience-row reveal magnetic-card"><div class="audience-num">4</div><div><strong><?php esc_html_e( 'Klaar voor een nieuwe start', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'Jongeren die een tijd buiten beeld waren en bij ons opnieuw kunnen opbouwen.', 'samen-omhoog' ); ?></span></div><em>→</em></div>
+		</div>
+	</div>
+</section>
+
+<!-- AANBOD -->
+<section class="programs site-section" id="aanbod">
+	<div class="programs-header">
+		<div class="section-label"><?php esc_html_e( 'Wat we bieden', 'samen-omhoog' ); ?></div>
+		<h2 class="section-title"><?php esc_html_e( 'Eén doel: ontwikkeling.', 'samen-omhoog' ); ?><br><em><?php esc_html_e( 'Eén plek. Meerdere ingangen.', 'samen-omhoog' ); ?></em></h2>
+		<p class="section-subtitle"><?php esc_html_e( 'Elke jongere komt bij ons om zich te ontwikkelen. Dat doen we onder één dak, via meerdere ingangen — elk met een eigen financiering, zodat verwijzers precies weten waarvoor ze kunnen aanmelden.', 'samen-omhoog' ); ?></p>
+	</div>
+
+	<div class="programs-grid">
+		<div class="program-card featured reveal magnetic-card">
+			<div>
+				<div class="program-number">★</div>
+				<div class="program-label"><?php esc_html_e( 'Onderwijs & stage onder één dak', 'samen-omhoog' ); ?></div>
+				<h3 class="program-title"><?php esc_html_e( 'Klas Entree — van leren tot diploma', 'samen-omhoog' ); ?></h3>
+				<p class="program-desc"><?php esc_html_e( 'Onderwijs én stage op één plek, samen met StartCollege Landstede, Start.Deltion en de gemeente Zwolle. In een kleine groep toewerken naar een Entree-diploma, mbo-verklaring of praktijkverklaring. Voor anderstalige jongeren vanaf 16 jaar — start schooljaar 2026–2027.', 'samen-omhoog' ); ?></p>
+				<a href="#contact" class="program-link"><?php esc_html_e( 'Plan een kennismaking', 'samen-omhoog' ); ?> <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M2 7h10M7 2l5 5-5 5"/></svg></a>
+			</div>
+			<div>
+				<ul class="program-featured-list">
+					<li><?php esc_html_e( '1 plek: onderwijs én stage onder één dak', 'samen-omhoog' ); ?></li>
+					<li><?php esc_html_e( 'Max. 10 studenten per klas, veel aandacht', 'samen-omhoog' ); ?></li>
+					<li><?php esc_html_e( 'Eigen leerplan op het tempo van de student', 'samen-omhoog' ); ?></li>
+					<li><?php esc_html_e( 'Examen op de werkplek, leren in de echte context', 'samen-omhoog' ); ?></li>
+					<li><?php esc_html_e( 'Taal in de praktijk', 'samen-omhoog' ); ?></li>
+					<li><?php esc_html_e( 'Doorstroom naar werk of vervolgopleiding', 'samen-omhoog' ); ?></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div class="ingang-grid">
+		<div class="ingang-card reveal magnetic-card"><h3><?php esc_html_e( 'Inloop', 'samen-omhoog' ); ?></h3><p><?php esc_html_e( 'Laagdrempelige ontmoeting, structuur en een luisterend oor — overdag en in de avond. Velen vinden via de inloop hun weg terug.', 'samen-omhoog' ); ?></p><span class="ingang-fin"><?php esc_html_e( 'Financiering: subsidie', 'samen-omhoog' ); ?></span></div>
+		<div class="ingang-card reveal magnetic-card"><h3><?php esc_html_e( 'Leerwerktrajecten & stage', 'samen-omhoog' ); ?></h3><p><?php esc_html_e( 'Begeleide leer- en werkplekken (De Groene Draad) richting een reguliere stage of het afronden van school.', 'samen-omhoog' ); ?></p><span class="ingang-fin"><?php esc_html_e( 'Onderwijs · subsidie', 'samen-omhoog' ); ?></span></div>
+		<div class="ingang-card reveal magnetic-card"><h3><?php esc_html_e( 'Klas Entree', 'samen-omhoog' ); ?></h3><p><?php esc_html_e( 'Onderwijs én stage op één plek, richting Entree-diploma of praktijkverklaring.', 'samen-omhoog' ); ?></p><span class="ingang-fin"><?php esc_html_e( 'I.s.m. onderwijs', 'samen-omhoog' ); ?></span></div>
+		<div class="ingang-card reveal magnetic-card"><h3><?php esc_html_e( 'Sociale activering', 'samen-omhoog' ); ?></h3><p><?php esc_html_e( 'Betekenisvolle daginvulling en taal- en cultuurondersteuning, ook voor nieuwkomers en AMV\'ers.', 'samen-omhoog' ); ?></p><span class="ingang-fin"><?php esc_html_e( 'Financiering: subsidie', 'samen-omhoog' ); ?></span></div>
+		<div class="ingang-card reveal magnetic-card"><h3><?php esc_html_e( 'Zorgtrajecten', 'samen-omhoog' ); ?></h3><p><?php esc_html_e( 'Ambulante begeleiding en groepsaanbod wanneer een jongere meer nodig heeft — als gecontracteerd aanbieder via Coöperatie Boer & Zorg.', 'samen-omhoog' ); ?></p><span class="ingang-fin"><?php esc_html_e( 'Jeugdwet / Wmo · op maat', 'samen-omhoog' ); ?></span></div>
+		<div class="ingang-card reveal magnetic-card"><h3><?php esc_html_e( 'Participatietrajecten', 'samen-omhoog' ); ?></h3><p><?php esc_html_e( 'Meedoen en groeien richting werk en zelfstandigheid.', 'samen-omhoog' ); ?></p><span class="ingang-fin"><?php esc_html_e( 'Inkoop · op maat', 'samen-omhoog' ); ?></span></div>
+		<div class="ingang-card reveal magnetic-card"><h3><?php esc_html_e( 'Jobcoaching', 'samen-omhoog' ); ?></h3><p><?php esc_html_e( 'Persoonlijke begeleiding richting werk, stage en de arbeidsmarkt.', 'samen-omhoog' ); ?></p><span class="ingang-fin"><?php esc_html_e( 'Op maat', 'samen-omhoog' ); ?></span></div>
+		<div class="ingang-card soon reveal magnetic-card"><h3><?php esc_html_e( 'Trainingen', 'samen-omhoog' ); ?></h3><p><?php esc_html_e( 'Aanbod in ontwikkeling — hier komt binnenkort meer over.', 'samen-omhoog' ); ?></p><span class="ingang-fin"><?php esc_html_e( 'Binnenkort', 'samen-omhoog' ); ?></span></div>
+	</div>
+</section>
+
+<!-- RESULTATEN -->
+<section class="results site-section">
+	<div class="approach-inner">
+		<div class="approach-header">
+			<div class="section-label"><?php esc_html_e( 'Wat het oplevert', 'samen-omhoog' ); ?></div>
+			<h2 class="section-title"><?php esc_html_e( 'Resultaat begint al bij', 'samen-omhoog' ); ?> <em><?php esc_html_e( 'binnenkomen.', 'samen-omhoog' ); ?></em></h2>
+			<p class="section-subtitle"><?php esc_html_e( 'Een jongere die via de inloop binnenkomt en weer de weg terugvindt naar onderwijs, stage of een dagritme — dat is op zichzelf al een resultaat.', 'samen-omhoog' ); ?></p>
+		</div>
+		<div class="results-grid">
+			<div class="result-stat reveal"><div class="rnum">±230</div><div class="rlabel"><?php esc_html_e( 'Unieke jongeren & bezoekers bereikt', 'samen-omhoog' ); ?></div></div>
+			<div class="result-stat reveal"><div class="rnum">55</div><div class="rlabel"><?php esc_html_e( 'Jongeren op een stageplek', 'samen-omhoog' ); ?></div></div>
+			<div class="result-stat reveal"><div class="rnum">20</div><div class="rlabel"><?php esc_html_e( 'Zorgtrajecten', 'samen-omhoog' ); ?></div></div>
+			<div class="result-stat reveal"><div class="rnum">150</div><div class="rlabel"><?php esc_html_e( 'Bezoekers van de inloop', 'samen-omhoog' ); ?></div></div>
+			<div class="result-stat reveal"><div class="rnum">6</div><div class="rlabel"><?php esc_html_e( 'Participatietrajecten', 'samen-omhoog' ); ?></div></div>
+		</div>
+	</div>
+</section>
+
+<!-- FOUNDER -->
+<section class="founder site-section" id="verhaal">
+	<div class="founder-grid">
+		<div class="founder-portrait">
+			<div class="founder-name-big"><span><?php esc_html_e( 'Oprichter · Manager Uitvoering & Ontwikkeling', 'samen-omhoog' ); ?></span><?php esc_html_e( 'Abdiwahab Ali', 'samen-omhoog' ); ?></div>
+		</div>
+		<div class="founder-content">
+			<div class="section-label"><?php esc_html_e( 'De oprichter', 'samen-omhoog' ); ?></div>
+			<h2 class="section-title"><?php esc_html_e( 'Rolmodellen', 'samen-omhoog' ); ?><br><?php esc_html_e( 'spreken de', 'samen-omhoog' ); ?> <em><?php esc_html_e( 'taal.', 'samen-omhoog' ); ?></em></h2>
+			<div class="founder-body">
+				<p><?php esc_html_e( 'Samen Omhoog is opgericht door Abdiwahab Ali. Hij kwam op jonge leeftijd alleen naar Nederland en weet uit eigen ervaring hoe het is om je weg te zoeken — met vallen en opstaan, en uiteindelijk een nieuwe richting in meubelmakerij, ondernemerschap en film.', 'samen-omhoog' ); ?></p>
+				<p><?php esc_html_e( 'Vanuit die herkenning begeleidt hij jongeren met één overtuiging: ieder mens heeft potentieel, ongeacht achtergrond of omstandigheden. Hij staat zelf als rolmodel en begeleider op de werkvloer; zijn nabijheid vormt het fundament onder onze aanpak.', 'samen-omhoog' ); ?></p>
+			</div>
+			<div class="founder-quote">
+				<p><?php esc_html_e( '"Door nabijheid en een gedeelde leefwereld bereiken we jongeren die voor anderen onbereikbaar blijven."', 'samen-omhoog' ); ?></p>
+				<cite><?php esc_html_e( 'Stichting Samen Omhoog', 'samen-omhoog' ); ?></cite>
+			</div>
+			<a href="#team" class="btn-outline-gold"><?php esc_html_e( 'Maak kennis met het team →', 'samen-omhoog' ); ?></a>
+		</div>
+	</div>
+</section>
+
+<!-- TEAM -->
+<section class="team site-section" id="team">
+	<div class="certs-inner">
+		<div class="section-label"><?php esc_html_e( 'Wie wij zijn', 'samen-omhoog' ); ?></div>
+		<h2 class="section-title"><?php esc_html_e( 'Verschillende achtergronden,', 'samen-omhoog' ); ?> <em><?php esc_html_e( 'één missie.', 'samen-omhoog' ); ?></em></h2>
+		<p class="section-subtitle"><?php esc_html_e( 'It takes a village. Bij Samen Omhoog ontmoet een jongere niet één begeleider, maar een hecht team van professionals, vakmensen en ervaringsdeskundigen die hun leefwereld kennen.', 'samen-omhoog' ); ?></p>
+		<div class="team-grid">
+			<div class="team-card reveal magnetic-card"><div class="team-avatar">AA</div><h3><?php esc_html_e( 'Abdi Ali', 'samen-omhoog' ); ?></h3><div class="team-role"><?php esc_html_e( 'Manager Uitvoering & Ontwikkeling', 'samen-omhoog' ); ?></div><p><?php esc_html_e( 'Oprichter en rolmodel; ook als begeleider op de werkvloer. Vond na een moeilijke weg zijn richting in meubelmakerij, ondernemerschap en film.', 'samen-omhoog' ); ?></p></div>
+			<div class="team-card reveal magnetic-card"><div class="team-avatar">MH</div><h3><?php esc_html_e( 'Marijn Hageman', 'samen-omhoog' ); ?></h3><div class="team-role"><?php esc_html_e( 'Manager Organisatie & Strategie', 'samen-omhoog' ); ?></div><p><?php esc_html_e( 'Veiligheidskundige met een achtergrond binnen politie en veiligheid. Bouwt aan de organisatie, strategie en samenwerking.', 'samen-omhoog' ); ?></p></div>
+			<div class="team-card reveal magnetic-card"><div class="team-avatar">AA</div><h3><?php esc_html_e( 'Ali Abdulle', 'samen-omhoog' ); ?></h3><div class="team-role"><?php esc_html_e( 'Manager Facilitair & Beheer', 'samen-omhoog' ); ?></div><p><?php esc_html_e( 'Ook begeleider op de werkvloer; ervaringsdeskundige die zonder opleiding opnieuw begon en een eigen bedrijf opbouwde.', 'samen-omhoog' ); ?></p></div>
+			<div class="team-card reveal magnetic-card"><div class="team-avatar">EB</div><h3><?php esc_html_e( 'Esther Brinkman', 'samen-omhoog' ); ?></h3><div class="team-role"><?php esc_html_e( 'Trajectcoördinator Zorg & Participatie', 'samen-omhoog' ); ?></div><p><?php esc_html_e( 'Achtergrond in de reclassering, met ervaring in de TBS- en GGZ-sector. Begeleiding en jobcoaching.', 'samen-omhoog' ); ?></p></div>
+			<div class="team-card reveal magnetic-card"><div class="team-avatar">SP</div><h3><?php esc_html_e( 'Sonja van der Ploeg', 'samen-omhoog' ); ?></h3><div class="team-role"><?php esc_html_e( 'Docent & jobcoach', 'samen-omhoog' ); ?></div><p><?php esc_html_e( 'Verzorgt onderwijs, jobcoaching en sociale activering.', 'samen-omhoog' ); ?></p></div>
+			<div class="team-card reveal magnetic-card"><div class="team-avatar">YA</div><h3><?php esc_html_e( 'Yassine Assad', 'samen-omhoog' ); ?></h3><div class="team-role"><?php esc_html_e( 'SKJ-jeugdprofessional', 'samen-omhoog' ); ?></div><p><?php esc_html_e( 'Geregistreerd jeugdprofessional. Begeleiding van jongeren vanuit de (verlengde) Jeugdwet. Daarnaast werkzaam bij het COA.', 'samen-omhoog' ); ?></p></div>
+			<div class="team-card reveal magnetic-card"><div class="team-avatar">RK</div><h3><?php esc_html_e( 'Robbert Kaspers', 'samen-omhoog' ); ?></h3><div class="team-role"><?php esc_html_e( 'Werkmeester', 'samen-omhoog' ); ?></div><p><?php esc_html_e( 'Meubelmaker en luchtvaarttechnicus; brengt vakmanschap, discipline en praktijkervaring de werkplaats in.', 'samen-omhoog' ); ?></p></div>
+			<div class="team-card reveal magnetic-card"><div class="team-avatar">SH</div><h3><?php esc_html_e( 'Shaakir Haashi', 'samen-omhoog' ); ?></h3><div class="team-role"><?php esc_html_e( 'Sociale activering', 'samen-omhoog' ); ?></div><p><?php esc_html_e( 'Ervaringsdeskundige met een migratieachtergrond; betrokken bij de sociale activering voor praktische vragen en ondersteuning.', 'samen-omhoog' ); ?></p></div>
+			<div class="team-card reveal magnetic-card" style="background:var(--forest);border-color:var(--forest);"><div class="team-avatar" style="background:var(--gold);">+</div><h3 style="color:#fff;"><?php esc_html_e( 'Ons netwerk', 'samen-omhoog' ); ?></h3><div class="team-role" style="color:var(--gold-light);"><?php esc_html_e( 'Samen om één jongere heen', 'samen-omhoog' ); ?></div><p style="color:rgba(255,255,255,.7);"><?php esc_html_e( 'Naast ons vaste team werken we met een netwerk van ondernemers, scholen, wijkteams en zorgpartners.', 'samen-omhoog' ); ?></p></div>
 		</div>
 	</div>
 </section>
@@ -255,39 +288,23 @@ $wa_url      = 'https://wa.me/' . $so_whatsapp;
 <section class="certs site-section">
 	<div class="certs-inner">
 		<div class="section-label"><?php esc_html_e( 'Kwaliteit & certificering', 'samen-omhoog' ); ?></div>
-		<h2 class="section-title"><?php esc_html_e( 'Gecertificeerd en', 'samen-omhoog' ); ?><br><em><?php esc_html_e( 'aanspreekbaar.', 'samen-omhoog' ); ?></em></h2>
+		<h2 class="section-title"><?php esc_html_e( 'Gecertificeerd en', 'samen-omhoog' ); ?> <em><?php esc_html_e( 'aanspreekbaar.', 'samen-omhoog' ); ?></em></h2>
 		<div class="certs-grid">
 			<div class="cert-card reveal magnetic-card">
 				<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M13 2l3 3 4-1 1 4 3 3-3 3 1 4-4 1-3 3-3-3-4 1-1-4-3-3 3-3-1-4 4 1z"/><path d="M9 13l3 3 5-6"/></svg></div>
 				<div class="cert-title"><?php esc_html_e( 'ISO 9001 Gecertificeerd', 'samen-omhoog' ); ?></div>
-				<p class="cert-desc"><?php esc_html_e( 'Onze organisatie voldoet aan de internationale norm voor kwaliteitsmanagement. Dit garandeert consistente, kwalitatieve dienstverlening.', 'samen-omhoog' ); ?></p>
-			</div>
-			<div class="cert-card reveal magnetic-card">
-				<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M13 2L3 6v6c0 6 4 9 10 12 6-3 10-6 10-12V6z"/><path d="M9 13l3 3 5-6"/></svg></div>
-				<div class="cert-title"><?php esc_html_e( 'SBB Erkend Leerbedrijf', 'samen-omhoog' ); ?></div>
-				<p class="cert-desc"><?php esc_html_e( 'We zijn erkend door Stichting Beroepsonderwijs Bedrijfsleven voor het bieden van kwalitatieve stageplekken en leerwerktrajecten.', 'samen-omhoog' ); ?></p>
+				<p class="cert-desc"><?php esc_html_e( 'Onze organisatie voldoet aan de internationale norm voor kwaliteitsmanagement — consistente, kwalitatieve dienstverlening.', 'samen-omhoog' ); ?></p>
 			</div>
 			<div class="cert-card reveal magnetic-card">
 				<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><circle cx="13" cy="13" r="10"/><path d="M8 13l3 3 6-7"/></svg></div>
-				<div class="cert-title"><?php esc_html_e( 'Aangesloten bij CBZ', 'samen-omhoog' ); ?></div>
-				<p class="cert-desc"><?php esc_html_e( 'Via Coöperatie Boer en Zorg bieden we zorg met bijbehorende klachtenregeling, algemene voorwaarden en vertrouwenspersoon.', 'samen-omhoog' ); ?></p>
+				<div class="cert-title"><?php esc_html_e( 'Coöperatie Boer & Zorg (CBZ)', 'samen-omhoog' ); ?></div>
+				<p class="cert-desc"><?php esc_html_e( 'Als gecontracteerd zorgaanbieder via CBZ, met bijbehorende klachtenregeling, algemene voorwaarden en vertrouwenspersoon.', 'samen-omhoog' ); ?></p>
 			</div>
-		</div>
-	</div>
-</section>
-
-<!-- DOCUMENTEN -->
-<section class="documents site-section" id="documenten">
-	<div class="documents-inner">
-		<div>
-			<div class="section-label"><?php esc_html_e( 'Officiële documenten', 'samen-omhoog' ); ?></div>
-			<h2 class="section-title"><?php esc_html_e( 'Transparant, veilig en professioneel.', 'samen-omhoog' ); ?></h2>
-			<p class="section-subtitle"><?php esc_html_e( 'Alle belangrijke documenten zijn direct beschikbaar voor deelnemers, ouders, verwijzers en partners.', 'samen-omhoog' ); ?></p>
-		</div>
-		<div class="doc-grid">
-			<a class="doc-card" href="#"><strong><?php esc_html_e( 'Klachtenregeling deelnemers SSO', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'PDF downloaden →', 'samen-omhoog' ); ?></span></a>
-			<a class="doc-card" href="#"><strong><?php esc_html_e( 'Algemene voorwaarden zorgverlening', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'PDF downloaden →', 'samen-omhoog' ); ?></span></a>
-			<a class="doc-card" href="#"><strong><?php esc_html_e( 'Huisregels', 'samen-omhoog' ); ?></strong><span><?php esc_html_e( 'PDF downloaden →', 'samen-omhoog' ); ?></span></a>
+			<div class="cert-card reveal magnetic-card">
+				<div class="cert-icon"><svg viewBox="0 0 26 26" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"><path d="M13 2L3 6v6c0 6 4 9 10 12 6-3 10-6 10-12V6z"/><path d="M9 13l3 3 5-6"/></svg></div>
+				<div class="cert-title"><?php esc_html_e( 'SKJ & AVG', 'samen-omhoog' ); ?></div>
+				<p class="cert-desc"><?php esc_html_e( 'Geregistreerde SKJ-jeugdprofessional in huis en zorgvuldige omgang met persoonsgegevens volgens de AVG.', 'samen-omhoog' ); ?></p>
+			</div>
 		</div>
 	</div>
 </section>
@@ -296,16 +313,16 @@ $wa_url      = 'https://wa.me/' . $so_whatsapp;
 <section class="contact site-section" id="contact">
 	<div class="contact-inner">
 		<div>
-			<div class="section-label"><?php esc_html_e( 'Contact opnemen', 'samen-omhoog' ); ?></div>
-			<h2 class="section-title"><?php esc_html_e( 'We horen', 'samen-omhoog' ); ?><br><em><?php esc_html_e( 'graag van je.', 'samen-omhoog' ); ?></em></h2>
-			<p class="section-subtitle"><?php esc_html_e( 'Of je nu voor jezelf belt, voor je kind, of als verwijzer — geen drempel te hoog.', 'samen-omhoog' ); ?></p>
+			<div class="section-label"><?php esc_html_e( 'Contact', 'samen-omhoog' ); ?></div>
+			<h2 class="section-title"><?php esc_html_e( 'Kom langs, bel', 'samen-omhoog' ); ?> <em><?php esc_html_e( 'of mail.', 'samen-omhoog' ); ?></em></h2>
+			<p class="section-subtitle"><?php esc_html_e( 'Voor jongeren die een plek zoeken, verwijzers die willen aanmelden en partners die willen bijdragen — we denken graag mee.', 'samen-omhoog' ); ?></p>
 			<div class="contact-details">
 				<div class="contact-item">
 					<div class="contact-icon"><svg viewBox="0 0 18 18" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round"><path d="M3 4C3 3.4 3.4 3 4 3h3l1.5 3L7 8c1 2 3 4 5 5l2-1.5 3 1.5v3c0 .6-.4 1-1 1C8.5 17 1 9.5 1 4c0-.4.4-1 1-1"/></svg></div>
 					<div>
 						<div class="contact-info-label"><?php esc_html_e( 'Telefoon / WhatsApp', 'samen-omhoog' ); ?></div>
-						<div class="contact-info-val"><a class="whatsapp-inline" href="<?php echo esc_url( $wa_url ); ?>" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.44 3 4.07 8.36 4.07 14.96c0 2.11.55 4.17 1.6 5.98L4 29l8.27-1.63a11.9 11.9 0 0 0 5.77 1.47H18.05C24.64 28.84 30 23.48 30 16.88 30 10.3 22.64 3 16.04 3Zm7.04 17.16c-.3.85-1.74 1.63-2.4 1.73-.62.1-1.4.14-2.26-.14-.52-.17-1.2-.39-2.06-.77-3.62-1.56-5.98-5.2-6.16-5.44-.18-.24-1.47-1.96-1.47-3.74s.93-2.65 1.26-3.01c.33-.36.72-.45.96-.45h.69c.22.01.52-.08.81.62.3.72 1.02 2.5 1.11 2.68.09.18.15.39.03.63-.12.24-.18.39-.36.6-.18.21-.38.47-.54.63-.18.18-.37.38-.16.74.21.36.93 1.54 2 2.5 1.37 1.22 2.53 1.6 2.9 1.78.36.18.57.15.78-.09.21-.24.9-1.05 1.14-1.41.24-.36.48-.3.81-.18.33.12 2.1.99 2.46 1.17.36.18.6.27.69.42.09.15.09.87-.21 1.72Z"/></svg><?php esc_html_e( 'WhatsApp ons', 'samen-omhoog' ); ?></a></div>
-						<div class="contact-info-sub"><?php echo esc_html( $so_phone ); ?> · <?php esc_html_e( 'Snelste manier om ons te bereiken', 'samen-omhoog' ); ?></div>
+						<div class="contact-info-val"><a class="whatsapp-inline" href="<?php echo esc_url( $wa_url ); ?>" target="_blank" rel="noopener"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16.04 3C9.44 3 4.07 8.36 4.07 14.96c0 2.11.55 4.17 1.6 5.98L4 29l8.27-1.63a11.9 11.9 0 0 0 5.77 1.47H18.05C24.64 28.84 30 23.48 30 16.88 30 10.3 22.64 3 16.04 3Zm7.04 17.16c-.3.85-1.74 1.63-2.4 1.73-.62.1-1.4.14-2.26-.14-.52-.17-1.2-.39-2.06-.77-3.62-1.56-5.98-5.2-6.16-5.44-.18-.24-1.47-1.96-1.47-3.74s.93-2.65 1.26-3.01c.33-.36.72-.45.96-.45h.69c.22.01.52-.08.81.62.3.72 1.02 2.5 1.11 2.68.09.18.15.39.03.63-.12.24-.18.39-.36.6-.18.21-.38.47-.54.63-.18.18-.37.38-.16.74.21.36.93 1.54 2 2.5 1.37 1.22 2.53 1.6 2.9 1.78.36.18.57.15.78-.09.21-.24.9-1.05 1.14-1.41.24-.36.48-.3.81-.18.33.12 2.1.99 2.46 1.17.36.18.6.27.69.42.09.15.09.87-.21 1.72Z"/></svg><?php echo esc_html( $so_phone ); ?></a></div>
+						<div class="contact-info-sub"><?php esc_html_e( 'Snelste manier om ons te bereiken', 'samen-omhoog' ); ?></div>
 					</div>
 				</div>
 				<div class="contact-item">
@@ -319,15 +336,23 @@ $wa_url      = 'https://wa.me/' . $so_whatsapp;
 				<div class="contact-item">
 					<div class="contact-icon"><svg viewBox="0 0 18 18" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round"><path d="M9 2C6.2 2 4 4.2 4 7c0 4 5 9 5 9s5-5 5-9c0-2.8-2.2-5-5-5z"/><circle cx="9" cy="7" r="1.5"/></svg></div>
 					<div>
-						<div class="contact-info-label"><?php esc_html_e( 'Adres', 'samen-omhoog' ); ?></div>
+						<div class="contact-info-label"><?php esc_html_e( 'Bezoek', 'samen-omhoog' ); ?></div>
 						<div class="contact-info-val"><?php echo esc_html( $so_address ); ?></div>
-						<div class="contact-info-sub"><?php esc_html_e( 'Ma–do 09:00–17:00 · Vr tot 15:00', 'samen-omhoog' ); ?></div>
+						<div class="contact-info-sub"><?php esc_html_e( 'Ma–vr 09:00–17:00 · Avondinloop di & do 19:00–23:00', 'samen-omhoog' ); ?></div>
+					</div>
+				</div>
+				<div class="contact-item">
+					<div class="contact-icon"><svg viewBox="0 0 18 18" fill="none" stroke="rgba(255,255,255,0.8)" stroke-width="1.5" stroke-linecap="round"><rect x="2.5" y="3.5" width="13" height="11" rx="1.5"/><path d="M2.5 7h13"/></svg></div>
+					<div>
+						<div class="contact-info-label"><?php esc_html_e( 'Organisatie', 'samen-omhoog' ); ?></div>
+						<div class="contact-info-val"><?php echo esc_html( sprintf( 'KvK %s', $so_kvk ) ); ?></div>
+						<div class="contact-info-sub"><?php echo esc_html( sprintf( 'RSIN %1$s · AGB %2$s', $so_rsin, $so_agb ) ); ?></div>
 					</div>
 				</div>
 			</div>
 		</div>
 		<div class="contact-form-wrapper">
-			<div class="form-title"><?php esc_html_e( 'Stuur een bericht', 'samen-omhoog' ); ?></div>
+			<div class="form-title"><?php esc_html_e( 'Plan een kennismaking', 'samen-omhoog' ); ?></div>
 			<div class="form-sub"><?php esc_html_e( 'We reageren zo snel mogelijk — meestal binnen één werkdag.', 'samen-omhoog' ); ?></div>
 
 			<?php
@@ -351,14 +376,15 @@ $wa_url      = 'https://wa.me/' . $so_whatsapp;
 				</div>
 				<div class="form-group"><label><?php esc_html_e( 'Telefoon', 'samen-omhoog' ); ?></label><input type="tel" name="so_phone" placeholder="06 ..."></div>
 				<div class="form-group">
-					<label><?php esc_html_e( 'Onderwerp', 'samen-omhoog' ); ?></label>
+					<label><?php esc_html_e( 'Ik ben...', 'samen-omhoog' ); ?></label>
 					<select name="so_subject">
 						<option value=""><?php esc_html_e( 'Kies een onderwerp', 'samen-omhoog' ); ?></option>
-						<option><?php esc_html_e( 'Informatie over een programma', 'samen-omhoog' ); ?></option>
-						<option><?php esc_html_e( 'Aanmelding deelnemer', 'samen-omhoog' ); ?></option>
-						<option><?php esc_html_e( 'Verwijzing als professional', 'samen-omhoog' ); ?></option>
-						<option><?php esc_html_e( 'Samenwerking', 'samen-omhoog' ); ?></option>
-						<option><?php esc_html_e( 'Vrijwilligerswerk', 'samen-omhoog' ); ?></option>
+						<option><?php esc_html_e( 'Jongere — ik zoek een plek', 'samen-omhoog' ); ?></option>
+						<option><?php esc_html_e( 'Ouder / familie', 'samen-omhoog' ); ?></option>
+						<option><?php esc_html_e( 'Verwijzer / professional', 'samen-omhoog' ); ?></option>
+						<option><?php esc_html_e( 'Gemeente / partner', 'samen-omhoog' ); ?></option>
+						<option><?php esc_html_e( 'Klas Entree (onderwijs)', 'samen-omhoog' ); ?></option>
+						<option><?php esc_html_e( 'Vrijwilliger / donateur', 'samen-omhoog' ); ?></option>
 						<option><?php esc_html_e( 'Iets anders', 'samen-omhoog' ); ?></option>
 					</select>
 				</div>

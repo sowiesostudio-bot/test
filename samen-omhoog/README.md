@@ -41,6 +41,14 @@ Voor betrouwbare aflevering wordt een SMTP-plugin aangeraden (bijv. WP Mail SMTP
 - `index.php` — fallback voor blog/pagina's
 - `assets/js/main.js` — sticky nav + reveal-animaties
 
+## Preview bijwerken
+De map `preview/` bevat een standalone HTML-versie (zonder WordPress) ter beoordeling.
+Die wordt automatisch uit de échte themabestanden gegenereerd, dus preview en thema
+blijven identiek. Opnieuw genereren na wijzigingen:
+```bash
+php tools/build-preview.php
+```
+
 ## Aandachtspunten
 - De afbeeldingen in het oorspronkelijke ontwerp (logo, ISO/SBB/Rotary, PDF's) waren externe links.
   Upload deze via de Mediabibliotheek en koppel ze (logo via Site-identiteit, documenten via de doc-links).

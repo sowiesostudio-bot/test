@@ -705,8 +705,59 @@ a { color: inherit; }
   .tile-caption strong { font-size:21px; }
 }
 
+/* APPROACH — 4-step variant */
+.steps.four { grid-template-columns: repeat(4, 1fr); }
+.steps.four::before { left: 12%; right: 12%; }
+
+/* WERKPLAATSEN */
+.workshops { background: var(--cream); }
+.work-grid { display:grid; grid-template-columns: repeat(5,1fr); gap:14px; margin-top:48px; max-width:1200px; }
+.work-card { background:var(--forest); color:#fff; border-radius:20px; padding:26px 18px; text-align:center; transition:transform .2s ease, box-shadow .2s ease; }
+.work-card:hover { transform:translateY(-3px); box-shadow:0 16px 44px rgba(0,0,0,.12); }
+.work-icon { font-size:28px; margin-bottom:12px; display:block; }
+.work-card strong { display:block; font-size:14px; line-height:1.3; }
+
+/* VOOR WIE — extra intro line */
+.audience-age { display:inline-block; margin-top:14px; background:var(--gold); color:#fff; font-weight:800; font-size:13px; padding:6px 14px; border-radius:999px; }
+
+/* AANBOD — ingangen */
+.ingang-grid { display:grid; grid-template-columns: repeat(4,1fr); gap:16px; max-width:1200px; margin:48px auto 0; }
+.ingang-card { background:var(--cream); border:1px solid var(--border); border-radius:22px; padding:24px; display:flex; flex-direction:column; }
+.ingang-card h3 { font-family:'Playfair Display',serif; font-size:19px; color:var(--charcoal); margin-bottom:10px; }
+.ingang-card p { color:var(--text-muted); font-size:13px; line-height:1.6; margin-bottom:16px; flex:1; }
+.ingang-fin { font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.06em; color:var(--gold); background:#fff; border:1px solid var(--border); border-radius:999px; padding:6px 12px; align-self:flex-start; }
+.ingang-card.soon { background:var(--warm-white); border-style:dashed; }
+
+/* RESULTATEN */
+.results { background: var(--forest); }
+.results .section-label { color: var(--gold-light); }
+.results .section-label::before { background: var(--gold-light); }
+.results .section-title { color:#fff; }
+.results .section-subtitle { color: rgba(255,255,255,.62); }
+.results-grid { display:grid; grid-template-columns: repeat(5,1fr); gap:16px; margin-top:48px; }
+.result-stat { background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius:20px; padding:30px 20px; text-align:center; }
+.result-stat .rnum { font-family:'Playfair Display',serif; font-size:40px; font-weight:900; color:var(--gold-light); line-height:1; }
+.result-stat .rlabel { color:rgba(255,255,255,.62); font-size:12px; margin-top:10px; line-height:1.4; }
+
+/* TEAM */
+.team { background: var(--warm-white); }
+.team-grid { display:grid; grid-template-columns: repeat(3,1fr); gap:20px; margin-top:56px; max-width:1200px; }
+.team-card { background:var(--cream); border:1px solid var(--border); border-radius:22px; padding:26px; }
+.team-avatar { width:54px; height:54px; border-radius:50%; background:var(--forest); color:#fff; display:flex; align-items:center; justify-content:center; font-family:'Playfair Display',serif; font-weight:900; font-size:19px; margin-bottom:16px; }
+.team-card h3 { font-size:17px; color:var(--charcoal); margin-bottom:2px; }
+.team-role { color:var(--gold); font-size:11px; font-weight:800; text-transform:uppercase; letter-spacing:.06em; margin-bottom:12px; }
+.team-card p { color:var(--text-muted); font-size:13px; line-height:1.6; }
+
+@media (max-width: 900px) {
+  .work-grid, .results-grid { grid-template-columns: repeat(3,1fr); }
+  .ingang-grid { grid-template-columns: 1fr 1fr; }
+  .team-grid { grid-template-columns: 1fr 1fr; }
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
+  .steps.four { grid-template-columns: 1fr; }
+  .work-grid, .results-grid, .ingang-grid, .team-grid { grid-template-columns: 1fr; }
   .site-nav { padding: 0 20px; }
   .nav-links { display: none; }
   .site-section { padding: 80px 24px; }
