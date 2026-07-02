@@ -14,8 +14,18 @@ tot WordPress (PHP uitvoeren, database queries, bestanden lezen/schrijven).
 Claude Code  ->  mcp-wordpress-remote (npx-proxy)  ->  https://jouw-site.nl/wp-json/mcp/novamira  ->  WordPress
 ```
 
-De inloggegevens staan **niet** in de repo: `.mcp.json` leest ze uit
-omgevingsvariabelen. Die stel je zelf in (zie stap 3).
+De inloggegevens voor **buurmanstudio.nl** staan direct ingevuld in
+`.mcp.json` — er zijn geen omgevingsvariabelen meer nodig.
+
+> Let op: het application password staat daarmee leesbaar in de repo.
+> Deel deze repo niet publiek; wil je de toegang intrekken, verwijder dan
+> het application password via **Novamira → Configuration** in WordPress
+> en maak een nieuwe aan.
+
+Het enige dat nog nodig is: sta `buurmanstudio.nl` toe in het
+**netwerkbeleid** van je Claude Code-environment
+([claude.ai/code](https://claude.ai/code) → environment-instellingen →
+network policy) en start een nieuwe sessie.
 
 ## Stap voor stap
 
