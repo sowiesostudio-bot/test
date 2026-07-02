@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "novamira": {
+      "command": "npx",
+      "args": ["-y", "@automattic/mcp-wordpress-remote@latest"],
+      "env": {
+        "WP_API_URL": "${NOVAMIRA_URL}",
+        "WP_API_USERNAME": "${NOVAMIRA_USER}",
+        "WP_API_PASSWORD": "${NOVAMIRA_APP_PASSWORD}"
+      }
+    }
+  }
+}
