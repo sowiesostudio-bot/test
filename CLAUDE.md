@@ -18,6 +18,30 @@ Deze repo verbindt Claude Code met WordPress via de Novamira MCP-server
   "Buurman Studio - Footer" (post 2780, `elementor_library`), in
   postmeta `_elementor_data`. Live geverifieerd op meerdere pagina's.
 
+## Lopend project: nieuwe website marijnhageman.nl (2026-07-03)
+
+Nieuw one-page ontwerp "Beweging" (aangeleverd als HTML) nagebouwd in
+Elementor. **Status: voorbeeld klaar, wacht op akkoord van de gebruiker.**
+
+- Voorbeeldpagina: `https://marijnhageman.nl/nieuw/` (post 3179, publiek
+  maar noindex, template `elementor_canvas`, nav/footer zitten ín de
+  pagina voor de preview).
+- Huisstijl-CSS: `wp-content/themes/hello-elementor/mh-huisstijl.css`,
+  enqueued via functions.php (marker `mh-huisstijl`); Google Fonts
+  (Cormorant Garamond + Inter) idem (marker `mh-google-fonts`).
+- Widget-CSS-klassen in Elementor-JSON: widgets gebruiken `_css_classes`,
+  secties/kolommen `css_classes` — beide gezet door de generator.
+- Foto's: media 3175 (hero), 3176 (portret), 3177 (balans).
+- Contactformulier: CF7 id 3178 "Kennismaking (nieuwe site)" →
+  info@marijnhageman.nl.
+- Generator + CSS staan in de scratchpad van sessie
+  session_01JvSzt8J6jj8PXEUeYYN7Vg (bouw_pagina.py, custom.css).
+- **Nog te doen na akkoord:** header/footer als theme-builder-templates
+  (in-page nav/footer er dan uit), pagina omzetten naar homepage
+  (front page), oude pagina's (2654 Home, 2657 Expertise, 2659 Contact)
+  op concept, 301-redirects, Yoast-titel/meta, noindex eraf, caches,
+  live natesten.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
