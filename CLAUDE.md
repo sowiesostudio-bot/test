@@ -68,6 +68,9 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
     widget-key `wcc_msawdjkeoc`, sdk `cdn.hipsy.nl/sdk/v1/hipsy-events.js`).
   - Bij livegang: previewslugs `/nieuw*` → `/`, `/aanbod/`, `/contact/`;
     interne links in `_elementor_data` mee-vervangen.
+- Kleuren: goud #DEA344, grond #6B3A2A, zwart #1C1008, vlam #B84820,
+  adem (warm wit) **#F7F3E8** (op 2026-07-03 gewijzigd van #FAF5EE op
+  verzoek gebruiker; ook in _elementor_page_settings background_color).
 - Huisstijl-CSS: `wp-content/themes/hello-elementor/mh-huisstijl.css`,
   enqueued via functions.php (marker `mh-huisstijl`); Google Fonts
   (Cormorant Garamond + Inter) idem (marker `mh-google-fonts`).
