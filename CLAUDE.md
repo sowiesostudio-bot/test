@@ -53,6 +53,9 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
     CF7-formulier + social-icoontjes. `/contact/` → 301 `/kennismaken/`.
   - Menu overal: Home / Over mij / Aanbod + Kennismaken-CTA (geen apart
     Contact-item meer, was dubbelop).
+  - Reviews-sectie op home ("Ervaringen — Wat deelnemers zeggen. Uit mijn
+    yogalessen."): 2 kaarten (Wendy Borninkhof, Marieke Peters), tussen
+    werkwijze en CTA. Sessiekaart: "Vorm — Live" (online weggehaald).
   - Alle pagina's: publiek maar noindex, `elementor_canvas`, nav/footer ín
     de pagina (voor preview), menu Home/Aanbod/Contact + Kennismaken-CTA.
   - Socials: Instagram `instagram.com/marijn_hageman/`, LinkedIn
