@@ -1,23 +1,35 @@
-# Project: buurmanstudio.nl via Novamira
+# Project: WordPress-sites beheren via Novamira
 
-Deze repo verbindt Claude Code met de WordPress-site **buurmanstudio.nl**
-via de Novamira MCP-server (zie `.mcp.json` en `novamira-mcp-setup/README.md`).
+Deze repo verbindt Claude Code met WordPress via de Novamira MCP-server
+(zie `.mcp.json` en `novamira-mcp-setup/README.md`).
 
-## Openstaande taak
+## Sites
 
-- [ ] **Footertekst wijzigen** op buurmanstudio.nl:
-  vervang `Designed By: Zeko Code` door `Designed By: Buurman Studio`.
-  De credit staat in de footer (rood/roze balk onderaan de site) — zoek de
-  bron via de Novamira-tools: waarschijnlijk een customizer/thema-instelling
-  (`wp_options`/theme mods), anders `footer.php` van het actieve thema of een
-  widget. Controleer na de wijziging de live site.
+- **marijnhageman.nl** — Novamira geïnstalleerd en werkend.
+  Gebruiker: `abdi` (administrator). De `.mcp.json` wijst hierheen.
+- **buurmanstudio.nl** — géén Novamira; application-password-login komt
+  daar niet door de server (Authorization-header wordt gestript).
 
-## Werkwijze
+## Afgeronde taken
 
-- De Novamira-tools (`mcp__novamira__*`) laden automatisch als het
-  netwerkbeleid van de environment `buurmanstudio.nl` toestaat.
-- Zijn de tools er niet, controleer dan eerst met `curl` of
-  `https://buurmanstudio.nl/wp-json/` bereikbaar is; zo niet, dan blokkeert
-  het netwerkbeleid nog en moet de gebruiker dat aanpassen op claude.ai/code.
-- buurmanstudio.nl is een live site: maak gerichte, kleine wijzigingen en
-  verifieer het resultaat op de site zelf.
+- [x] Footertekst op marijnhageman.nl gewijzigd (2026-07-03):
+  `Designed By: Zeko Code` → `Designed By: Buurman Studio`,
+  link naar `https://buurmanstudio.nl`. Bron: Elementor-template
+  "Buurman Studio - Footer" (post 2780, `elementor_library`), in
+  postmeta `_elementor_data`. Live geverifieerd op meerdere pagina's.
+
+## Werkwijze / geleerde lessen
+
+- De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
+  REST-route ook direct met Basic auth (application password):
+  `POST /wp-json/novamira/v1/abilities/novamira/execute-php/run`
+  met body `{"input":{"code":"...PHP zonder <?php..."}}`.
+- marijnhageman.nl draait achter Varnish/Breeze (Cloudways-achtig).
+  In `functions.php` van het actieve thema (hello-elementor) staan
+  snippets die de Authorization-header herstellen en `PHP_AUTH_USER/PW`
+  vullen — niet verwijderen, de API-login kan ervan afhangen.
+- Na content-wijzigingen: Elementor-cache legen
+  (`\Elementor\Plugin::$instance->files_manager->clear_cache()`) en
+  `do_action('breeze_clear_all_cache')`, daarna live controleren.
+- Het zijn live sites: maak gerichte, kleine wijzigingen en verifieer
+  het resultaat op de site zelf.

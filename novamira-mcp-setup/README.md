@@ -11,21 +11,22 @@ tot WordPress (PHP uitvoeren, database queries, bestanden lezen/schrijven).
 ## Hoe het werkt
 
 ```
-Claude Code  ->  mcp-wordpress-remote (npx-proxy)  ->  https://jouw-site.nl/wp-json/mcp/novamira  ->  WordPress
+Claude Code  ->  mcp-wordpress-remote (npx-proxy)  ->  https://marijnhageman.nl/wp-json/mcp/novamira  ->  WordPress
 ```
 
-De inloggegevens voor **buurmanstudio.nl** staan direct ingevuld in
-`.mcp.json` — er zijn geen omgevingsvariabelen meer nodig.
+De inloggegevens voor **marijnhageman.nl** (gebruiker `abdi`) staan direct
+ingevuld in `.mcp.json` — er zijn geen omgevingsvariabelen nodig. Novamira
+staat op die site geïnstalleerd en werkt; zie `CLAUDE.md` voor de geleerde
+lessen (Varnish/headers, cache legen na wijzigingen).
 
 > Let op: het application password staat daarmee leesbaar in de repo.
 > Deel deze repo niet publiek; wil je de toegang intrekken, verwijder dan
 > het application password via **Novamira → Configuration** in WordPress
 > en maak een nieuwe aan.
 
-Het enige dat nog nodig is: sta `buurmanstudio.nl` toe in het
-**netwerkbeleid** van je Claude Code-environment
-([claude.ai/code](https://claude.ai/code) → environment-instellingen →
-network policy) en start een nieuwe sessie.
+Vereist verder: het **netwerkbeleid** van je Claude Code-environment moet
+`marijnhageman.nl` toestaan ([claude.ai/code](https://claude.ai/code) →
+environment-instellingen → network access).
 
 ## Stap voor stap
 
