@@ -35,7 +35,8 @@ media 3190 (site_icon) en 3191 (footer-embleem); 3183/3184 verwijderd.
 Footerquote overal: "Jij doet het werk. Ik creëer de bedding." Alle
 Zeko-mailadressen uit de opties geschoond (0 treffers). Hipsy-widget vergt
 nog actie van gebruiker: marijnhageman.nl toevoegen aan de domeinlijst in
-het Hipsy-dashboard.
+het Hipsy-dashboard. [afgerond: domein toegevoegd, org-slug
+gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
 
 - **Meerpagina-opzet na feedback gebruiker (geen one-pager):**
   - Home: `https://marijnhageman.nl/nieuw/` (post 3179) — hero, voor wie
@@ -58,7 +59,8 @@ het Hipsy-dashboard.
   - Blokkenritme na feedback: voices-sectie op home is donker (grond-bg);
     aanbodpagina = licht intro-blok → donker 1:1-blok (ruim, kaart 3rem
     padding) → licht events-blok met live Hipsy-widget
-    (organisation `marijn-lichaamswijsheid-bewustzijn`,
+    (organisation `marijn-hageman` — let op: de eerder aangeleverde
+    embedcode bevatte een verkeerde organisatienaam,
     widget-key `wcc_msawdjkeoc`, sdk `cdn.hipsy.nl/sdk/v1/hipsy-events.js`).
   - Bij livegang: previewslugs `/nieuw*` → `/`, `/aanbod/`, `/contact/`;
     interne links in `_elementor_data` mee-vervangen.
