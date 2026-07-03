@@ -34,6 +34,11 @@ Elementor. **Status: voorbeeld klaar, wacht op akkoord van de gebruiker.**
     de pagina (voor preview), menu Home/Aanbod/Contact + Kennismaken-CTA.
   - Socials: Instagram `instagram.com/marijn_hageman/`, LinkedIn
     `linkedin.com/in/marijn-hageman/` (in footer overal + contactpagina).
+  - Blokkenritme na feedback: voices-sectie op home is donker (grond-bg);
+    aanbodpagina = licht intro-blok → donker 1:1-blok (ruim, kaart 3rem
+    padding) → licht events-blok met live Hipsy-widget
+    (organisation `marijn-lichaamswijsheid-bewustzijn`,
+    widget-key `wcc_msawdjkeoc`, sdk `cdn.hipsy.nl/sdk/v1/hipsy-events.js`).
   - Bij livegang: previewslugs `/nieuw*` → `/`, `/aanbod/`, `/contact/`;
     interne links in `_elementor_data` mee-vervangen.
 - Huisstijl-CSS: `wp-content/themes/hello-elementor/mh-huisstijl.css`,
