@@ -49,9 +49,10 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   - Aanbod: `https://marijnhageman.nl/nieuw-aanbod/` (post 3180) — licht
     intro-blok, donker 1:1-blok (2 uur, €450 per 3 sessies), licht
     events-blok met Hipsy-widget.
-  - Contact: `https://marijnhageman.nl/nieuw-contact/` (post 3181) — CF7-
-    formulier + social-icoontjes.
-  - Menu overal: Home / Over mij / Aanbod / Contact + Kennismaken-CTA.
+  - Kennismaken (voorheen Contact): post 3181, live op `/kennismaken/` —
+    CF7-formulier + social-icoontjes. `/contact/` → 301 `/kennismaken/`.
+  - Menu overal: Home / Over mij / Aanbod + Kennismaken-CTA (geen apart
+    Contact-item meer, was dubbelop).
   - Alle pagina's: publiek maar noindex, `elementor_canvas`, nav/footer ín
     de pagina (voor preview), menu Home/Aanbod/Contact + Kennismaken-CTA.
   - Socials: Instagram `instagram.com/marijn_hageman/`, LinkedIn
