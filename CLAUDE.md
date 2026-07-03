@@ -24,12 +24,19 @@ Nieuw one-page ontwerp "Beweging" (aangeleverd als HTML) nagebouwd in
 Elementor. **Status: voorbeeld klaar, wacht op akkoord van de gebruiker.**
 
 - **Meerpagina-opzet na feedback gebruiker (geen one-pager):**
-  - Home: `https://marijnhageman.nl/nieuw/` (post 3179) — hero, voor wie,
-    voices, wie ik ben, hoe ik werk, CTA naar aanbod.
-  - Aanbod: `https://marijnhageman.nl/nieuw-aanbod/` (post 3180) — titel
-    linksboven (feedback), sessiekaart.
+  - Home: `https://marijnhageman.nl/nieuw/` (post 3179) — hero, voor wie
+    (donker blok), voices (7 stemmen), hoe ik werk, CTA naar aanbod.
+    Teksten hero/voorwie/voices komen uit de tweede aangeleverde HTML
+    (df3ace61-marijnbelichaamd.html).
+  - Over mij: `https://marijnhageman.nl/nieuw-over-mij/` (post 3182) —
+    verhaal (nieuwe lange tekst van gebruiker): foto + eerste 3 alinea's,
+    daarna leeskolommen (CSS columns), groot 2016-citaat, leeskolommen.
+  - Aanbod: `https://marijnhageman.nl/nieuw-aanbod/` (post 3180) — licht
+    intro-blok, donker 1:1-blok (2 uur, €450 per 3 sessies), licht
+    events-blok met Hipsy-widget.
   - Contact: `https://marijnhageman.nl/nieuw-contact/` (post 3181) — CF7-
     formulier + social-icoontjes.
+  - Menu overal: Home / Over mij / Aanbod / Contact + Kennismaken-CTA.
   - Alle pagina's: publiek maar noindex, `elementor_canvas`, nav/footer ín
     de pagina (voor preview), menu Home/Aanbod/Contact + Kennismaken-CTA.
   - Socials: Instagram `instagram.com/marijn_hageman/`, LinkedIn
