@@ -23,9 +23,19 @@ Deze repo verbindt Claude Code met WordPress via de Novamira MCP-server
 Nieuw one-page ontwerp "Beweging" (aangeleverd als HTML) nagebouwd in
 Elementor. **Status: voorbeeld klaar, wacht op akkoord van de gebruiker.**
 
-- Voorbeeldpagina: `https://marijnhageman.nl/nieuw/` (post 3179, publiek
-  maar noindex, template `elementor_canvas`, nav/footer zitten ín de
-  pagina voor de preview).
+- **Meerpagina-opzet na feedback gebruiker (geen one-pager):**
+  - Home: `https://marijnhageman.nl/nieuw/` (post 3179) — hero, voor wie,
+    voices, wie ik ben, hoe ik werk, CTA naar aanbod.
+  - Aanbod: `https://marijnhageman.nl/nieuw-aanbod/` (post 3180) — titel
+    linksboven (feedback), sessiekaart.
+  - Contact: `https://marijnhageman.nl/nieuw-contact/` (post 3181) — CF7-
+    formulier + social-icoontjes.
+  - Alle pagina's: publiek maar noindex, `elementor_canvas`, nav/footer ín
+    de pagina (voor preview), menu Home/Aanbod/Contact + Kennismaken-CTA.
+  - Socials: Instagram `instagram.com/marijn_hageman/`, LinkedIn
+    `linkedin.com/in/marijn-hageman/` (in footer overal + contactpagina).
+  - Bij livegang: previewslugs `/nieuw*` → `/`, `/aanbod/`, `/contact/`;
+    interne links in `_elementor_data` mee-vervangen.
 - Huisstijl-CSS: `wp-content/themes/hello-elementor/mh-huisstijl.css`,
   enqueued via functions.php (marker `mh-huisstijl`); Google Fonts
   (Cormorant Garamond + Inter) idem (marker `mh-google-fonts`).
