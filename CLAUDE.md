@@ -18,10 +18,17 @@ Deze repo verbindt Claude Code met WordPress via de Novamira MCP-server
   "Buurman Studio - Footer" (post 2780, `elementor_library`), in
   postmeta `_elementor_data`. Live geverifieerd op meerdere pagina's.
 
-## Lopend project: nieuwe website marijnhageman.nl (2026-07-03)
+## Project: nieuwe website marijnhageman.nl — LIVE sinds 2026-07-03
 
-Nieuw one-page ontwerp "Beweging" (aangeleverd als HTML) nagebouwd in
-Elementor. **Status: voorbeeld klaar, wacht op akkoord van de gebruiker.**
+Nieuw ontwerp "Beweging" (aangeleverd als HTML) nagebouwd in Elementor.
+**Status: LIVE.** Front page = post 3179. Oude pagina's (2654 home-oud,
+2657 expertise-oud, 2659 contact-oud) staan op concept — niet verwijderd.
+301-redirects in `.htaccess` (blok `MH-redirects`): /nieuw* → definitieve
+slugs, /expertise/ → /over-mij/. Favicon = media 3183 (site_icon),
+rond logo-embleem = media 3184 (in footer), volledig logo = media 3185.
+Yoast-titels/-descriptions per pagina gezet, noindex verwijderd.
+Nog open (nice-to-have): 404-template is nog Zeko-styling (post 2803);
+nav/footer zitten ín de pagina's (elementor_canvas) i.p.v. theme builder.
 
 - **Meerpagina-opzet na feedback gebruiker (geen one-pager):**
   - Home: `https://marijnhageman.nl/nieuw/` (post 3179) — hero, voor wie
