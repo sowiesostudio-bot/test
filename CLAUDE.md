@@ -77,7 +77,9 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   (Cormorant Garamond + Inter) idem (marker `mh-google-fonts`).
 - Widget-CSS-klassen in Elementor-JSON: widgets gebruiken `_css_classes`,
   secties/kolommen `css_classes` — beide gezet door de generator.
-- Foto's: media 3175 (hero), 3176 (portret), 3177 (balans).
+- Foto's: media 3175 (hero), 3176 (portret), 3177 (balans, op
+  kennismaken-pagina naast het formulier), 3194 (close-up, in het
+  1:1-blok op de aanbodpagina).
 - Contactformulier: CF7 id 3178 "Kennismaking (nieuwe site)" →
   info@marijnhageman.nl.
 - Generator + CSS staan in de scratchpad van sessie
