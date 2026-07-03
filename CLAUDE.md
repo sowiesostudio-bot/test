@@ -27,8 +27,15 @@ Nieuw ontwerp "Beweging" (aangeleverd als HTML) nagebouwd in Elementor.
 slugs, /expertise/ → /over-mij/. Favicon = media 3183 (site_icon),
 rond logo-embleem = media 3184 (in footer), volledig logo = media 3185.
 Yoast-titels/-descriptions per pagina gezet, noindex verwijderd.
-Nog open (nice-to-have): 404-template is nog Zeko-styling (post 2803);
-nav/footer zitten ín de pagina's (elementor_canvas) i.p.v. theme builder.
+404-template (post 2803) is omgebouwd naar de nieuwe huisstijl ("Pagina
+niet gevonden"); Zeko header/footer-templates (36, 2780) zijn uitgeschakeld
+(_elementor_conditions verwijderd, ook uit de Pro conditions-cache) — alle
+pagina's dragen hun eigen nav/footer. Favicon/rond logo opnieuw gecentreerd:
+media 3190 (site_icon) en 3191 (footer-embleem); 3183/3184 verwijderd.
+Footerquote overal: "Jij doet het werk. Ik creëer de bedding." Alle
+Zeko-mailadressen uit de opties geschoond (0 treffers). Hipsy-widget vergt
+nog actie van gebruiker: marijnhageman.nl toevoegen aan de domeinlijst in
+het Hipsy-dashboard.
 
 - **Meerpagina-opzet na feedback gebruiker (geen one-pager):**
   - Home: `https://marijnhageman.nl/nieuw/` (post 3179) — hero, voor wie
