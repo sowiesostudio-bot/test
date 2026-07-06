@@ -106,6 +106,10 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   focus-visible-stijl; hover-lift op reviewkaarten; e-mail
   info@marijnhageman.nl in footer; sessiekaart heeft locatieregel
   "Zwolle e.o." (gebruiker heeft geen vaste locatie) + notitie.
+- **"Zo werkt het"** (punt 10): 3 stappen (01 Kennismaken / 02 Drie
+  sessies / 03 Verder bewegen) onderin het donkere 1:1-blok op /aanbod/,
+  klasse `stappen-grid`. Nog open: betere close-upfoto (3194 is een
+  screenshot) en herofoto in hogere resolutie (3175 is 700px breed).
 
 ## Werkwijze / geleerde lessen
 
