@@ -90,6 +90,17 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   op concept, 301-redirects, Yoast-titel/meta, noindex eraf, caches,
   live natesten.
 
+- **Review-verbeterronde (2026-07-03):** mobiel menu toont nu de
+  Kennismaken-CTA (Home-link verbergt op mobiel, logo = home); hero heeft
+  concrete propositie + toonanker-accentregel; privacypagina (post 3195,
+  `/privacy/`, noindex) + notitie bij formulier + footerlink; og:image
+  (media 3196, ook Yoast-default); CF7-honeypot (veld `mh-website` +
+  `wpcf7_spam`-filter in functions.php, marker mh-honeypot);
+  scroll-reveals + actieve menustaat via `mh-extra.js` (enqueued, marker
+  mh-extra); h1 op /over-mij/ en /kennismaken/; 404 heeft twee knoppen;
+  Hipsy lege-staat-notitie. Let op: homepage-cache kan hardnekkig zijn —
+  na wijzigingen met `?fresh=<random>` controleren.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
