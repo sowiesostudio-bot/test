@@ -77,9 +77,12 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   (Cormorant Garamond + Inter) idem (marker `mh-google-fonts`).
 - Widget-CSS-klassen in Elementor-JSON: widgets gebruiken `_css_classes`,
   secties/kolommen `css_classes` — beide gezet door de generator.
-- Foto's: media 3175 (hero), 3176 (portret), 3177 (balans, op
-  kennismaken-pagina naast het formulier), 3194 (close-up, in het
-  1:1-blok op de aanbodpagina).
+- Foto's: media 3197 (hero, terracotta pak — crop uit prof. shoot,
+  960x1215), 3176 (portret, over-mij), 3177 (balans, kennismaken),
+  3198 (sessieportret bordeaux — solo-crop uit duofoto, 1:1-blok).
+  Oude 3175/3194 verwijderd. Originele shootfoto's (5x 2000px, deels
+  duo met andere vrouw — die moet er altijd afgesneden worden) in
+  scratchpad als shoot1-5.bin.
 - Contactformulier: CF7 id 3178 "Kennismaking (nieuwe site)" →
   info@marijnhageman.nl.
 - Generator + CSS staan in de scratchpad van sessie
@@ -108,8 +111,8 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   "Zwolle e.o." (gebruiker heeft geen vaste locatie) + notitie.
 - **"Zo werkt het"** (punt 10): 3 stappen (01 Kennismaken / 02 Drie
   sessies / 03 Verder bewegen) onderin het donkere 1:1-blok op /aanbod/,
-  klasse `stappen-grid`. Nog open: betere close-upfoto (3194 is een
-  screenshot) en herofoto in hogere resolutie (3175 is 700px breed).
+  klasse `stappen-grid`. Fotopunten uit de review zijn opgelost met de
+  professionele shoot (2026-07-06).
 
 ## Werkwijze / geleerde lessen
 
