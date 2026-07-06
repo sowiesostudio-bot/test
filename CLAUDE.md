@@ -100,6 +100,12 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   mh-extra); h1 op /over-mij/ en /kennismaken/; 404 heeft twee knoppen;
   Hipsy lege-staat-notitie. Let op: homepage-cache kan hardnekkig zijn —
   na wijzigingen met `?fresh=<random>` controleren.
+- **Review-ronde 2 (2026-07-03):** asymmetrische kolommen (voorwie 5/6,
+  verhaal 4.4/6.6, aanbod 5.4/6.6, verhaal-foto -4vh); koppen op licht
+  gebruiken `--goud-diep` #C9922F (donkere blokken houden #E0A93C);
+  focus-visible-stijl; hover-lift op reviewkaarten; e-mail
+  info@marijnhageman.nl in footer; sessiekaart heeft locatieregel
+  "Zwolle e.o." (gebruiker heeft geen vaste locatie) + notitie.
 
 ## Werkwijze / geleerde lessen
 
