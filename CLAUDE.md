@@ -42,7 +42,12 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   - Home: `https://marijnhageman.nl/nieuw/` (post 3179) — hero, voor wie
     (donker blok), voices (7 stemmen), hoe ik werk, CTA naar aanbod.
     Teksten hero/voorwie/voices komen uit de tweede aangeleverde HTML
-    (df3ace61-marijnbelichaamd.html).
+    (df3ace61-marijnbelichaamd.html). Hero-subregel later vormneutraal
+    gemaakt (niet meer "één-op-één"): "Voor sterke vrouwen die veel dragen,
+    maar zichzelf zijn kwijtgeraakt. Ik begeleid je terug naar je lichaam,
+    je wijsheid en je vrouwelijke kracht." — a.d.h.v. Business/Vorm-doc
+    (propositie: sterke vrouwen die dragen/doen/analyseren maar contact met
+    lichaam kwijt zijn; aanbod verbreedt naar trajecten/cirkels).
   - Over mij: `https://marijnhageman.nl/nieuw-over-mij/` (post 3182) —
     verhaal (nieuwe lange tekst van gebruiker): foto + eerste 3 alinea's,
     daarna leeskolommen (CSS columns), groot 2016-citaat, leeskolommen.
