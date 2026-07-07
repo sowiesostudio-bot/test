@@ -140,6 +140,18 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   .elementor-widget-wrap`-variant pakte niet). LET OP: headless Chromium
   komt in deze omgeving niet langs de proxy naar de live site — visuele
   controle alleen via curl/grep mogelijk.
+- **2026-07-06 (3 wijzigingen):** (a) **Goud overal gelijkgetrokken** naar
+  het diepe #C9922F — `--goud` was #E0A93C (fel/oranjer op donkere blokken),
+  nu = `--goud-diep`; ook `--lijn-goud` rgba(201,146,47,.30) en Hipsy
+  `--hipsy-secondary`. Toonanker-oker #E0A93C dus verlaten t.b.v.
+  consistentie + minder oranje. (b) **WhatsApp** (06-10927446 →
+  `wa.me/31610927446?text=Hoi Marijn, `) als monochroom SVG (SVG_WA,
+  currentColor, géén groen) toegevoegd aan socials() + footer() — subtiel,
+  op alle pagina's in de footer + op kennismaken. (c) **Algemene
+  voorwaarden**: verstopte pagina `/algemene-voorwaarden/` (post 3199,
+  noindex, niet in menu), bereikbaar via subtiele footerlink naast Privacy.
+  CONCEPT met placeholders [plaats]/[KvK-nummer] — gebruiker moet nog laten
+  toetsen en KvK/plaats invullen.
 
 ## Werkwijze / geleerde lessen
 
