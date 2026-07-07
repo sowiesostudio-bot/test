@@ -51,9 +51,12 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   - Over mij: `https://marijnhageman.nl/nieuw-over-mij/` (post 3182) —
     verhaal (nieuwe lange tekst van gebruiker): foto + eerste 3 alinea's,
     daarna leeskolommen (CSS columns), groot 2016-citaat, leeskolommen.
-  - Aanbod: `https://marijnhageman.nl/nieuw-aanbod/` (post 3180) — licht
-    intro-blok, donker 1:1-blok (2 uur, €450 per 3 sessies), licht
-    events-blok met Hipsy-widget.
+  - Aanbod: `https://marijnhageman.nl/nieuw-aanbod/` (post 3180) —
+    blokkenritme licht/donker: intro (licht, "Sessies, cirkels, rituelen
+    & events") → 1:1-blok (donker, 2 uur/€450 per 3 sessies + "Zo werkt
+    het") → Vrouwencirkels (licht, id `cirkels`) → Rituelen Rite of the
+    Womb (donker, id `rituelen`, kan in cirkel of 1:1) → events (licht,
+    Hipsy).
   - Kennismaken (voorheen Contact): post 3181, live op `/kennismaken/` —
     CF7-formulier + social-icoontjes. `/contact/` → 301 `/kennismaken/`.
   - Menu overal: Home / Over mij / Aanbod + Kennismaken-CTA (geen apart
