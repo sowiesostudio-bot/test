@@ -150,8 +150,10 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   op alle pagina's in de footer + op kennismaken. (c) **Algemene
   voorwaarden**: verstopte pagina `/algemene-voorwaarden/` (post 3199,
   noindex, niet in menu), bereikbaar via subtiele footerlink naast Privacy.
-  CONCEPT met placeholders [plaats]/[KvK-nummer] — gebruiker moet nog laten
-  toetsen en KvK/plaats invullen.
+  CONCEPT, gegevens ingevuld: Zwolle, KvK 99478161, btw NL869008018B01.
+  Gebruiker moet de inhoud nog juridisch laten toetsen (jurist/
+  beroepsvereniging); termijnen (14 dagen betalen, 48 uur annuleren) zijn
+  standaardaannames.
 
 ## Werkwijze / geleerde lessen
 
