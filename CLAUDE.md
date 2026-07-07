@@ -131,6 +131,15 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   uit de zichtbare teksten verwijderd** (voelden AI-achtig) — vervangen
   door komma/punt/dubbele punt in de generator; alle 6 pagina's opnieuw
   gedeployed. Hyphens in woorden (één-op-één) blijven.
+- **Aanbod-layout 2026-07-06:** sessieportret (3198) staat nu bovenin de
+  intro (2-koloms: tekst | foto, `aanbod-intro-foto`), niet meer naast het
+  1:1-blok; 1:1-blok is nu enkele kolom (sessie-kaart max-width 620px).
+  Cirkels-zin: "Wat je (nog) niet ziet of voelt". VRIJspraak-kaart padding
+  gelijkgetrokken met de 1:1-sessiekaart (padding 3rem op `.vrij-kaart`
+  zelf + `.vrij-kaart .elementor-widget-wrap { padding: 0 }`; de `>
+  .elementor-widget-wrap`-variant pakte niet). LET OP: headless Chromium
+  komt in deze omgeving niet langs de proxy naar de live site — visuele
+  controle alleen via curl/grep mogelijk.
 
 ## Werkwijze / geleerde lessen
 
