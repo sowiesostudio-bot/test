@@ -123,6 +123,14 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   sessies / 03 Verder bewegen) onderin het donkere 1:1-blok op /aanbod/,
   klasse `stappen-grid`. Fotopunten uit de review zijn opgelost met de
   professionele shoot (2026-07-06).
+- **VRIJspraak praktisch + em-dashes weg (2026-07-06):** VRIJspraak-kaart
+  toont nu praktische details (6 maanden, livedagen & masterclasses, max.
+  6 vrouwen, start 2027, investering "volgt") + zachte interesse-CTA "Laat
+  je interesse weten" (in ontwikkeling). "VRIJ" in beide woorden in
+  goud-diep. Cirkels-zin: "wat je (nog) niet ziet". **Alle em-dashes (—)
+  uit de zichtbare teksten verwijderd** (voelden AI-achtig) — vervangen
+  door komma/punt/dubbele punt in de generator; alle 6 pagina's opnieuw
+  gedeployed. Hyphens in woorden (één-op-één) blijven.
 
 ## Werkwijze / geleerde lessen
 
