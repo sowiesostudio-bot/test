@@ -194,6 +194,20 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   site vervangen; favicon 3190 + embleem 3191 idem (md5 live gecheckt).
   Hand van de danseres heeft in het ORIGINEEL ook al duim + 3 vingers
   (gestileerd) — geen vectorisatiefout; gebruiker gemeld.
+- **Logo v3 (2026-07-10, feedback):** (a) achtergrond van adem #F7F3E8
+  naar **warm wit #F2E9DE** (gebruiker vond adem te wit-geel); (b)
+  **vuur-accenten weer weg: álle stralen goud** #C9922F; (c) **extra
+  vinger** op de opgestoken hand (nu duim + 4): middelste vingerzone
+  op de 5016px-render gewist en 3 vingers programmatisch getekend
+  (taps toelopende polygonen langs centerlijn), vectorisatie strijkt
+  de randen glad; (d) **pols-kringel rechterhand weggewerkt** (was de
+  duim die door vectorisatie een klont werd) + los zwevend vlekje weg
+  + omsloten crème-vlekjes in de hand gevuld (scipy label, alleen
+  componenten die de vensterrand niet raken). Werk-render:
+  `render-edit.png` in scratchpad; workflow = bewerken op render5016 →
+  herinkleuren → 2508 PNG → Adobe vectorize → SVG. Favicon/embleem/
+  SVG op de site vervangen (md5 live geverifieerd). Streepje onder de
+  naam blijft terra.
 
 ## Werkwijze / geleerde lessen
 
