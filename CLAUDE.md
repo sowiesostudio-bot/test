@@ -172,6 +172,16 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   (-150x150/-300x300 gecheckt). Live geverifieerd via md5-vergelijking.
   Embleem-centrering: pixel-bbox boven 58,5% hoogte (tekst eronder
   uitgesloten), 5% marge favicon / 11% marge rond embleem.
+- **Logo herkleurd naar huisstijlpalet (2026-07-10, keuze gebruiker):**
+  zonnestralen = verloop vlam #C66A3F → goud #C9922F (o.b.v. originele
+  toon per pad), vrouw + naam = grond #6B3A2A, streepje/sterretje onder
+  de naam = terra #C66A3F (geselecteerd op positie: paden met min-y >
+  1040 in 1254-space), achtergrond = adem #F7F3E8. Master:
+  `uploads/2026/07/logo-marijn-hageman-palet.svg` (origineelkleurige
+  SVG staat er ook nog: `logo-marijn-hageman.svg`). Favicon 3190 +
+  rond embleem 3191 opnieuw in place overschreven uit 2508px-render,
+  metadata geregenereerd, live geverifieerd (md5). Scratchpad:
+  `logo-palet-definitief.svg` + herkleurscript in de sessie.
 
 ## Werkwijze / geleerde lessen
 
