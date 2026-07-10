@@ -159,6 +159,19 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   Herroeping: mag wettelijk NIET bij 'start' vervallen, alleen bij volledige
   uitvoering + evenredige vergoeding bij tussentijdse herroeping (uitgelegd).
   Gebruiker moet de inhoud nog juridisch laten toetsen.
+- **Logo gevectoriseerd (2026-07-10):** origineel was 1254px webp (80 KB,
+  zachte randen bij inzoomen). Via Adobe `image_vectorize` (MCP) omgezet
+  naar SVG met strakke paden; master staat op de site:
+  `wp-content/uploads/2026/07/logo-marijn-hageman.svg` (172 KB, géén
+  attachment) + lokaal in scratchpad als `logo-vector.svg`. Favicon
+  (media 3190, mh-favicon2.png 512px) en rond footer-embleem (media 3191,
+  mh-logo-rond2.png 400px) opnieuw gegenereerd uit een 2508px-render van
+  de SVG (cairosvg) en **in place overschreven** (zelfde bestandsnamen,
+  dus alle verwijzingen + site_icon bleven werken);
+  `wp_generate_attachment_metadata` draaide de maatvarianten opnieuw
+  (-150x150/-300x300 gecheckt). Live geverifieerd via md5-vergelijking.
+  Embleem-centrering: pixel-bbox boven 58,5% hoogte (tekst eronder
+  uitgesloten), 5% marge favicon / 11% marge rond embleem.
 
 ## Werkwijze / geleerde lessen
 
