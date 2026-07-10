@@ -182,6 +182,18 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   rond embleem 3191 opnieuw in place overschreven uit 2508px-render,
   metadata geregenereerd, live geverifieerd (md5). Scratchpad:
   `logo-palet-definitief.svg` + herkleurscript in de sessie.
+- **Stralen-revisie (2026-07-10, feedback):** het vlam→goud-verloop per
+  straal verving door **kronkelstralen = vlam-accenten, rechte spitsen +
+  ring = goud**. Segmentatie die werkte (na mislukte pogingen met vaste/
+  adaptieve zaadradius + watershed en erosie — de stralen vergroeien bij
+  de ring): **skeletonize op 5016px-render, skelet in takken splitsen op
+  junctiepunten, tak = vuur als gemiddelde EDT-dikte > 11** (verdeling is
+  bimodaal: spitsen 2-10, kronkels 12-26), daarna watershed met
+  takken als markers. Definitieve PNG opnieuw gevectoriseerd via Adobe
+  `image_vectorize` → `logo-marijn-hageman-palet.svg` (145 KB) op de
+  site vervangen; favicon 3190 + embleem 3191 idem (md5 live gecheckt).
+  Hand van de danseres heeft in het ORIGINEEL ook al duim + 3 vingers
+  (gestileerd) — geen vectorisatiefout; gebruiker gemeld.
 
 ## Werkwijze / geleerde lessen
 
