@@ -208,6 +208,20 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   herinkleuren → 2508 PNG → Adobe vectorize → SVG. Favicon/embleem/
   SVG op de site vervangen (md5 live geverifieerd). Streepje onder de
   naam blijft terra.
+- **Logo v4 — handen getransplanteerd (2026-07-10):** gebruiker vond de
+  getekende handen niet goed en leverde een referentiefoto (danseres,
+  stock). Beide handsilhouetten uit de foto gesneden (4x LANCZOS-upscale
+  eerst, dán drempel lum<150, grootste component, fill_holes — direct
+  drempelen op lage resolutie versmolt de vingers) en op de polsen van
+  de logo-figuur geënt: masker ingekort tot hand + polsstomp, oude hand
+  gewist, geplakt op ankerpunt (armhoeken kwamen vrijwel overeen, geen
+  rotatie nodig), polsnaden met kleine donkere/lichte polygonen
+  bijgewerkt (meerdere zoom-iteraties: pijlpunt, schoorsteentje en
+  hoorntje-artefacten weggewerkt). Werkbestand `render-hands.png`,
+  maskers `mask4-boven/rechts.png`, ref `danseres-ref.png` (scratchpad).
+  Daarna zelfde pipeline: herinkleuren → 2508 → Adobe vectorize → SVG →
+  favicon/embleem/SVG op site (md5 geverifieerd). Masters:
+  `logo-v4-2508.png` + `logo-v4.svg`.
 
 ## Werkwijze / geleerde lessen
 
