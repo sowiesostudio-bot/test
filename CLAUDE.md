@@ -247,6 +247,22 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   3191/SVG op site vervangen (md5 geverifieerd). LES: geen
   ontwerp-chirurgie (handen e.d.) meer proberen op dit logo — dat is
   illustratorwerk; alleen kleuren/scherpte aanpassen werkt goed.
+- **Logo DEFINITIEF v7 — nieuw aangeleverd ontwerp (2026-07-11):**
+  gebruiker leverde een NIEUW logo (danseres met wapperende broek ín de
+  zon, stralen met oranje verloop, ander ontwerp dan het oude). Kleuren
+  gemeten en NIET aangepast (instructie): achtergrond #F6E6D5, figuur/
+  naam ±#5F3A22, stralen verloop ±#D67F36 (ring #CB8A2E, ster #D86A2B).
+  Let op: wijkt af van het sitepalet (goud #C9922F 12% donkerder,
+  figuur donkerder dan grond) — gebruiker gemeld, bewust zo gelaten.
+  Adobe-vectorisatie kleurgetrouw (Δ1-4 tinten). Masters:
+  `logo-def-2508.png` + `logo-def.svg` (scratchpad), SVG ook op de site
+  (zelfde bestandsnaam logo-marijn-hageman-palet.svg). Favicon 3190 +
+  rond embleem 3191 in place vervangen (embleem-cut y<0.645H, ster valt
+  eraf). **Header-embleem toegevoegd:** rond zonnetje (zelfde
+  mh-logo-rond2.png) naast de naam in de nav op alle 7 pagina's —
+  nav() in bouw_pagina.py heeft nu `<img class="nav-embleem">` in
+  .nav-mark; CSS: .nav-mark flex + .nav-embleem 38px (mobiel 30px).
+  Alle pagina's + CSS gedeployed, md5 + nav-embleem live geverifieerd.
 
 ## Werkwijze / geleerde lessen
 
