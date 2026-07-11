@@ -235,6 +235,17 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   aansluiting. Puntenlijst HAND2 + transformeer() staan in de sessie.
   Zelfde pipeline → masters `logo-v5-2508.png` + `logo-v5.svg`;
   favicon/embleem/SVG op site vervangen (md5 geverifieerd).
+- **Logo v6 — DEFINITIEF: originele handen terug (2026-07-11):**
+  gebruiker vond ook de spline-handen lelijk ("laat maar even, zet de
+  oorspronkelijke afbeelding terug"). Alle handbewerkingen teruggedraaid:
+  v6 = schone render5016 van het originele logo, alleen herinkleurd
+  (warm wit #F2E9DE, alle stralen goud #C9922F, figuur/naam grond
+  #6B3A2A, streepje terra #C66A3F). Handen dus exact zoals in het
+  aangeleverde origineel (incl. gestileerde duim + 3 vingers).
+  Masters `logo-v6-2508.png` + `logo-v6.svg`; favicon 3190/embleem
+  3191/SVG op site vervangen (md5 geverifieerd). LES: geen
+  ontwerp-chirurgie (handen e.d.) meer proberen op dit logo — dat is
+  illustratorwerk; alleen kleuren/scherpte aanpassen werkt goed.
 
 ## Werkwijze / geleerde lessen
 
