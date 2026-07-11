@@ -263,6 +263,17 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   nav() in bouw_pagina.py heeft nu `<img class="nav-embleem">` in
   .nav-mark; CSS: .nav-mark flex + .nav-embleem 38px (mobiel 30px).
   Alle pagina's + CSS gedeployed, md5 + nav-embleem live geverifieerd.
+  **Cache-doorbraak (2026-07-11):** gebruiker bleef oud logo zien
+  ondanks juiste bestanden op de server (afbeeldingen krijgen
+  max-age=1 jaar; hernieuwde inhoud onder zelfde naam is onbetrouwbaar).
+  Definitieve oplossing: **nieuwe bestandsnamen** mh-favicon3.png +
+  mh-logo-rond3.png (attachments 3190/3191: _wp_attached_file
+  aangepast + metadata geregenereerd zodat site_icon-maten
+  mh-favicon3-150x150/-300x300 werden); nav/footer in generator naar
+  rond3; alle pagina's opnieuw gedeployed; Varnish gepurged (PURGE
+  per pad vanaf de server zelf werkt, regex-purge niet). LES: bij
+  vervanging van afbeeldingen op deze site ALTIJD een nieuwe
+  bestandsnaam gebruiken.
 
 ## Werkwijze / geleerde lessen
 
