@@ -63,9 +63,10 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   - Menu overal: Home / Over mij / Aanbod + Kennismaken-CTA (geen apart
     Contact-item meer, was dubbelop).
   - Reviews-sectie op home ("Ervaringen — Wat deelnemers zeggen. Uit mijn
-    yogalessen."): 3 kaarten (Wendy Borninkhof, Marieke Peters, Wilma
-    Eilander — met emoji's, bewust behouden), tussen werkwijze en CTA;
-    3 kolommen ≥1100px, daaronder 2/1. Sessiekaart: "Vorm — Live" (online weggehaald).
+    yogalessen."): 4 kaarten (Wendy Borninkhof, Marieke Peters, Wilma
+    Eilander — met emoji's, bewust behouden — en Miranda Schrijver,
+    toegevoegd 2026-07-11), tussen werkwijze en CTA; 2x2-raster ≥1100px
+    (was 3 kolommen), daaronder 2/1. Sessiekaart: "Vorm — Live" (online weggehaald).
   - Alle pagina's: publiek maar noindex, `elementor_canvas`, nav/footer ín
     de pagina (voor preview), menu Home/Aanbod/Contact + Kennismaken-CTA.
   - Socials: Instagram `instagram.com/marijn_hageman/`, LinkedIn
