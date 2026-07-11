@@ -222,6 +222,19 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   Daarna zelfde pipeline: herinkleuren → 2508 → Adobe vectorize → SVG →
   favicon/embleem/SVG op site (md5 geverifieerd). Masters:
   `logo-v4-2508.png` + `logo-v4.svg`.
+- **Logo v5 — handen als splines (2026-07-11):** gebruiker vond ook de
+  fotomaskers niet netjes (te grof op deze schaal, vingers papperig).
+  Definitieve aanpak: **handen getekend als gladde gesloten splines**
+  (scipy splprep, per=1, s=3.5*n, ~30 controlepunten per hand) op de
+  5016-render. De hangende rechterhand (handrug → 4 vingerprongen met
+  dalen → duim) werkte meteen; de opgestoken hand faalde 3x als eigen
+  ontwerp (blob/klauw) en is uiteindelijk **dezelfde vorm, gespiegeld
+  (linkerhand!), -63° geroteerd, schaal 0.92** op de pols van de
+  opgeheven arm gezet (armtip programmatisch gemeten: bovenste donkere
+  pixel na wissen, (2556,1453)) + polswig-polygoon voor de geknikte
+  aansluiting. Puntenlijst HAND2 + transformeer() staan in de sessie.
+  Zelfde pipeline → masters `logo-v5-2508.png` + `logo-v5.svg`;
+  favicon/embleem/SVG op site vervangen (md5 geverifieerd).
 
 ## Werkwijze / geleerde lessen
 
