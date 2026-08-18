@@ -301,8 +301,9 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   hoofd→lichaam**)** → Belangrijk om te weten → Tarief (tekst |
   sessie-kaart, grid align start). Kaart: Duur 2 uur / Minimale afname
   3 sessies / €550 per 3 sessies (incl. btw) / **Vervolgsessies €170
-  per sessie (incl. btw)**; intake-notitie (formulier vooraf, 1e sessie
-  2,5 uur) als sessie-note; CTA "Plan een kennismaken". "Zwolle e.o."
+  per sessie (incl. btw)**; intake-notitie (formulier vooraf, "In de
+  eerste sessie bespreken we de intake, daarna volgt de sessie zelf.
+  De eerste sessie duurt daarom 2,5 uur.") als sessie-note; CTA "Plan een kennismaken". "Zwolle e.o."
   en "Vorm Live" op verzoek (impliciet, definitieve lijst) verwijderd.
   Tekst woord-voor-woord geverifieerd (46 fragmenten). `.aanbod-tweeluik`
   uit CSS verwijderd; subkoppen krijgen margin-top 3.2rem.
