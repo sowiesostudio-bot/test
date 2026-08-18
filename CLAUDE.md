@@ -293,6 +293,19 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   LET OP: generator bouw_pagina.py bestaat niet meer (scratchpad
   geleegd); live _elementor_data is nu de bron, wijzigingen dus
   chirurgisch in de JSON doen.
+- **1:1-blok ronde 2, definitieve tekst gebruiker (2026-08-18):**
+  gebruiker leverde de definitieve tekst + vond het tweeluik niet mooi
+  uitgelijnd. Nu één rustige kolom (66ch) met gouden subkoppen:
+  verhaal → Veiligheid als bedding → Wat lichaamswerk je kan brengen →
+  **Mijn achtergrond (nieuw**: politie, veld lezen, doorleefde weg
+  hoofd→lichaam**)** → Belangrijk om te weten → Tarief (tekst |
+  sessie-kaart, grid align start). Kaart: Duur 2 uur / Minimale afname
+  3 sessies / €550 per 3 sessies (incl. btw) / **Vervolgsessies €170
+  per sessie (incl. btw)**; intake-notitie (formulier vooraf, 1e sessie
+  2,5 uur) als sessie-note; CTA "Plan een kennismaken". "Zwolle e.o."
+  en "Vorm Live" op verzoek (impliciet, definitieve lijst) verwijderd.
+  Tekst woord-voor-woord geverifieerd (46 fragmenten). `.aanbod-tweeluik`
+  uit CSS verwijderd; subkoppen krijgen margin-top 3.2rem.
 
 ## Werkwijze / geleerde lessen
 
