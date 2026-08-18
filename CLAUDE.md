@@ -274,6 +274,25 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   per pad vanaf de server zelf werkt, regex-purge niet). LES: bij
   vervanging van afbeeldingen op deze site ALTIJD een nieuwe
   bestandsnaam gebruiken.
+- **1:1-blok herbouwd na ChatGPT-bewerking (2026-08-18):** gebruiker had
+  via ChatGPT nieuwe teksten in het 1:1-blok op /aanbod/ gezet: één lange
+  text-editor met inline-styled koppen en detailbox in #6b3a2a op de
+  donkere grond-achtergrond (onleesbaar); sessiekaart + stappen-grid
+  waren daarbij verdwenen. Herbouwd in huisstijl MET BEHOUD van alle
+  nieuwe teksten (lichaamswerk/de-armouring, nieuw tarief €550 per 3
+  sessies incl. btw, medische disclaimer): verhaal (klasse
+  `aanbod-verhaal`, 62ch) → tweeluik "Veiligheid als bedding" | "Wat
+  lichaamswerk je kan brengen" (`aanbod-tweeluik`, subkoppen
+  `aanbod-subkop` in goud-cursief) → tariefblok (`aanbod-tarief`:
+  tarieftekst | sessie-kaart met Duur 2 uur / Start min. 3 sessies /
+  €550 / Zwolle e.o. / Live + disclaimer als sessie-note + CTA-knop
+  mh-btn-adem naar /kennismaken/). CSS-blok toegevoegd aan
+  mh-huisstijl.css. Intro-sectie ("Beweging begint hier.") was al in
+  huisstijl, alleen tekst gewijzigd; zo gelaten. Stappen-grid "Zo werkt
+  het" bewust NIET teruggezet (nieuwe tarieftekst dekt dat verhaal).
+  LET OP: generator bouw_pagina.py bestaat niet meer (scratchpad
+  geleegd); live _elementor_data is nu de bron, wijzigingen dus
+  chirurgisch in de JSON doen.
 
 ## Werkwijze / geleerde lessen
 
