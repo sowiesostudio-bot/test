@@ -326,6 +326,9 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   Overige pagina's houden "Paginanaam — Marijn Hageman". Google toont
   de nieuwe titel pas na hercrawl (dagen tot weken).
 
+- **CTA-kop op home (2026-08-19):** "Klaar om te bewegen?" →
+  "Klaar om in beweging te komen?" (echoot de hero-eyebrow).
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
