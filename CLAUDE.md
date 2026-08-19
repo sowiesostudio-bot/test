@@ -293,6 +293,18 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   LET OP: generator bouw_pagina.py bestaat niet meer (scratchpad
   geleegd); live _elementor_data is nu de bron, wijzigingen dus
   chirurgisch in de JSON doen.
+- **1:1-blok ronde 3, blokjes-layout (2026-08-18, DEFINITIEF):** gebruiker
+  vond de enkele kolom een "lange lap tekst"; wilde blokjes naast elkaar,
+  maar de prijzenkaart alleen ónderaan (niet naast tekst). Nu: verhaal in
+  2 CSS-leeskolommen (`aanbod-leeskolommen`, ≥900px, max 140ch) →
+  2x2-raster (`aanbod-blokken`) met 4 omkaderde blokjes (`aanbod-blok`,
+  dun kader + gouden accentlijn links, zoals sessie-kaart): Veiligheid
+  als bedding | Wat lichaamswerk je kan brengen | Mijn achtergrond |
+  Tarief → sessie-kaart los gecentreerd onderaan (`aanbod-kaart-wrap`,
+  max 620px) met details (2 uur / min. 3 sessies / €550 / vervolg €170),
+  intake-note, "Belangrijk om te weten"-disclaimer als tweede note, CTA.
+  Subkop "Belangrijk om te weten" is dus opgegaan in de kaart-note
+  (gemeld aan gebruiker). Mobiel: raster 1 kolom.
 - **1:1-blok ronde 2, definitieve tekst gebruiker (2026-08-18):**
   gebruiker leverde de definitieve tekst + vond het tweeluik niet mooi
   uitgelijnd. Nu één rustige kolom (66ch) met gouden subkoppen:
