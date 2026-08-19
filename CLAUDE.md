@@ -320,6 +320,12 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   Tekst woord-voor-woord geverifieerd (46 fragmenten). `.aanbod-tweeluik`
   uit CSS verwijderd; subkoppen krijgen margin-top 3.2rem.
 
+- **Homepage-titel ingekort (2026-08-19):** Yoast-titel van post 3179
+  was "Marijn Hageman — Beweging"; gebruiker vond "Beweging" stom in
+  tabblad/Google. Nu alleen "Marijn Hageman" (_yoast_wpseo_title).
+  Overige pagina's houden "Paginanaam — Marijn Hageman". Google toont
+  de nieuwe titel pas na hercrawl (dagen tot weken).
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
