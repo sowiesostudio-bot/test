@@ -327,7 +327,12 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   de nieuwe titel pas na hercrawl (dagen tot weken).
 
 - **CTA-kop op home (2026-08-19):** "Klaar om te bewegen?" →
-  "Klaar om in beweging te komen?" (echoot de hero-eyebrow).
+  "Klaar om in beweging te komen?" (echoot de hero-eyebrow); dubbele
+  tussenregel "Bekijk het aanbod." (em) verwijderd, knop dekt dat al.
+- **Reviews-kop op home (2026-08-19):** "Wat deelnemers zeggen. / Uit
+  mijn yogalessen." → alleen "Wat ik terugkrijg." (gebruiker vond
+  deelnemers/yogalessen lelijk gestapeld); eyebrow "Ervaringen" en de
+  twee intro-zinnen blijven.
 
 ## Werkwijze / geleerde lessen
 
