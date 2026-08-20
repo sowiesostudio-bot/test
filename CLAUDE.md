@@ -420,6 +420,10 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   bijgewerkt. Let op: /aanbod/ Yoast-schema thumbnailUrl verwijst nog
   naar mh-logo-rond3.png (onzichtbaar, onschuldig).
 
+- **Praktisch-kaart /aanbod/ (2026-08-20):** regel "Eén-op-één sessie"
+  (sessie-naam) verwijderd; kop "Praktisch" nu in aanbod-subkop-stijl
+  (groot goud cursief, h3) i.p.v. klein sessie-label.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
