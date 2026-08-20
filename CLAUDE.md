@@ -437,6 +437,10 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   knop-hover-lift (translateY) en reviewkaart-hover-lift weg.
   Kleurovergangen bij hover (zonder beweging) bewust behouden.
 
+- **Ayni weg (2026-08-20):** in het Ritueel-blokje op home nu "zoals
+  de Rite of the Womb of een Despacho-ritueel" (Ayni-ritueel eruit,
+  stond alleen op home).
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
