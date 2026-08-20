@@ -343,6 +343,13 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   of Mother Nature"). 36 fragmenten woord-voor-woord live geverifieerd.
   Kernwoorden-regel en foto ongewijzigd.
 
+- **"Hoe ik werk" op home vernieuwd (2026-08-19):** 4 oude ww-items
+  vervangen door 6 nieuwe (tekst gebruiker): Het veld lezen /
+  Lichaamswerk / Schaduwwerk & systemisch werk / Dans & expressie /
+  Ritueel (Rite of the Womb, Ayni, Despacho) / Veiligheid & eigen regie
+  (consent). 2 kolommen van 3, kop ongewijzigd. 21 fragmenten live
+  geverifieerd.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
