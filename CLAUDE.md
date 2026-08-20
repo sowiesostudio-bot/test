@@ -343,12 +343,15 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   of Mother Nature"). 36 fragmenten woord-voor-woord live geverifieerd.
   Kernwoorden-regel en foto ongewijzigd.
 
-- **"Hoe ik werk" op home vernieuwd (2026-08-19):** 4 oude ww-items
-  vervangen door 6 nieuwe (tekst gebruiker): Het veld lezen /
-  Lichaamswerk / Schaduwwerk & systemisch werk / Dans & expressie /
-  Ritueel (Rite of the Womb, Ayni, Despacho) / Veiligheid & eigen regie
-  (consent). 2 kolommen van 3, kop ongewijzigd. 21 fragmenten live
-  geverifieerd.
+- **Werkwijze-sectie op home gesplitst (2026-08-19, definitief):** op
+  aanleveren gebruiker nu TWEE secties: (1) "Waarvoor je bij mij
+  terechtkunt." (id `werkvormen`, eyebrow "Werkvormen" door mij gekozen)
+  met intro-alinea + 4 ww-items: Lichaamswerk / Schaduwwerk & systemisch
+  werk / Dans & expressie / Ritueel (Rite of the Womb, Ayni, Despacho);
+  (2) "Hoe ik werk" (id `hoe-ik-werk`, kop "Afstemmen op het veld."
+  behouden) met 2 ww-items: Het veld lezen / Veiligheid & eigen regie
+  (nieuwe tekst: "basis van alles wat ik doe"). 16 fragmenten +
+  volgorde live geverifieerd.
 
 ## Werkwijze / geleerde lessen
 
