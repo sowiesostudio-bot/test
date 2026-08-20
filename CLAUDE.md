@@ -424,6 +424,13 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   (sessie-naam) verwijderd; kop "Praktisch" nu in aanbod-subkop-stijl
   (groot goud cursief, h3) i.p.v. klein sessie-label.
 
+- **VRIJspraak-foto (2026-08-20):** kliffoto gebruiker naast de
+  VRIJspraak-kaart (`vrij-kaart-wrap` nu grid 1.25fr/1fr,
+  `vrij-foto-wrap`): `uploads/2026/08/mh-vrijspraak.jpg` 900x1200 q82,
+  géén attachment/origineel op server; zachte randen (radius 18 +
+  schaduw), niet klikbaar, pointer-events none + draggable=false.
+  Max 360px (mobiel 300px onder de kaart).
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
