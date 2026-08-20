@@ -366,6 +366,10 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   weet dat lage resolutie de echte bescherming is). Max 420px breed
   (mobiel 340px, gecentreerd).
 
+- **Knoppen /aanbod/ (2026-08-20):** sessiekaart-CTA "Plan een
+  kennismaking" → "Neem contact op"; onder Rite of the Womb-tekst
+  nieuwe knop "Meer informatie" (mh-btn-adem → /kennismaken/).
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
