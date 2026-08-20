@@ -431,6 +431,12 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   schaduw), niet klikbaar, pointer-events none + draggable=false.
   Max 360px (mobiel 300px onder de kaart).
 
+- **Alle beweging van de site (2026-08-20):** op verzoek gebruiker geen
+  bewegende/schuivende teksten meer: scroll-reveals uit mh-extra.js
+  verwijderd (alleen actieve-menustaat blijft), .mh-reveal-CSS weg,
+  knop-hover-lift (translateY) en reviewkaart-hover-lift weg.
+  Kleurovergangen bij hover (zonder beweging) bewust behouden.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
