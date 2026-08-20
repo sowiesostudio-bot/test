@@ -401,6 +401,14 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   vervallen. Praktisch-kaart + foto ongewijzigd. 27 fragmenten live
   geverifieerd.
 
+- **Header-logo: transparante zon (2026-08-20):** nav-embleem is nu
+  `uploads/2026/08/mh-logo-zon1.png` (400px RGBA, zon volledig met
+  uitlopende stralen, transparante achtergrond, 2%% marge) op alle 7
+  pagina's; 54px desktop / 42px mobiel, border-radius verwijderd.
+  Footer-embleem + favicon blijven mh-logo-rond3/mh-favicon3. LET OP:
+  in opgeslagen _elementor_data zijn quotes ge-escaped (\") — bij
+  server-side str_replace het patroon met backslashes gebruiken.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
