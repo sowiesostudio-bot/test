@@ -353,6 +353,19 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   (nieuwe tekst: "basis van alles wat ik doe"). 16 fragmenten +
   volgorde live geverifieerd.
 
+- **Werkvormen-intro ingekort + sessiefoto (2026-08-20):** intro van
+  "Waarvoor je bij mij terechtkunt." op home ingekort (geen "eigen
+  ingang en bedoeling"/"Wat centraal staat"-zin; "vervolggroep" →
+  "groepstrajecten"). Op /aanbod/ in het 1:1-blok: aangeleverde
+  sessiefoto (AI-bewerkt, 1536x1024) naast het verhaal
+  (`aanbod-foto-rij` 1.4fr/1fr; leeskolommen daar vervallen). Foto
+  bewust klein op de site: `uploads/2026/08/mh-sessie-lichaamswerk.jpg`
+  900px JPEG q82 (geen groter origineel op de server), géén attachment,
+  niet klikbaar, pointer-events none + draggable=false (rechtsklik-
+  opslaan/slepen geblokkeerd; screenshots blijven mogelijk, gebruiker
+  weet dat lage resolutie de echte bescherming is). Max 420px breed
+  (mobiel 340px, gecentreerd).
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
