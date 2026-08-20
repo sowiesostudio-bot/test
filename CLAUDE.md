@@ -409,6 +409,17 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   in opgeslagen _elementor_data zijn quotes ge-escaped (\") — bij
   server-side str_replace het patroon met backslashes gebruiken.
 
+- **Footer-embleem = zon + nieuwe hero (2026-08-20):** footer toont nu
+  ook mh-logo-zon1.png (48px, geen ronde clip); alleen favicon is nog
+  rond3. Hero home volledig vernieuwd (tekst gebruiker): eyebrow
+  "Lichaamswerk · Bewustzijnswerk · Vrouwenwerk", h1 + naam + nieuwe
+  rolregel "Lichaamswerker en facilitator van vrouwenwerk" (span
+  .hero-rol), nieuwe subtekst ("Voor vrouwen die veel dragen en gewend
+  zijn door te gaan...", accent "Ik hoor tussen de regels..."), knop
+  "Ontdek hoe ik werk" → #werkvormen. Yoast-metadesc home mee
+  bijgewerkt. Let op: /aanbod/ Yoast-schema thumbnailUrl verwijst nog
+  naar mh-logo-rond3.png (onzichtbaar, onschuldig).
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
