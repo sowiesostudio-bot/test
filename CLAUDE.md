@@ -380,6 +380,12 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   2x2-raster hernoemd; de detailregel "Investering" in de sessiekaart
   stond er al zo.
 
+- **Rite of the Womb-tekst vernieuwd (2026-08-20):** kop nu alleen
+  "Rite of the Womb." (subregel "In een cirkel of één-op-één." weg);
+  nieuwe tekst gebruiker: 3 alinea's (ritueel / 1:1 of kleine kring
+  vriendinnen-familie / praktisch: 2 uur, €170 incl. btw voor 1:1 of
+  twee vrouwen, grotere groep op maat). 7 fragmenten live geverifieerd.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
