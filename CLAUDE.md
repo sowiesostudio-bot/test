@@ -370,6 +370,9 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   kennismaking" → "Neem contact op"; onder Rite of the Womb-tekst
   nieuwe knop "Meer informatie" (mh-btn-adem → /kennismaken/).
 
+- **Kennismaken-pagina (2026-08-20):** regel "Plan een kennismaking.
+  Geen verplichtingen." onder de kop verwijderd.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
