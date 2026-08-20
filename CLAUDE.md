@@ -386,6 +386,11 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   vriendinnen-familie / praktisch: 2 uur, €170 incl. btw voor 1:1 of
   twee vrouwen, grotere groep op maat). 7 fragmenten live geverifieerd.
 
+- **"Veiligheid & eigen regie" op home ingekort (2026-08-20):** alleen
+  nog "Veiligheid vormt de basis van alles wat ik doe. Ik werk met
+  heldere grenzen, afstemming en consent." (regie/stoppen-zinnen weg;
+  die staan wel nog volledig in het 1:1-blok op /aanbod/).
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
