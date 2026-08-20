@@ -374,7 +374,7 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   Geen verplichtingen." onder de kop verwijderd.
 
 - **Events-kop /aanbod/ (2026-08-20):** "Samen in beweging." weg; grote
-  kop is nu "Events & workshops." (eyebrow zegt dat ook nog, gemeld).
+  kop is nu "Events & workshops.", eyebrow → "Agenda" (geen dubbeling).
 
 ## Werkwijze / geleerde lessen
 
