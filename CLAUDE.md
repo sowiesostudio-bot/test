@@ -376,6 +376,10 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
 - **Events-kop /aanbod/ (2026-08-20):** "Samen in beweging." weg; grote
   kop is nu "Events & workshops.", eyebrow → "Agenda" (geen dubbeling).
 
+- **1:1-blokje "Tarief" → "Investering" (2026-08-20):** subkop in het
+  2x2-raster hernoemd; de detailregel "Investering" in de sessiekaart
+  stond er al zo.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
