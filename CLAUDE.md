@@ -373,6 +373,9 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
 - **Kennismaken-pagina (2026-08-20):** regel "Plan een kennismaking.
   Geen verplichtingen." onder de kop verwijderd.
 
+- **Events-kop /aanbod/ (2026-08-20):** "Samen in beweging." weg; grote
+  kop is nu "Events & workshops." (eyebrow zegt dat ook nog, gemeld).
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
