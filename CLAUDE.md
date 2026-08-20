@@ -391,6 +391,16 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   "werkelijk kan zakken"); regie/consent-details staan in het 1:1-blok
   op /aanbod/.
 
+- **Lichaamswerk-blok /aanbod/ herschreven (2026-08-20, tekst
+  gebruiker):** kop alleen "Lichaamswerk." (em "Eén-op-één sessies."
+  weg); verhaal naast foto = 3 nieuwe alinea's ("sjamanistisch", "zonder
+  iets te forceren of open te willen breken"); 2x2-blokjes nu:
+  De-armouring binnen het lichaamswerk / Afstemming, consent en eigen
+  regie / Wat lichaamswerk je kan brengen / Investering (3 alinea's,
+  integratie-verhaal). "Veiligheid als bedding" en "Mijn achtergrond"
+  vervallen. Praktisch-kaart + foto ongewijzigd. 27 fragmenten live
+  geverifieerd.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
