@@ -334,6 +334,15 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   deelnemers/yogalessen lelijk gestapeld); eyebrow "Ervaringen" en de
   twee intro-zinnen blijven.
 
+- **Over mij-tekst vervangen (2026-08-19):** volledige nieuwe tekst van
+  gebruiker op /over-mij/ (post 3182), verdeeld over de bestaande opbouw:
+  intro naast foto (tussenruimte / gezin+pleegkinderen / politie op 18e),
+  leeskolommen 1 (17 jaar, spaceholden, masker / IVK+kinderen / stem van
+  anderen / super stoer), 2016-quote (ongewijzigd), leeskolommen 2
+  (naar binnen / gifts / direct-scherp-analytisch / "The feminine force
+  of Mother Nature"). 36 fragmenten woord-voor-woord live geverifieerd.
+  Kernwoorden-regel en foto ongewijzigd.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
