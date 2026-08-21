@@ -525,6 +525,21 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   bij 'void' → dubbele punt conform huisregel) + Praktisch-kaart + knop
   "Meld je aan" → /kennismaken/. Advies gegeven: pagina i.p.v. PDF.
 
+- **Tussenruimte uitgebreid + blokvolgorde /aanbod/ (2026-08-21):**
+  (1) Aanbod-kaart heeft nu de VOLLEDIGE eerste tekst (5 alinea's) en
+  "Ben jij klaar voor iets anders?" vetgedrukt. (2) Pagina
+  /de-tussenruimte/ (3214) volledig herbouwd met de lange definitieve
+  tekst: intro (4 al.) → subkoppen (klasse `pagina-subkop`, goud-diep
+  cursief) "De ruimte tussen wat was en wat wil ontstaan" (+ bullets,
+  li-CSS) / "Jouw vraag in de bedding van de groep" / "Een zorgvuldig
+  bewaakte bedding" / "Voor wie?" / "Over mij" / "Drie vrijdagochtenden"
+  → Praktisch-kaart (incl. groepsgrootte 4-6) + "Meld je aan". Em-dash
+  'void' → dubbele punt. (3) Nieuwe sectievolgorde /aanbod/ met
+  licht/terra-afwisseling: intro L → lichaamswerk D → cirkels L →
+  VRIJspraak D (klasse `vrijspraak-donker`, kaartkleuren + knop
+  omgekeerd) → events L → rituelen D. 33 fragmenten + volgorde live
+  geverifieerd.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
