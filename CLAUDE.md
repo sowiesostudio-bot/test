@@ -514,6 +514,17 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   onder de tekst, zonder maskvervaging maar met ronde hoeken + schaduw
   (max 340px). Desktop ongewijzigd (foto op naamhoogte geverifieerd).
 
+- **De Tussenruimte toegevoegd (2026-08-21):** nieuwe vrouwencirkel-
+  reeks. (1) Kaart in de cirkels-sectie op /aanbod/ (vrij-kaart-stijl,
+  wrapper `cirkel-kaart-wrap`): kern-tekst + details (3 vrijdagochtenden
+  / Zwolle / 10.00-12.30 / 9 okt, 6 nov, 4 dec / €195) + note (één
+  doorgaande reis) + "Ben jij klaar voor iets anders?" + knop "Ontdek
+  De Tussenruimte" → /de-tussenruimte/. (2) Nieuwe pagina post 3214
+  `/de-tussenruimte/` (elementor_canvas, eigen nav/footer, Yoast-titel
+  + metadesc, indexeerbaar) met volledig verhaal (5 alinea's; em-dash
+  bij 'void' → dubbele punt conform huisregel) + Praktisch-kaart + knop
+  "Meld je aan" → /kennismaken/. Advies gegeven: pagina i.p.v. PDF.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
