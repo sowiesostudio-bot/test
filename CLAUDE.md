@@ -449,8 +449,10 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   5.5rem) → 2 ww-items (Het veld lezen / Veiligheid & eigen regie).
   Anker `hoe-ik-werk` bestaat niet meer.
 
-- **Hero-tekst v2 (2026-08-21, tekst gebruiker):** h1 nu "Je hebt al
-  veel innerlijk werk gedaan. Nu mag het ook in je lichaam aankomen."
+- **Hero-tekst v2 (2026-08-21, tekst gebruiker):** h1 na revisie kort:
+  "Nu mag je lichaam spreken." (eerst "Je hebt al veel innerlijk werk
+  gedaan. Nu mag het ook in je lichaam aankomen.", zelfde dag ingekort;
+  "Na" in verzoek als tikfout voor "Nu" gelezen, gemeld)
   (slogan "Jij doet het werk..." alleen nog in footerquote); subtekst
   5 alinea's (ballen in de lucht / veilige bedding / doorleefde
   ervaring) + accent "Ik hoor wat je zegt én wat je niet zegt...";
