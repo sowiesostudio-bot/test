@@ -550,6 +550,15 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   onderaan. VRIJ-letters in het donkere VRIJspraak-blok nu wit vet
   (.vrijspraak-donker .vrij → adem, 700).
 
+- **Tussenruimte-sfeerbeeld (2026-08-21):** gouden-vonken-op-water-beeld
+  (donker, 736x1307) naast "De ruimte tussen wat was en wat wil
+  ontstaan" (`tussen-foto-rij` 1.55fr/1fr, tekst links).
+  `uploads/2026/08/mh-tussenruimte-licht.jpg`, geen attachment,
+  niet klikbaar/sleepbaar. Vervaging via RADIAAL masker (ellipse
+  60%/52%, #000 30% → transparent 76%): lineaire randvervaging gaf
+  bij dit bijna-zwarte beeld een lelijke vlek. LES: donkere beelden
+  op licht → radiale dissolve, lichte foto's → lineaire randen.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
