@@ -480,6 +480,18 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   lokale render zonder Elementor-CSS toont kolommen gestapeld
   (display:block) — alle site-CSS lokaal meenemen bij het testen.
 
+- **BELANGRIJKE VONDST (2026-08-21): verborgen oude CSS op de homepage.**
+  In `_elementor_page_settings['custom_css']` van post 3179 zat nog de
+  ALLEREERSTE huisstijl-CSS (13KB, oude palet #DEA344/#B84820) die via
+  post-3179.css NA de theme-CSS laadde en alles overschreef — alleen op
+  home. Daardoor leken hero-wijzigingen bij de gebruiker "niet aan te
+  komen" (werd eerst onterecht op browsercache gegooid; theme-CSS was
+  daarvoor al hernoemd naar mh-huisstijl2.css). custom_css verwijderd
+  (andere pagina's waren schoon), Elementor-CSS geregenereerd, met
+  ongewijzigde spiegel + Chromium live-getrouw geverifieerd. LES: bij
+  "CSS komt niet aan" op één pagina ALTIJD post-<id>.css en
+  page settings custom_css checken.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
