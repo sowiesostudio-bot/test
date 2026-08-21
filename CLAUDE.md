@@ -497,6 +497,14 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   840px zodat hij op brede schermen eindigt waar de kop eindigt.
   Op 1440px en 1920px geverifieerd via ongewijzigde spiegel-render.
 
+- **Hero definitief: foto op naamhoogte, randen vervaagd (2026-08-21):**
+  keuze B van gebruiker; foto (max 560px) begint op hoogte van MARIJN
+  HAGEMAN (padding-top + 8.7rem) en "ontstaat uit de achtergrond" via
+  CSS mask (linear-gradients + mask-composite intersect; links smal
+  15% zodat Marijn — links in beeld — scherp blijft, rechts/onder
+  royaal). Geen border-radius/schaduw meer. Introtekst max 840px
+  (komt nergens voorbij de kop, op 4 breedtes gemeten).
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
