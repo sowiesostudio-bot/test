@@ -441,6 +441,14 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   de Rite of the Womb of een Despacho-ritueel" (Ayni-ritueel eruit,
   stond alleen op home).
 
+- **Werkvormen + Hoe ik werk samengevoegd (2026-08-21):** nu ÉÉN sectie
+  op home (id `werkvormen` behouden, hero-knop verwijst erheen): eyebrow
+  "Mijn werk" → kop "Waarvoor je bij mij terechtkunt." → intro → 4
+  ww-items → tussenkop "Afstemmen op het veld. / Voelen wat er gezegd
+  mag worden." (klasse `ww-kop ww-tussenkop`, h3, kleiner + margin-top
+  5.5rem) → 2 ww-items (Het veld lezen / Veiligheid & eigen regie).
+  Anker `hoe-ik-werk` bestaat niet meer.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
