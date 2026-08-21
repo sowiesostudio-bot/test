@@ -502,8 +502,10 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   HAGEMAN (padding-top + 8.7rem) en "ontstaat uit de achtergrond" via
   CSS mask (linear-gradients + mask-composite intersect; links smal
   15% zodat Marijn — links in beeld — scherp blijft, rechts/onder
-  royaal). Geen border-radius/schaduw meer. Introtekst max 840px
-  (komt nergens voorbij de kop, op 4 breedtes gemeten).
+  royaal, na feedback versmald naar 11%/74-80%). Geen border-radius/
+  schaduw meer. Introtekst max min(55vw, 810px): langste REGEL blijft
+  op elke breedte vóór het kop-einde (per-regel gemeten op 6 breedtes;
+  vaste px-cap alleen was op sommige schermen te breed).
 
 ## Werkwijze / geleerde lessen
 
