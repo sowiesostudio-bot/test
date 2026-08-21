@@ -507,6 +507,13 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   op elke breedte vóór het kop-einde (per-regel gemeten op 6 breedtes;
   vaste px-cap alleen was op sommige schermen te breed).
 
+- **Mobiele hero gefixt (2026-08-21):** de tijdens debuggen toegevoegde
+  `flex-wrap: nowrap` op .hero > .elementor-container brak mobiel
+  (kolommen bleven naast elkaar, alles platgedrukt) — verwijderd, was
+  overbodig. Mobiel nu: tekst volle breedte (max-width none), foto
+  onder de tekst, zonder maskvervaging maar met ronde hoeken + schaduw
+  (max 340px). Desktop ongewijzigd (foto op naamhoogte geverifieerd).
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
