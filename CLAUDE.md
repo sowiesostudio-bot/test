@@ -532,7 +532,8 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   tekst: intro (4 al.) → subkoppen (klasse `pagina-subkop`, goud-diep
   cursief) "De ruimte tussen wat was en wat wil ontstaan" (+ bullets,
   li-CSS) / "Jouw vraag in de bedding van de groep" / "Een zorgvuldig
-  bewaakte bedding" / "Voor wie?" / "Over mij" / "Drie vrijdagochtenden"
+  bewaakte bedding" / "Voor wie?" / "Drie vrijdagochtenden" ("Over
+  mij"-deel op verzoek weer verwijderd, 2026-08-21)
   → Praktisch-kaart (incl. groepsgrootte 4-6) + "Meld je aan". Em-dash
   'void' → dubbele punt. (3) Nieuwe sectievolgorde /aanbod/ met
   licht/terra-afwisseling: intro L → lichaamswerk D → cirkels L →
