@@ -459,13 +459,11 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   knop "Ontdek mijn werk" → #werkvormen. 13 fragmenten live
   geverifieerd.
 
-- **Zeefoto op home (2026-08-21):** strandfoto gebruiker naast het
-  "Afstemmen op het veld"-deel in de Mijn werk-sectie (`ww-afstem-rij`
-  1.2fr/1fr: links de 2 ww-items, rechts foto). Bestand
-  `uploads/2026/08/mh-marijn-zee.jpg` 900x632 q82, géén attachment/
-  origineel op server; zachte randen (radius 18 + schaduw), niet
-  klikbaar, pointer-events none + draggable=false. Max 420px
-  (mobiel 340px eronder).
+- **Zeefoto op home geplaatst en weer verwijderd (2026-08-21):**
+  strandfoto stond kort naast "Afstemmen op het veld"; gebruiker wilde
+  hem toch niet. Alles teruggedraaid: 2 ww-items weer in ww-grid,
+  ww-afstem-rij/home-foto-wrap-CSS weg, mh-marijn-zee.jpg van server
+  verwijderd.
 
 ## Werkwijze / geleerde lessen
 
