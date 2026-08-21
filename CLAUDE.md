@@ -540,6 +540,15 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   omgekeerd) → events L → rituelen D. 33 fragmenten + volgorde live
   geverifieerd.
 
+- **Aanbod-ritme definitief + VRIJ wit (2026-08-21):** volgorde nu
+  intro L → lichaamswerk D → cirkels (incl. Tussenruimte) L →
+  VRIJspraak D → Rite of the Womb L (klasse `rituelen-licht`:
+  tekst zwart/grond, knop grond) → events D als afsluiter (klasse
+  `events-donker`: grond-bg, teksten adem-tinten, Hipsy-kaarten
+  behouden eigen witte bg). Perfecte L/D-afwisseling met events
+  onderaan. VRIJ-letters in het donkere VRIJspraak-blok nu wit vet
+  (.vrijspraak-donker .vrij → adem, 700).
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
