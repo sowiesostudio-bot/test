@@ -576,6 +576,18 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   kit-knopkleuren op huisstijl gezet. Alle 4 knoppen op /aanbod/
   hover-getest via Playwright: geen rood meer.
 
+- **Tussenruimte-pagina speels herbouwd (2026-08-21, na "lap tekst"-
+  feedback):** nu 5 secties met licht/terra-ritme zoals lichaamswerk:
+  (1) L: kop + intro | doekbeeld; (2) D (`tussen-donker`): "De ruimte
+  tussen..." | vonkenbeeld (smelt in grond-bg) + bullets in breed
+  kaderblok (`tussen-blokken`/`tussen-blok`, label-kopjes klasse
+  `blok-label`); (3) L: "Jouw vraag..." in 2 leeskolommen
+  (`tussen-leeskolommen`); (4) D: "Een zorgvuldig bewaakte bedding" als
+  2x2-blokjes met VERZONNEN mini-labels Begeleiding/Zuiverheid/Eigen
+  regie/Vertrouwelijkheid (gemeld); (5) L: tweeluik Voor wie? | Drie
+  vrijdagochtenden + Praktisch-kaart + CTA. Volledig via spiegel-render
+  gecontroleerd.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
