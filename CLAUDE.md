@@ -465,11 +465,18 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   ww-afstem-rij/home-foto-wrap-CSS weg, mh-marijn-zee.jpg van server
   verwijderd.
 
-- **Nieuwe herofoto + bredere tekstkolom (2026-08-21):** hero-afbeelding
-  is nu `uploads/2026/08/mh-hero-groen.jpg` (892x794, blazer bij groen,
-  geen attachment; oude 3197 blijft in mediatheek); hero-kolommen van
-  56/44 naar 62/38 zodat de introtekst breder uitlijnt. LET OP: bron is
-  maar 794px hoog; bij zeer hoge viewports rekt de cover-crop iets op.
+- **Hero herbouwd: nieuwe foto + brede tekst (2026-08-21, definitief):**
+  hero-afbeelding is `uploads/2026/08/mh-hero-groen.jpg` (892x794,
+  blazer bij groen, geen attachment; oude 3197 in mediatheek). Foto is
+  GEEN schermhoge cover-strook meer (die sneed Marijn eruit) maar een
+  natuurlijke foto met ronde hoeken/schaduw, boven uitgelijnd naast de
+  naam (.hero-visual-col flex, align-items flex-start, padding-top als
+  hero-text, box-sizing border-box, max 480px); ::after-verloop weg.
+  Kolommen 68/32 (tekst breed op verzoek). Hero-sub heeft nu subkopje
+  "Vanuit doorleefde ervaring" (klasse hero-subkop, goud-diep cursief)
+  + nieuwe alinea (sjamanistisch) i.p.v. de oude ervaring-alinea. LES:
+  lokale render zonder Elementor-CSS toont kolommen gestapeld
+  (display:block) — alle site-CSS lokaal meenemen bij het testen.
 
 ## Werkwijze / geleerde lessen
 
