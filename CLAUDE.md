@@ -83,7 +83,9 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   goud/oker #E0A93C, grond #6B3A2A, zwart #1C1008, vlam/terracotta
   #C66A3F, adem (warm wit) #F7F3E8 (ook in _elementor_page_settings
   background_color). Oorspronkelijk ontwerp-palet: #DEA344/#B84820/#FAF5EE.
-- Huisstijl-CSS: `wp-content/themes/hello-elementor/mh-huisstijl.css`,
+- Huisstijl-CSS: `wp-content/themes/hello-elementor/mh-huisstijl2.css`
+  (2026-08-21 hernoemd van mh-huisstijl.css wegens hardnekkige
+  browsercache bij gebruiker; oude bestand staat er nog als vangnet),
   enqueued via functions.php (marker `mh-huisstijl`); Google Fonts
   (Cormorant Garamond + Inter) idem (marker `mh-google-fonts`).
 - Widget-CSS-klassen in Elementor-JSON: widgets gebruiken `_css_classes`,
