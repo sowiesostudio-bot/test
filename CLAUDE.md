@@ -559,6 +559,23 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   bij dit bijna-zwarte beeld een lelijke vlek. LES: donkere beelden
   op licht → radiale dissolve, lichte foto's → lineaire randen.
 
+- **Tussenruimte-verfijning + hero v3 + knoppenfix (2026-08-21):**
+  (1) Subtitel op /de-tussenruimte/ stond gecentreerd (contact-sub
+  heeft margin auto voor de kennismaken-pagina) → sectieklasse
+  `tussen-top` + override links, max 52ch. (2) Doekbeeld
+  (`mh-tussenruimte-doek.jpg`, licht textiel 900x600) rechts naast de
+  intro (`doek-foto-rij` 1.5fr/1fr, max 400px, lineaire randvervaging
+  14%). (3) Vonkenbeeld strakker gecropt rond de lichtkolom
+  (`mh-tussenruimte-licht2.jpg` 588x915, NIEUWE naam) en kleiner
+  (270px) met brede lineaire vervaging 30/26% (radiaal ovaal vond
+  gebruiker een spiegel). (4) Hero home: eyebrow "Lichaamswerk en
+  bewustzijnswerk voor vrouwen", rolregel "Lichaamswerker en
+  facilitator" (zonder "van vrouwenwerk"). (5) KNOPPEN: Elementor-kit
+  2674 had nog Zeko-rood (#BB1825/#E3342A) dat op hover doorsloeg →
+  alle .mh-btn*-hoverregels met !important (kleur+achtergrond) en
+  kit-knopkleuren op huisstijl gezet. Alle 4 knoppen op /aanbod/
+  hover-getest via Playwright: geen rood meer.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
