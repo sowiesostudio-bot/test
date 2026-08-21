@@ -492,6 +492,11 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   "CSS komt niet aan" op één pagina ALTIJD post-<id>.css en
   page settings custom_css checken.
 
+- **Hero-uitlijning n.a.v. schets gebruiker (2026-08-21):** foto begint
+  nu op kophoogte (padding-top + 3.4rem) en de introtekst is begrensd op
+  840px zodat hij op brede schermen eindigt waar de kop eindigt.
+  Op 1440px en 1920px geverifieerd via ongewijzigde spiegel-render.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
