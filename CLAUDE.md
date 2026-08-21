@@ -465,6 +465,12 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   ww-afstem-rij/home-foto-wrap-CSS weg, mh-marijn-zee.jpg van server
   verwijderd.
 
+- **Nieuwe herofoto + bredere tekstkolom (2026-08-21):** hero-afbeelding
+  is nu `uploads/2026/08/mh-hero-groen.jpg` (892x794, blazer bij groen,
+  geen attachment; oude 3197 blijft in mediatheek); hero-kolommen van
+  56/44 naar 62/38 zodat de introtekst breder uitlijnt. LET OP: bron is
+  maar 794px hoog; bij zeer hoge viewports rekt de cover-crop iets op.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
