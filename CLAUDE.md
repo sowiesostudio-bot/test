@@ -659,6 +659,8 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   rots-blok (foto + bijschrift eronder). Tekst eindigt nog steeds met
   de Mother Nature-slotalinea. Mobiel: tekst boven, foto + bijschrift
   eronder. Het eerste kolommenblok (867c42a) en de quote ongewijzigd.
+  Bijschrift ingekort (2026-08-23): "maar juist van binnenuit beweegt"
+  → "maar van binnenuit beweegt" (woord "juist" weg op verzoek).
 
 ## Werkwijze / geleerde lessen
 
