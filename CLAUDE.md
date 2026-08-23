@@ -629,6 +629,22 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   verbinding met andere vrouwen." stond er al. 12 fragmenten live
   geverifieerd + spiegel-render.
 
+- **Rotsformatie-foto op /over-mij/ (2026-08-23):** vulva-vormige
+  rotsformatie (havenfoto gebruiker) bij de slotalinea "The feminine
+  force of Mother Nature". Haven weggewerkt: zwarte paal + tuidraad
+  onderin met textuur-patches verwijderd (horizontale rotsband,
+  buurpatroon gekopieerd met feather), daarna crop (180,0,780,1090)
+  zodat de volledige formatie mét staart overblijft; mast/boten/palen
+  buiten beeld. Web 550x1000 q82 `uploads/2026/08/mh-rots-moedernatuur.jpg`
+  (geen attachment, niet klikbaar/sleepbaar). Slotalinea uit de
+  leeskolommen-widget (87cf7d3) gehaald; nieuwe inner-section
+  `rots-rij` (grid 1fr/1.45fr): foto links (`rots-foto-wrap`, lineaire
+  randvervaging 12/10%) | rechts accenttekst `rots-accent` (goud-diep
+  cursief, "Het vrouwelijke is niet alleen zacht...") + slotalinea.
+  Mobiel: foto boven tekst, max 280px. Live geverifieerd + spiegel-
+  render desktop/mobiel. Origineel + gepatchte master in scratchpad
+  (rots-orig.jpg / rots-gepatcht.jpg / rots-crop-b.jpg).
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
