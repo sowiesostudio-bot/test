@@ -667,9 +667,12 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   "Wanneer is alles eigenlijk zo serieus geworden?"; 8e widget a8voic8
   toegevoegd, kopie voice-line); afsluitkop "Ik stem af op wat er écht
   speelt." → "Ik stem af op wat er onder de oppervlakte beweegt."
-  LET OP: hero-accent zegt vrijwel hetzelfde ("...stem af op wat zich
-  bij jou onder de oppervlakte beweegt") — gebruiker gemeld. 9
-  fragmenten + volgorde live geverifieerd.
+  Afsluitkop + gouden streepje (voices-break 140b071, voices-turn
+  fb35922) daarna op verzoek helemaal verwijderd: dubbelde met de
+  hero-accent ("...stem af op wat zich bij jou onder de oppervlakte
+  beweegt"); de 8 stemmen sluiten de sectie nu zelf af. Live
+  geverifieerd + spiegel-render. CTA-eyebrow "Verder" → "Uitnodiging"
+  (gebruiker vond "Verder" gek; eyebrow behouden voor het ritme).
 
 - **2016-quote op /over-mij/ vervangen (2026-08-23, tekst gebruiker):**
   widget 3fabf11 (verhaal-quote): nieuwe tekst "In 2016 viel ik om.
