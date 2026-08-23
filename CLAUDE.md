@@ -597,6 +597,28 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   geverifieerd (md5 + spiegel-render desktop 1440 en mobiel 390:
   vervaging laat de snijrand mooi oplossen, mobiel ronde hoeken ok).
 
+- **Algemene voorwaarden volledig vernieuwd (2026-08-23, tekst
+  gebruiker):** post 3199 heeft nu de definitieve juridische tekst
+  (13 artikelen: definities met klant/consument/deelnemer-onderscheid,
+  totstandkoming, uitvoering incl. weigeringsgronden-opsomming,
+  betaling zakelijk/consument, herroeping, annulering per aanbodsvorm,
+  consent, aansprakelijkheid, IP/opnames, vertrouwelijkheid, klachten,
+  recht, wijziging) + slotregel (Zwolle · KvK 99478161 · btw
+  NL869008018B01) + bijlage modelformulier herroeping (adres
+  Wipstrikkerallee 54, 8023 DL Zwolle). **PDF-download toegevoegd**
+  (vraag gebruiker; sluit aan op art. 2.5 "bekijken en bewaren"):
+  `uploads/2026/08/algemene-voorwaarden-marijn-hageman.pdf` (6 p.,
+  huisstijl: Cormorant-kop goud, Inter-body, geen attachment), link
+  bovenaan de pagina (klasse `av-download`). Generator:
+  `av_inhoud.py` + `bouw_av.py` in scratchpad (HTML én PDF uit
+  dezelfde bron). CSS: `.privacy-tekst ul/li` (gouden markers) +
+  `.av-download`/`.av-slot`. 37 fragmenten live geverifieerd.
+  **KvK/btw-scan hele DB (posts/postmeta/options):** juiste nummers
+  alleen op /algemene-voorwaarden/; VERKEERDE nummers (KVK 86325728,
+  BTW NL004229850B43 + IBAN) staan alléén nog in het uitgeschakelde
+  oude Zeko-footertemplate (post 2780, geen conditions, rendert
+  nergens) — publieke pagina's alle 8 gegrept: schoon.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
