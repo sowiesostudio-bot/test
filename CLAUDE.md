@@ -681,8 +681,10 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   Gebruiker vond het een loze kreet onderin. De zin leeft nog wél in
   de lopende tekst van het lichaamswerk-blok op /aanbod/ ("Jij doet
   het werk, ik creëer de bedding." als slot van de katalysator-alinea)
-  — daar bewust laten staan, gebruiker geïnformeerd. Footer-layout
-  live gecheckt (spiegel-render): oogt in balans.
+  — op verzoek daarna óók verwijderd (uit _elementor_data én
+  post_content; alinea eindigt nu op "...wat jouw lichaam al langer
+  probeert te vertellen."). De zin komt nu nergens meer voor.
+  Footer-layout live gecheckt (spiegel-render): oogt in balans.
 
 - **2016-quote op /over-mij/ vervangen (2026-08-23, tekst gebruiker):**
   widget 3fabf11 (verhaal-quote): nieuwe tekst "In 2016 viel ik om.
