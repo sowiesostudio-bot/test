@@ -588,6 +588,15 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   vrijdagochtenden + Praktisch-kaart + CTA. Volledig via spiegel-render
   gecontroleerd.
 
+- **Herofoto bijgesneden: handen eruit (2026-08-23):** gebruiker vond de
+  handen (blazer vasthoudend, onderin beeld) de foto zakelijk maken.
+  Crop op y=720 (vingers beginnen ±y725; bepaald via rasterlijnen op de
+  foto), nieuw formaat 892x720. NIEUWE bestandsnaam
+  `uploads/2026/08/mh-hero-groen2.jpg` (cache-regel; oude groen.jpg
+  staat er nog), URL in post 3179 via str_replace vervangen. Live
+  geverifieerd (md5 + spiegel-render desktop 1440 en mobiel 390:
+  vervaging laat de snijrand mooi oplossen, mobiel ronde hoeken ok).
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
