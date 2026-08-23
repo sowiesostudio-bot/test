@@ -662,6 +662,15 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   Bijschrift ingekort (2026-08-23): "maar juist van binnenuit beweegt"
   → "maar van binnenuit beweegt" (woord "juist" weg op verzoek).
 
+- **Voices-sectie home vernieuwd (2026-08-23, tekst gebruiker):** de 7
+  stemmen vervangen door 8 nieuwe ("Ik red het allemaal nog wel..." t/m
+  "Wanneer is alles eigenlijk zo serieus geworden?"; 8e widget a8voic8
+  toegevoegd, kopie voice-line); afsluitkop "Ik stem af op wat er écht
+  speelt." → "Ik stem af op wat er onder de oppervlakte beweegt."
+  LET OP: hero-accent zegt vrijwel hetzelfde ("...stem af op wat zich
+  bij jou onder de oppervlakte beweegt") — gebruiker gemeld. 9
+  fragmenten + volgorde live geverifieerd.
+
 - **2016-quote op /over-mij/ vervangen (2026-08-23, tekst gebruiker):**
   widget 3fabf11 (verhaal-quote): nieuwe tekst "In 2016 viel ik om.
   Overspannen. Mijn lichaam zette een grens waar ik die zelf jarenlang
