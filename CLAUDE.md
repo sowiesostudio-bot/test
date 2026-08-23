@@ -651,6 +651,14 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   (max 420px, foto 340px) met de nieuwe regel als bijschrift eronder
   (`rots-bijschrift`, Cormorant cursief goud-diep, gecentreerd).
   Klassen rots-rij/rots-accent/rots-tekst vervallen.
+  **Ronde 3 (2026-08-23, definitief): foto naast de tekst.** Op verzoek
+  (kortere pagina, tekstdeel opgeleukt): het tweede leeskolommenblok
+  (87cf7d3, na de quote) staat nu als één leeskolom (klasse
+  verhaal-kolommen eraf, max 58ch) links in inner-section
+  `rots-naast-rij` (grid 1.45fr/1fr, align center) met rechts het
+  rots-blok (foto + bijschrift eronder). Tekst eindigt nog steeds met
+  de Mother Nature-slotalinea. Mobiel: tekst boven, foto + bijschrift
+  eronder. Het eerste kolommenblok (867c42a) en de quote ongewijzigd.
 
 ## Werkwijze / geleerde lessen
 
