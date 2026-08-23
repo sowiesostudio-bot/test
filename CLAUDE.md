@@ -674,6 +674,16 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   geverifieerd + spiegel-render. CTA-eyebrow "Verder" → "Uitnodiging"
   (gebruiker vond "Verder" gek; eyebrow behouden voor het ritme).
 
+- **Footerquote verwijderd (2026-08-23):** "Jij doet het werk. Ik
+  creëer de bedding." uit de footer van alle 8 pagina's gehaald
+  (3179/3180/3181/3182/3195/3199/3214 + 404-template 2803; span
+  `footer-quote` weg, CSS-regel staat er nog maar is ongebruikt).
+  Gebruiker vond het een loze kreet onderin. De zin leeft nog wél in
+  de lopende tekst van het lichaamswerk-blok op /aanbod/ ("Jij doet
+  het werk, ik creëer de bedding." als slot van de katalysator-alinea)
+  — daar bewust laten staan, gebruiker geïnformeerd. Footer-layout
+  live gecheckt (spiegel-render): oogt in balans.
+
 - **2016-quote op /over-mij/ vervangen (2026-08-23, tekst gebruiker):**
   widget 3fabf11 (verhaal-quote): nieuwe tekst "In 2016 viel ik om.
   Overspannen. Mijn lichaam zette een grens waar ik die zelf jarenlang
