@@ -644,6 +644,13 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   Mobiel: foto boven tekst, max 280px. Live geverifieerd + spiegel-
   render desktop/mobiel. Origineel + gepatchte master in scratchpad
   (rots-orig.jpg / rots-gepatcht.jpg / rots-crop-b.jpg).
+  **Herzien na feedback (2026-08-23, definitief):** gebruiker wilde de
+  oorspronkelijke tekst intact ("tekst hoort bij de foto"). Slotalinea
+  staat weer gewoon achterin de leeskolommen (87cf7d3); de foto is nu
+  een losse afsluiting ná de tekst: gecentreerd blok `rots-blok`
+  (max 420px, foto 340px) met de nieuwe regel als bijschrift eronder
+  (`rots-bijschrift`, Cormorant cursief goud-diep, gecentreerd).
+  Klassen rots-rij/rots-accent/rots-tekst vervallen.
 
 ## Werkwijze / geleerde lessen
 
