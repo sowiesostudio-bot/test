@@ -619,6 +619,16 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   oude Zeko-footertemplate (post 2780, geen conditions, rendert
   nergens) — publieke pagina's alle 8 gegrept: schoon.
 
+- **Tussenruimte-intro herzien (2026-08-23, tekst gebruiker):** in het
+  introblok naast het doekbeeld op /de-tussenruimte/ (widget ca4a137)
+  is de zin "De Tussenruimte is een plek waar niet eindeloos wordt
+  gepraat..." vervangen door "De Tussenruimte is geen:" + 4 bullets
+  (theekransje / praatgroep / dramadriehoek / analyseren-adviseren).
+  Alinea's 1-2 en de twee luister-alinea's waren al identiek aan de
+  aangeleverde tekst; accentregel "Jouw eigen reis, gedragen in
+  verbinding met andere vrouwen." stond er al. 12 fragmenten live
+  geverifieerd + spiegel-render.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
