@@ -662,6 +662,13 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   Bijschrift ingekort (2026-08-23): "maar juist van binnenuit beweegt"
   → "maar van binnenuit beweegt" (woord "juist" weg op verzoek).
 
+- **2016-quote op /over-mij/ vervangen (2026-08-23, tekst gebruiker):**
+  widget 3fabf11 (verhaal-quote): nieuwe tekst "In 2016 viel ik om.
+  Overspannen. Mijn lichaam zette een grens waar ik die zelf jarenlang
+  niet had gevoeld. Doorgaan kon niet meer. Daar begon mijn weg terug
+  naar mijzelf en naar mijn lichaam." (oude "wandelend hoofd"-versie
+  weg). Live geverifieerd.
+
 ## Werkwijze / geleerde lessen
 
 - De Novamira-tools laden via `.mcp.json`; lukt dat niet, dan werkt de
