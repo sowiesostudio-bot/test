@@ -619,6 +619,16 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   oude Zeko-footertemplate (post 2780, geen conditions, rendert
   nergens) — publieke pagina's alle 8 gegrept: schoon.
 
+- **Tussenruimte-kaart /aanbod/ herschreven (2026-08-23, tekst
+  gebruiker):** widget ec2e75e in de cirkel-kaart: nu 5 bullets
+  ("Je weet dat er iets in jou..." t/m "...oeroude beweging van
+  vrouwen") → alinea "De Tussenruimte is de plek en moment tussen het
+  oude en het nieuwe..." → cirkels/void-alinea + gedeeld-alinea
+  (ongewijzigd hergebruikt) → "De Tussenruimte is geen:" + 4 bullets.
+  Vorm-blok, note, "Ben jij klaar voor iets anders?" en knop
+  ongewijzigd eronder. CSS: .vrij-tekst ul/li (gouden markers).
+  16 fragmenten live geverifieerd + spiegel-render.
+
 - **Tussenruimte-intro herzien (2026-08-23, tekst gebruiker):** in het
   introblok naast het doekbeeld op /de-tussenruimte/ (widget ca4a137)
   is de zin "De Tussenruimte is een plek waar niet eindeloos wordt
