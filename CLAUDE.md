@@ -625,9 +625,11 @@ gefixt naar marijn-hageman, widget gestyled via CSS-variabelen]
   vrouwen") → alinea "De Tussenruimte is de plek en moment tussen het
   oude en het nieuwe..." → cirkels/void-alinea + gedeeld-alinea
   (ongewijzigd hergebruikt) → "De Tussenruimte is geen:" + 4 bullets.
-  Vorm-blok, note, "Ben jij klaar voor iets anders?" en knop
-  ongewijzigd eronder. CSS: .vrij-tekst ul/li (gouden markers).
-  16 fragmenten live geverifieerd + spiegel-render.
+  "Ben jij klaar voor iets anders?" staat als duidelijke oproep
+  (klasse `vrij-oproep`, Cormorant cursief 1.45rem goud-diep) direct
+  onder het is-geen-lijstje; daarna Vorm-blok → note → knop.
+  CSS: .vrij-tekst ul/li (gouden markers) + .vrij-oproep.
+  16 fragmenten + volgorde live geverifieerd + spiegel-render.
 
 - **Tussenruimte-intro herzien (2026-08-23, tekst gebruiker):** in het
   introblok naast het doekbeeld op /de-tussenruimte/ (widget ca4a137)
