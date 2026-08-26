@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "novamira": {
+      "command": "npx",
+      "args": ["-y", "@automattic/mcp-wordpress-remote@latest"],
+      "env": {
+        "WP_API_URL": "https://marijnhageman.nl/wp-json/mcp/novamira",
+        "WP_API_USERNAME": "abdi",
+        "WP_API_PASSWORD": "hTPycBhwyCvX7EDIX8M9sb6z"
+      }
+    }
+  }
+}
